@@ -13,6 +13,15 @@
 		F8A5DED4273EC75B00770A6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A5DED2273EC75B00770A6E /* Main.storyboard */; };
 		F8A5DED6273EC75C00770A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8A5DED5273EC75C00770A6E /* Assets.xcassets */; };
 		F8A5DED9273EC75C00770A6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A5DED7273EC75C00770A6E /* LaunchScreen.storyboard */; };
+		F8BA1EC1273F8EEA00041003 /* TempConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC0273F8EEA00041003 /* TempConstants.swift */; };
+		F8BA1EC3273F8EF700041003 /* TempFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC2273F8EF700041003 /* TempFonts.swift */; };
+		F8BA1EC5273F8F8400041003 /* CellTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC4273F8F8400041003 /* CellTemp.swift */; };
+		F8BA1EC7273F8F8E00041003 /* TempExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC6273F8F8E00041003 /* TempExtension.swift */; };
+		F8BA1EC9273F8F9500041003 /* TempAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC8273F8F9500041003 /* TempAppModel.swift */; };
+		F8BA1ECB273F8FA300041003 /* TempNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ECA273F8FA300041003 /* TempNetworkModel.swift */; };
+		F8BA1ECD273F8FAB00041003 /* TempNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ECC273F8FAB00041003 /* TempNetworkService.swift */; };
+		F8BA1ECF273F8FB100041003 /* TempProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ECE273F8FB100041003 /* TempProtocol.swift */; };
+		F8BA1ED1273F8FB800041003 /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ED0273F8FB800041003 /* TempView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		F8A5DED5273EC75C00770A6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8A5DED8273EC75C00770A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8A5DEDA273EC75C00770A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8BA1EC0273F8EEA00041003 /* TempConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConstants.swift; sourceTree = "<group>"; };
+		F8BA1EC2273F8EF700041003 /* TempFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempFonts.swift; sourceTree = "<group>"; };
+		F8BA1EC4273F8F8400041003 /* CellTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTemp.swift; sourceTree = "<group>"; };
+		F8BA1EC6273F8F8E00041003 /* TempExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempExtension.swift; sourceTree = "<group>"; };
+		F8BA1EC8273F8F9500041003 /* TempAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempAppModel.swift; sourceTree = "<group>"; };
+		F8BA1ECA273F8FA300041003 /* TempNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNetworkModel.swift; sourceTree = "<group>"; };
+		F8BA1ECC273F8FAB00041003 /* TempNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNetworkService.swift; sourceTree = "<group>"; };
+		F8BA1ECE273F8FB100041003 /* TempProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempProtocol.swift; sourceTree = "<group>"; };
+		F8BA1ED0273F8FB800041003 /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +74,128 @@
 		F8A5DECB273EC75B00770A6E /* SOPT-29th-JointSeminar10-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F8A5DECC273EC75B00770A6E /* AppDelegate.swift */,
-				F8A5DECE273EC75B00770A6E /* SceneDelegate.swift */,
-				F8A5DED0273EC75B00770A6E /* ViewController.swift */,
-				F8A5DED2273EC75B00770A6E /* Main.storyboard */,
-				F8A5DED5273EC75C00770A6E /* Assets.xcassets */,
-				F8A5DED7273EC75C00770A6E /* LaunchScreen.storyboard */,
-				F8A5DEDA273EC75C00770A6E /* Info.plist */,
+				F8BA1EB2273F837400041003 /* Resource */,
+				F8BA1EB3273F837900041003 /* Source */,
 			);
 			path = "SOPT-29th-JointSeminar10-iOS";
+			sourceTree = "<group>";
+		};
+		F8BA1EB2273F837400041003 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F8A5DEDA273EC75C00770A6E /* Info.plist */,
+				F8A5DED5273EC75C00770A6E /* Assets.xcassets */,
+				F8BA1EBC273F847800041003 /* Constants */,
+				F8BA1EBE273F84BF00041003 /* Fonts */,
+				F8BA1EBD273F84B900041003 /* Storyboards */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F8BA1EB3273F837900041003 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F8A5DECC273EC75B00770A6E /* AppDelegate.swift */,
+				F8A5DECE273EC75B00770A6E /* SceneDelegate.swift */,
+				F8BA1EB4273F837D00041003 /* Cell */,
+				F8BA1EB5273F844C00041003 /* Extension */,
+				F8BA1EBB273F847300041003 /* AppModel */,
+				F8BA1EBA273F846E00041003 /* NetworkModel */,
+				F8BA1EB9273F846500041003 /* NetworkService */,
+				F8BA1EB8273F845F00041003 /* Protocol */,
+				F8BA1EB7273F845900041003 /* ViewController */,
+				F8BA1EB6273F845300041003 /* View */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F8BA1EB4273F837D00041003 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F8BA1EC4273F8F8400041003 /* CellTemp.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F8BA1EB5273F844C00041003 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F8BA1EC6273F8F8E00041003 /* TempExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F8BA1EB6273F845300041003 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F8BA1ED0273F8FB800041003 /* TempView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8BA1EB7273F845900041003 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F8A5DED0273EC75B00770A6E /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F8BA1EB8273F845F00041003 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F8BA1ECE273F8FB100041003 /* TempProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F8BA1EB9273F846500041003 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				F8BA1ECC273F8FAB00041003 /* TempNetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		F8BA1EBA273F846E00041003 /* NetworkModel */ = {
+			isa = PBXGroup;
+			children = (
+				F8BA1ECA273F8FA300041003 /* TempNetworkModel.swift */,
+			);
+			path = NetworkModel;
+			sourceTree = "<group>";
+		};
+		F8BA1EBB273F847300041003 /* AppModel */ = {
+			isa = PBXGroup;
+			children = (
+				F8BA1EC8273F8F9500041003 /* TempAppModel.swift */,
+			);
+			path = AppModel;
+			sourceTree = "<group>";
+		};
+		F8BA1EBC273F847800041003 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F8BA1EC0273F8EEA00041003 /* TempConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F8BA1EBD273F84B900041003 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F8A5DED7273EC75C00770A6E /* LaunchScreen.storyboard */,
+				F8A5DED2273EC75B00770A6E /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F8BA1EBE273F84BF00041003 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F8BA1EC2273F8EF700041003 /* TempFonts.swift */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +270,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8A5DED1273EC75B00770A6E /* ViewController.swift in Sources */,
+				F8BA1ECB273F8FA300041003 /* TempNetworkModel.swift in Sources */,
+				F8BA1EC1273F8EEA00041003 /* TempConstants.swift in Sources */,
 				F8A5DECD273EC75B00770A6E /* AppDelegate.swift in Sources */,
+				F8BA1EC5273F8F8400041003 /* CellTemp.swift in Sources */,
 				F8A5DECF273EC75B00770A6E /* SceneDelegate.swift in Sources */,
+				F8BA1ED1273F8FB800041003 /* TempView.swift in Sources */,
+				F8BA1EC9273F8F9500041003 /* TempAppModel.swift in Sources */,
+				F8BA1EC7273F8F8E00041003 /* TempExtension.swift in Sources */,
+				F8BA1ECD273F8FAB00041003 /* TempNetworkService.swift in Sources */,
+				F8BA1ECF273F8FB100041003 /* TempProtocol.swift in Sources */,
+				F8BA1EC3273F8EF700041003 /* TempFonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +431,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T8C9SSEX5G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SOPT-29th-JointSeminar10-iOS/Info.plist";
+				INFOPLIST_FILE = "SOPT-29th-JointSeminar10-iOS/Resource/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +459,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T8C9SSEX5G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SOPT-29th-JointSeminar10-iOS/Info.plist";
+				INFOPLIST_FILE = "SOPT-29th-JointSeminar10-iOS/Resource/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
