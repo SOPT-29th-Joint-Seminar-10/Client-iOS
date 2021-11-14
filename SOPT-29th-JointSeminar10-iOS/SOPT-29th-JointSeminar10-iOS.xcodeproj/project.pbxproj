@@ -15,14 +15,18 @@
 		F8A5DED6273EC75C00770A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8A5DED5273EC75C00770A6E /* Assets.xcassets */; };
 		F8A5DED9273EC75C00770A6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A5DED7273EC75C00770A6E /* LaunchScreen.storyboard */; };
 		F8BA1EC1273F8EEA00041003 /* TempConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC0273F8EEA00041003 /* TempConstants.swift */; };
-		F8BA1EC3273F8EF700041003 /* TempFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC2273F8EF700041003 /* TempFonts.swift */; };
 		F8BA1EC5273F8F8400041003 /* CellTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC4273F8F8400041003 /* CellTemp.swift */; };
-		F8BA1EC7273F8F8E00041003 /* TempExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC6273F8F8E00041003 /* TempExtension.swift */; };
 		F8BA1EC9273F8F9500041003 /* TempAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC8273F8F9500041003 /* TempAppModel.swift */; };
 		F8BA1ECB273F8FA300041003 /* TempNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ECA273F8FA300041003 /* TempNetworkModel.swift */; };
 		F8BA1ECD273F8FAB00041003 /* TempNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ECC273F8FAB00041003 /* TempNetworkService.swift */; };
 		F8BA1ECF273F8FB100041003 /* TempProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ECE273F8FB100041003 /* TempProtocol.swift */; };
 		F8BA1ED1273F8FB800041003 /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ED0273F8FB800041003 /* TempView.swift */; };
+		F8E358F42740CEDC00E7B810 /* SpoqaHanSansNeo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F8E358EF2740CEDB00E7B810 /* SpoqaHanSansNeo-Bold.otf */; };
+		F8E358F52740CEDC00E7B810 /* SpoqaHanSansNeo-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F8E358F02740CEDB00E7B810 /* SpoqaHanSansNeo-Thin.otf */; };
+		F8E358F62740CEDC00E7B810 /* SpoqaHanSansNeo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F8E358F12740CEDC00E7B810 /* SpoqaHanSansNeo-Medium.otf */; };
+		F8E358F72740CEDC00E7B810 /* SpoqaHanSansNeo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F8E358F22740CEDC00E7B810 /* SpoqaHanSansNeo-Regular.otf */; };
+		F8E358F82740CEDC00E7B810 /* SpoqaHanSansNeo-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F8E358F32740CEDC00E7B810 /* SpoqaHanSansNeo-Light.otf */; };
+		F8E358FA2740D0FF00E7B810 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E358F92740D0FF00E7B810 /* UIFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,14 +40,18 @@
 		F8A5DED8273EC75C00770A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8A5DEDA273EC75C00770A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8BA1EC0273F8EEA00041003 /* TempConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConstants.swift; sourceTree = "<group>"; };
-		F8BA1EC2273F8EF700041003 /* TempFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempFonts.swift; sourceTree = "<group>"; };
 		F8BA1EC4273F8F8400041003 /* CellTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTemp.swift; sourceTree = "<group>"; };
-		F8BA1EC6273F8F8E00041003 /* TempExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempExtension.swift; sourceTree = "<group>"; };
 		F8BA1EC8273F8F9500041003 /* TempAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempAppModel.swift; sourceTree = "<group>"; };
 		F8BA1ECA273F8FA300041003 /* TempNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNetworkModel.swift; sourceTree = "<group>"; };
 		F8BA1ECC273F8FAB00041003 /* TempNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNetworkService.swift; sourceTree = "<group>"; };
 		F8BA1ECE273F8FB100041003 /* TempProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempProtocol.swift; sourceTree = "<group>"; };
 		F8BA1ED0273F8FB800041003 /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
+		F8E358EF2740CEDB00E7B810 /* SpoqaHanSansNeo-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Bold.otf"; sourceTree = "<group>"; };
+		F8E358F02740CEDB00E7B810 /* SpoqaHanSansNeo-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Thin.otf"; sourceTree = "<group>"; };
+		F8E358F12740CEDC00E7B810 /* SpoqaHanSansNeo-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Medium.otf"; sourceTree = "<group>"; };
+		F8E358F22740CEDC00E7B810 /* SpoqaHanSansNeo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Regular.otf"; sourceTree = "<group>"; };
+		F8E358F32740CEDC00E7B810 /* SpoqaHanSansNeo-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Light.otf"; sourceTree = "<group>"; };
+		F8E358F92740D0FF00E7B810 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +132,7 @@
 			children = (
 				F8BA1EC6273F8F8E00041003 /* TempExtension.swift */,
 				1590B3E62740D1E700F167D1 /* UIColorPlusExtension.swift */,
+				F8E358F92740D0FF00E7B810 /* UIFont+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -196,7 +205,11 @@
 		F8BA1EBE273F84BF00041003 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				F8BA1EC2273F8EF700041003 /* TempFonts.swift */,
+				F8E358EF2740CEDB00E7B810 /* SpoqaHanSansNeo-Bold.otf */,
+				F8E358F32740CEDC00E7B810 /* SpoqaHanSansNeo-Light.otf */,
+				F8E358F12740CEDC00E7B810 /* SpoqaHanSansNeo-Medium.otf */,
+				F8E358F22740CEDC00E7B810 /* SpoqaHanSansNeo-Regular.otf */,
+				F8E358F02740CEDB00E7B810 /* SpoqaHanSansNeo-Thin.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -260,8 +273,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8A5DED9273EC75C00770A6E /* LaunchScreen.storyboard in Resources */,
+				F8E358F52740CEDC00E7B810 /* SpoqaHanSansNeo-Thin.otf in Resources */,
 				F8A5DED6273EC75C00770A6E /* Assets.xcassets in Resources */,
+				F8E358F72740CEDC00E7B810 /* SpoqaHanSansNeo-Regular.otf in Resources */,
 				F8A5DED4273EC75B00770A6E /* Main.storyboard in Resources */,
+				F8E358F42740CEDC00E7B810 /* SpoqaHanSansNeo-Bold.otf in Resources */,
+				F8E358F62740CEDC00E7B810 /* SpoqaHanSansNeo-Medium.otf in Resources */,
+				F8E358F82740CEDC00E7B810 /* SpoqaHanSansNeo-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,10 +299,9 @@
 				F8A5DECF273EC75B00770A6E /* SceneDelegate.swift in Sources */,
 				F8BA1ED1273F8FB800041003 /* TempView.swift in Sources */,
 				F8BA1EC9273F8F9500041003 /* TempAppModel.swift in Sources */,
-				F8BA1EC7273F8F8E00041003 /* TempExtension.swift in Sources */,
 				F8BA1ECD273F8FAB00041003 /* TempNetworkService.swift in Sources */,
+				F8E358FA2740D0FF00E7B810 /* UIFont+Extension.swift in Sources */,
 				F8BA1ECF273F8FB100041003 /* TempProtocol.swift in Sources */,
-				F8BA1EC3273F8EF700041003 /* TempFonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
