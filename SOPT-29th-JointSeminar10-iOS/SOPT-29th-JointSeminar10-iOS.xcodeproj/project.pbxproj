@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1590B3E72740D1E700F167D1 /* UIColorPlusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B3E62740D1E700F167D1 /* UIColorPlusExtension.swift */; };
 		F8A5DECD273EC75B00770A6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5DECC273EC75B00770A6E /* AppDelegate.swift */; };
 		F8A5DECF273EC75B00770A6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5DECE273EC75B00770A6E /* SceneDelegate.swift */; };
 		F8A5DED1273EC75B00770A6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5DED0273EC75B00770A6E /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1590B3E62740D1E700F167D1 /* UIColorPlusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorPlusExtension.swift; sourceTree = "<group>"; };
 		F8A5DEC9273EC75B00770A6E /* SOPT-29th-JointSeminar10-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-29th-JointSeminar10-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A5DECC273EC75B00770A6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8A5DECE273EC75B00770A6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				F8BA1EC6273F8F8E00041003 /* TempExtension.swift */,
+				1590B3E62740D1E700F167D1 /* UIColorPlusExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1590B3E72740D1E700F167D1 /* UIColorPlusExtension.swift in Sources */,
 				F8A5DED1273EC75B00770A6E /* ViewController.swift in Sources */,
 				F8BA1ECB273F8FA300041003 /* TempNetworkModel.swift in Sources */,
 				F8BA1EC1273F8EEA00041003 /* TempConstants.swift in Sources */,
