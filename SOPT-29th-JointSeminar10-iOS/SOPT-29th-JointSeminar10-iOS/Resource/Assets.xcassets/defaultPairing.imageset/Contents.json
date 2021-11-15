@@ -1,18 +1,18 @@
 {
   "images" : [
     {
-      "filename" : "defaultHome.png",
+      "filename" : "selectedPairing.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "defaultHome@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "selectedPairing@2x.png"
     },
     {
-      "filename" : "defaultHome@3x.png",
       "idiom" : "universal",
+      "filename" : "selectedPairing@3x.png",
       "scale" : "3x"
     }
   ],

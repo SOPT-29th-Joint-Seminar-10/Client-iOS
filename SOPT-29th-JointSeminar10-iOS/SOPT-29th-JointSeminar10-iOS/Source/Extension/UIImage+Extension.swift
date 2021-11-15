@@ -10,75 +10,83 @@ import UIKit
 extension UIImage {
     
     static var defaultCarplan: UIImage {
-        return UIImage(named: "default_carplan")!
+        return UIImage(named: "defaultCarplan")!
     }
     
     static var defaultHome: UIImage {
-        return UIImage(named: "default_home")!
+        return UIImage(named: "defaultHome")!
     }
     
     static var defaultMypage: UIImage {
-        return UIImage(named: "default_mypage")!
+        return UIImage(named: "defaultMypage")!
     }
     
     static var defaultPairing: UIImage {
-        return UIImage(named: "default_pairing")!
+        return UIImage(named: "defaultPairing")!
     }
     
-    static var defaultHeartIcon: UIImage {
-        return UIImage(named: "ic_default_heart_ios")!
+    static var icDefaultHeartIos: UIImage {
+        return UIImage(named: "icDefaultHeartIos")!
+    }
+    
+    static var icPopular: UIImage {
+        return UIImage(named: "icPopular")!
     }
     
     static var selectedCarplan: UIImage {
-        return UIImage(named: "selected_carplan")!
+        return UIImage(named: "selectedCarplan")!
     }
     
     static var selectedHome: UIImage {
-        return UIImage(named: "selected_home")!
+        return UIImage(named: "selectedHome")!
     }
     
     static var selectedMypage: UIImage {
-        return UIImage(named: "selected_mypage")!
+        return UIImage(named: "selectedMypage")!
     }
     
     static var selectedPairing: UIImage {
-        return UIImage(named: "selected_pairing")!
+        return UIImage(named: "selectedPairing")!
     }
     
-    static var selectedHeartIcon: UIImage {
-        return UIImage(named: "ic_selected_heart_ios")!
+    static var icSelectedHeartIos: UIImage {
+        return UIImage(named: "icSelectedHeartIos")!
     }
     
-    static var santafeImage: UIImage {
-        return UIImage(named: "img_싼타페")!
+    static var icSpecialprice: UIImage {
+        return UIImage(named: "icSpecialprice")!
     }
     
-    static var allnewmorningImage: UIImage {
-        return UIImage(named: "img")!
+    static var imgSantafe: UIImage {
+        return UIImage(named: "imgSantafe")!
     }
     
-    static var carnivalImage: UIImage {
-        return UIImage(named: "img11")!
+    static var imgCarnival11: UIImage {
+        return UIImage(named: "imgCarnival11")!
     }
     
-    static var allnewk3Image: UIImage {
-        return UIImage(named: "img_allnewk3")!
+    static var imgAllnewk3: UIImage {
+        return UIImage(named: "imgAllnewk3")!
     }
     
-    static var conaImage: UIImage {
-        return UIImage(named: "img_cona")!
+    static var imgAllnewmorning: UIImage {
+        return UIImage(named: "imgAllnewmorning")!
     }
     
-    static var sportageImage: UIImage {
-        return UIImage(named: "img_sportage")!
+    static var imgCona: UIImage {
+        return UIImage(named: "imgCona")!
     }
     
-    static var thenewavanteImage: UIImage {
-        return UIImage(named: "img_thenewavante")!
+    static var imgSportage: UIImage {
+        return UIImage(named: "imgSportage")!
     }
     
-    static var tosanImage: UIImage {
-        return UIImage(named: "img_tosan")!
+    static var imgThenewavante: UIImage {
+        return UIImage(named: "imgThenewavante")!
+    }
+    
+    static var imgTosan: UIImage {
+        return UIImage(named: "imgTosan")!
     }
     
 }
