@@ -54,11 +54,11 @@ extension UIImage {
     }
     
     static var allnewmorningImage: UIImage {
-        return UIImage(named: "img_올뉴모닝")!
+        return UIImage(named: "img")!
     }
     
     static var carnivalImage: UIImage {
-        return UIImage(named: "img_카니발11인승")!
+        return UIImage(named: "img11")!
     }
     
     static var allnewk3Image: UIImage {
