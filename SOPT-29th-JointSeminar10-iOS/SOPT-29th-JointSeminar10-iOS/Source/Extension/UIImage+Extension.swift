@@ -9,7 +9,7 @@ import UIKit
 
 extension UIImage {
     
-    class var defaultCarplan: UIImage {
+    static var defaultCarplan: UIImage {
         return UIImage(named: "default_carplan")!
     }
     
@@ -17,67 +17,67 @@ extension UIImage {
         return UIImage(named: "default_home")!
     }
     
-    class var defaultMypage: UIImage {
+    static var defaultMypage: UIImage {
         return UIImage(named: "default_mypage")!
     }
     
-    class var defaultPairing: UIImage {
+    static var defaultPairing: UIImage {
         return UIImage(named: "default_pairing")!
     }
     
-    class var defaultHeartIcon: UIImage {
+    static var defaultHeartIcon: UIImage {
         return UIImage(named: "ic_default_heart_ios")!
     }
     
-    class var selectedCarplan: UIImage {
+    static var selectedCarplan: UIImage {
         return UIImage(named: "selected_carplan")!
     }
     
-    class var selectedHome: UIImage {
+    static var selectedHome: UIImage {
         return UIImage(named: "selected_home")!
     }
     
-    class var selectedMypage: UIImage {
+    static var selectedMypage: UIImage {
         return UIImage(named: "selected_mypage")!
     }
     
-    class var selectedPairing: UIImage {
+    static var selectedPairing: UIImage {
         return UIImage(named: "selected_pairing")!
     }
     
-    class var selectedHeartIcon: UIImage {
+    static var selectedHeartIcon: UIImage {
         return UIImage(named: "ic_selected_heart_ios")!
     }
     
-    class var santafeImage: UIImage {
+    static var santafeImage: UIImage {
         return UIImage(named: "img_싼타페")!
     }
     
-    class var allnewmorningImage: UIImage {
+    static var allnewmorningImage: UIImage {
         return UIImage(named: "img_올뉴모닝")!
     }
     
-    class var carnivalImage: UIImage {
+    static var carnivalImage: UIImage {
         return UIImage(named: "img_카니발11인승")!
     }
     
-    class var allnewk3Image: UIImage {
+    static var allnewk3Image: UIImage {
         return UIImage(named: "img_allnewk3")!
     }
     
-    class var conaImage: UIImage {
+    static var conaImage: UIImage {
         return UIImage(named: "img_cona")!
     }
     
-    class var sportageImage: UIImage {
+    static var sportageImage: UIImage {
         return UIImage(named: "img_sportage")!
     }
     
-    class var thenewavanteImage: UIImage {
+    static var thenewavanteImage: UIImage {
         return UIImage(named: "img_thenewavante")!
     }
     
-    class var tosanImage: UIImage {
+    static var tosanImage: UIImage {
         return UIImage(named: "img_tosan")!
     }
     
