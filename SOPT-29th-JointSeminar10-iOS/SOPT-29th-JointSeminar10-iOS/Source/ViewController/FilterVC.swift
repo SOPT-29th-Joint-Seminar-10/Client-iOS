@@ -12,6 +12,7 @@ class FilterVC: UIViewController {
     // MARK: - @IBOutlet Properties
 
     @IBOutlet weak var filterCV: UICollectionView!
+    @IBOutlet weak var reservationCV: UICollectionView!
     
     // MARK: - View Life Cycle
     
@@ -20,6 +21,8 @@ class FilterVC: UIViewController {
         
         filterCV.delegate = self
         filterCV.dataSource = self
+        reservationCV.delegate = self
+        reservationCV.dataSource = self
     }
     
     // TODO: - registerXib() 구현하기
