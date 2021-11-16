@@ -8,22 +8,44 @@
 import UIKit
 
 class FilterVC: UIViewController {
+    
+    // MARK: - @IBOutlet Properties
 
+    @IBOutlet weak var filterCV: UICollectionView!
+    
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        filterCV.delegate = self
+        filterCV.dataSource = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // TODO: - registerXib() 구현하기
+    
+    func registerXib() {
+        let xibName = UINib(nibName: <#T##String#>, bundle: <#T##Bundle?#>)
     }
-    */
+}
 
+// MARK: - Extensions
+
+extension FilterVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        <#code#>
+    }
+}
+
+extension FilterVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
+    
 }
