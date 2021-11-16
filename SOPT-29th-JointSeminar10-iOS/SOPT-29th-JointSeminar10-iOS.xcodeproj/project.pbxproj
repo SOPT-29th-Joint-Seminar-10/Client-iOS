@@ -22,13 +22,14 @@
 		F8983FBB2742C94F00FC69EE /* ReservationCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FB92742C94F00FC69EE /* ReservationCVC.swift */; };
 		F8983FBC2742C94F00FC69EE /* ReservationCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8983FBA2742C94F00FC69EE /* ReservationCVC.xib */; };
 		F8983FBE2742CD4A00FC69EE /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FBD2742CD4A00FC69EE /* CALayer+Extension.swift */; };
+		F8983FC2274337F400FC69EE /* RecommendCarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FC1274337F400FC69EE /* RecommendCarModel.swift */; };
+		F8983FC4274347F100FC69EE /* ReservationCarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FC3274347F100FC69EE /* ReservationCarModel.swift */; };
 		F8A5DECD273EC75B00770A6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5DECC273EC75B00770A6E /* AppDelegate.swift */; };
 		F8A5DECF273EC75B00770A6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5DECE273EC75B00770A6E /* SceneDelegate.swift */; };
 		F8A5DED1273EC75B00770A6E /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5DED0273EC75B00770A6E /* MainTabVC.swift */; };
 		F8A5DED4273EC75B00770A6E /* MainTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A5DED2273EC75B00770A6E /* MainTab.storyboard */; };
 		F8A5DED6273EC75C00770A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8A5DED5273EC75C00770A6E /* Assets.xcassets */; };
 		F8A5DED9273EC75C00770A6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A5DED7273EC75C00770A6E /* LaunchScreen.storyboard */; };
-		F8BA1EC9273F8F9500041003 /* TempAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC8273F8F9500041003 /* TempAppModel.swift */; };
 		F8BA1ECB273F8FA300041003 /* TempNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ECA273F8FA300041003 /* TempNetworkModel.swift */; };
 		F8BA1ECD273F8FAB00041003 /* TempNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ECC273F8FAB00041003 /* TempNetworkService.swift */; };
 		F8BA1ECF273F8FB100041003 /* TempProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ECE273F8FB100041003 /* TempProtocol.swift */; };
@@ -57,6 +58,8 @@
 		F8983FB92742C94F00FC69EE /* ReservationCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationCVC.swift; sourceTree = "<group>"; };
 		F8983FBA2742C94F00FC69EE /* ReservationCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationCVC.xib; sourceTree = "<group>"; };
 		F8983FBD2742CD4A00FC69EE /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		F8983FC1274337F400FC69EE /* RecommendCarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCarModel.swift; sourceTree = "<group>"; };
+		F8983FC3274347F100FC69EE /* ReservationCarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationCarModel.swift; sourceTree = "<group>"; };
 		F8A5DEC9273EC75B00770A6E /* SOPT-29th-JointSeminar10-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-29th-JointSeminar10-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A5DECC273EC75B00770A6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8A5DECE273EC75B00770A6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +68,6 @@
 		F8A5DED5273EC75C00770A6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8A5DED8273EC75C00770A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8A5DEDA273EC75C00770A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8BA1EC8273F8F9500041003 /* TempAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempAppModel.swift; sourceTree = "<group>"; };
 		F8BA1ECA273F8FA300041003 /* TempNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNetworkModel.swift; sourceTree = "<group>"; };
 		F8BA1ECC273F8FAB00041003 /* TempNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNetworkService.swift; sourceTree = "<group>"; };
 		F8BA1ECE273F8FB100041003 /* TempProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempProtocol.swift; sourceTree = "<group>"; };
@@ -220,7 +222,8 @@
 		F8BA1EBB273F847300041003 /* AppModel */ = {
 			isa = PBXGroup;
 			children = (
-				F8BA1EC8273F8F9500041003 /* TempAppModel.swift */,
+				F8983FC1274337F400FC69EE /* RecommendCarModel.swift */,
+				F8983FC3274347F100FC69EE /* ReservationCarModel.swift */,
 			);
 			path = AppModel;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			files = (
 				F8983FB72742C92300FC69EE /* RecommendCarCVC.swift in Sources */,
 				1590B3E72740D1E700F167D1 /* UIColorPlusExtension.swift in Sources */,
+				F8983FC2274337F400FC69EE /* RecommendCarModel.swift in Sources */,
 				F8983FA12742BBD800FC69EE /* Storyboard.swift in Sources */,
 				F8A5DED1273EC75B00770A6E /* MainTabVC.swift in Sources */,
 				F6DF60342740DE8B00A334EF /* UIImage+Extension.swift in Sources */,
@@ -350,13 +354,13 @@
 				F8BA1ED1273F8FB800041003 /* TempView.swift in Sources */,
 				F8983FAE2742C3AF00FC69EE /* HomeVC.swift in Sources */,
 				F8983FA32742BD5B00FC69EE /* Xib.swift in Sources */,
-				F8BA1EC9273F8F9500041003 /* TempAppModel.swift in Sources */,
 				F8BA1ECD273F8FAB00041003 /* TempNetworkService.swift in Sources */,
 				F8E358FA2740D0FF00E7B810 /* UIFont+Extension.swift in Sources */,
 				F8983FBB2742C94F00FC69EE /* ReservationCVC.swift in Sources */,
 				F8983FBE2742CD4A00FC69EE /* CALayer+Extension.swift in Sources */,
 				F8BA1ECF273F8FB100041003 /* TempProtocol.swift in Sources */,
 				F8983F9D2742BBCB00FC69EE /* Const.swift in Sources */,
+				F8983FC4274347F100FC69EE /* ReservationCarModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,8 +514,10 @@
 				INFOPLIST_FILE = "SOPT-29th-JointSeminar10-iOS/Resource/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,7 +527,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -537,8 +543,10 @@
 				INFOPLIST_FILE = "SOPT-29th-JointSeminar10-iOS/Resource/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -548,7 +556,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
