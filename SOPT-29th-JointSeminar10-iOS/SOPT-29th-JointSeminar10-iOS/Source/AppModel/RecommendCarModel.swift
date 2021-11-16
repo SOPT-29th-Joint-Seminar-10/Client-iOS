@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct RecommendCarModle {
+struct RecommendCarModel {
     let name: String
     let price: String
     let discount: String
