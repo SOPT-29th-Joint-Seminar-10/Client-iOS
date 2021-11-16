@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1590B3E72740D1E700F167D1 /* UIColorPlusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B3E62740D1E700F167D1 /* UIColorPlusExtension.swift */; };
+		15C8EDF42743F60600B4C486 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C8EDF32743F60600B4C486 /* Filter.storyboard */; };
 		F6DF60342740DE8B00A334EF /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */; };
 		F8983F9D2742BBCB00FC69EE /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983F9C2742BBCB00FC69EE /* Const.swift */; };
 		F8983F9F2742BBD200FC69EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983F9E2742BBD200FC69EE /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		1590B3E62740D1E700F167D1 /* UIColorPlusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorPlusExtension.swift; sourceTree = "<group>"; };
+		15C8EDF32743F60600B4C486 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		F8983F9C2742BBCB00FC69EE /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		F8983F9E2742BBD200FC69EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			children = (
 				F8A5DED7273EC75C00770A6E /* LaunchScreen.storyboard */,
 				F8A5DED2273EC75B00770A6E /* MainTab.storyboard */,
+				15C8EDF32743F60600B4C486 /* Filter.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				F8983FB82742C92300FC69EE /* RecommendCarCVC.xib in Resources */,
 				F8A5DED4273EC75B00770A6E /* MainTab.storyboard in Resources */,
 				F8E358F42740CEDC00E7B810 /* SpoqaHanSansNeo-Bold.otf in Resources */,
+				15C8EDF42743F60600B4C486 /* Filter.storyboard in Resources */,
 				F8E358F62740CEDC00E7B810 /* SpoqaHanSansNeo-Medium.otf in Resources */,
 				F8E358F82740CEDC00E7B810 /* SpoqaHanSansNeo-Light.otf in Resources */,
 				F8983FBC2742C94F00FC69EE /* ReservationCVC.xib in Resources */,
