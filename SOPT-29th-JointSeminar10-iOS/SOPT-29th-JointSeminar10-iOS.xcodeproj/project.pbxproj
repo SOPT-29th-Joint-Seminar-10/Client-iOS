@@ -7,45 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1590B3E72740D1E700F167D1 /* UIColorPlusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B3E62740D1E700F167D1 /* UIColorPlusExtension.swift */; };
+		154DD60327449D630089585B /* FilterCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154DD60127449D630089585B /* FilterCVC.swift */; };
+		154DD60427449D630089585B /* FilterCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154DD60227449D630089585B /* FilterCVC.xib */; };
+		1590B3E72740D1E700F167D1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B3E62740D1E700F167D1 /* UIColor+Extension.swift */; };
+		15C8EDF42743F60600B4C486 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C8EDF32743F60600B4C486 /* Filter.storyboard */; };
+		15C8EDF82743F6C400B4C486 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8EDF72743F6C400B4C486 /* FilterVC.swift */; };
 		F6DF60342740DE8B00A334EF /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */; };
+		F8983F9D2742BBCB00FC69EE /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983F9C2742BBCB00FC69EE /* Const.swift */; };
+		F8983F9F2742BBD200FC69EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983F9E2742BBD200FC69EE /* ViewController.swift */; };
+		F8983FA12742BBD800FC69EE /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FA02742BBD800FC69EE /* Storyboard.swift */; };
+		F8983FA32742BD5B00FC69EE /* Xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FA22742BD5B00FC69EE /* Xib.swift */; };
+		F8983FAE2742C3AF00FC69EE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FAD2742C3AF00FC69EE /* HomeVC.swift */; };
+		F8983FB02742C3B900FC69EE /* CarPlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FAF2742C3B900FC69EE /* CarPlanVC.swift */; };
+		F8983FB22742C3C600FC69EE /* PairingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FB12742C3C600FC69EE /* PairingVC.swift */; };
+		F8983FB42742C3CE00FC69EE /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FB32742C3CE00FC69EE /* MyPageVC.swift */; };
+		F8983FB72742C92300FC69EE /* RecommendCarCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FB52742C92300FC69EE /* RecommendCarCVC.swift */; };
+		F8983FB82742C92300FC69EE /* RecommendCarCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8983FB62742C92300FC69EE /* RecommendCarCVC.xib */; };
+		F8983FBB2742C94F00FC69EE /* ReservationCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FB92742C94F00FC69EE /* ReservationCVC.swift */; };
+		F8983FBC2742C94F00FC69EE /* ReservationCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8983FBA2742C94F00FC69EE /* ReservationCVC.xib */; };
+		F8983FBE2742CD4A00FC69EE /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FBD2742CD4A00FC69EE /* CALayer+Extension.swift */; };
+		F8983FC2274337F400FC69EE /* RecommendCarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FC1274337F400FC69EE /* RecommendCarModel.swift */; };
+		F8983FC4274347F100FC69EE /* ReservationCarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FC3274347F100FC69EE /* ReservationCarModel.swift */; };
 		F8A5DECD273EC75B00770A6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5DECC273EC75B00770A6E /* AppDelegate.swift */; };
 		F8A5DECF273EC75B00770A6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5DECE273EC75B00770A6E /* SceneDelegate.swift */; };
-		F8A5DED1273EC75B00770A6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5DED0273EC75B00770A6E /* ViewController.swift */; };
-		F8A5DED4273EC75B00770A6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A5DED2273EC75B00770A6E /* Main.storyboard */; };
+		F8A5DED1273EC75B00770A6E /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5DED0273EC75B00770A6E /* MainTabVC.swift */; };
+		F8A5DED4273EC75B00770A6E /* MainTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A5DED2273EC75B00770A6E /* MainTab.storyboard */; };
 		F8A5DED6273EC75C00770A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8A5DED5273EC75C00770A6E /* Assets.xcassets */; };
 		F8A5DED9273EC75C00770A6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A5DED7273EC75C00770A6E /* LaunchScreen.storyboard */; };
-		F8BA1EC1273F8EEA00041003 /* TempConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC0273F8EEA00041003 /* TempConstants.swift */; };
-		F8BA1EC3273F8EF700041003 /* TempFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC2273F8EF700041003 /* TempFonts.swift */; };
-		F8BA1EC5273F8F8400041003 /* CellTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC4273F8F8400041003 /* CellTemp.swift */; };
-		F8BA1EC7273F8F8E00041003 /* TempExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC6273F8F8E00041003 /* TempExtension.swift */; };
-		F8BA1EC9273F8F9500041003 /* TempAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1EC8273F8F9500041003 /* TempAppModel.swift */; };
 		F8BA1ECB273F8FA300041003 /* TempNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ECA273F8FA300041003 /* TempNetworkModel.swift */; };
 		F8BA1ECD273F8FAB00041003 /* TempNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ECC273F8FAB00041003 /* TempNetworkService.swift */; };
 		F8BA1ECF273F8FB100041003 /* TempProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ECE273F8FB100041003 /* TempProtocol.swift */; };
-		F8BA1ED1273F8FB800041003 /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ED0273F8FB800041003 /* TempView.swift */; };
+		F8C7AF8627439483004D0BD6 /* ReservationHistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C7AF8527439483004D0BD6 /* ReservationHistoryView.xib */; };
+		F8C7AF892743949B004D0BD6 /* ReservationHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C7AF882743949B004D0BD6 /* ReservationHistoryView.swift */; };
+		F8E358F42740CEDC00E7B810 /* SpoqaHanSansNeo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F8E358EF2740CEDB00E7B810 /* SpoqaHanSansNeo-Bold.otf */; };
+		F8E358F52740CEDC00E7B810 /* SpoqaHanSansNeo-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F8E358F02740CEDB00E7B810 /* SpoqaHanSansNeo-Thin.otf */; };
+		F8E358F62740CEDC00E7B810 /* SpoqaHanSansNeo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F8E358F12740CEDC00E7B810 /* SpoqaHanSansNeo-Medium.otf */; };
+		F8E358F72740CEDC00E7B810 /* SpoqaHanSansNeo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F8E358F22740CEDC00E7B810 /* SpoqaHanSansNeo-Regular.otf */; };
+		F8E358F82740CEDC00E7B810 /* SpoqaHanSansNeo-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F8E358F32740CEDC00E7B810 /* SpoqaHanSansNeo-Light.otf */; };
+		F8E358FA2740D0FF00E7B810 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E358F92740D0FF00E7B810 /* UIFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		154DD60127449D630089585B /* FilterCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCVC.swift; sourceTree = "<group>"; };
+		154DD60227449D630089585B /* FilterCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCVC.xib; sourceTree = "<group>"; };
+		1590B3E62740D1E700F167D1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		15C8EDF32743F60600B4C486 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
+		15C8EDF72743F6C400B4C486 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		1590B3E62740D1E700F167D1 /* UIColorPlusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorPlusExtension.swift; sourceTree = "<group>"; };
+		F8983F9C2742BBCB00FC69EE /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		F8983F9E2742BBD200FC69EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F8983FA02742BBD800FC69EE /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		F8983FA22742BD5B00FC69EE /* Xib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xib.swift; sourceTree = "<group>"; };
+		F8983FAD2742C3AF00FC69EE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		F8983FAF2742C3B900FC69EE /* CarPlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPlanVC.swift; sourceTree = "<group>"; };
+		F8983FB12742C3C600FC69EE /* PairingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingVC.swift; sourceTree = "<group>"; };
+		F8983FB32742C3CE00FC69EE /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
+		F8983FB52742C92300FC69EE /* RecommendCarCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCarCVC.swift; sourceTree = "<group>"; };
+		F8983FB62742C92300FC69EE /* RecommendCarCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCarCVC.xib; sourceTree = "<group>"; };
+		F8983FB92742C94F00FC69EE /* ReservationCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationCVC.swift; sourceTree = "<group>"; };
+		F8983FBA2742C94F00FC69EE /* ReservationCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationCVC.xib; sourceTree = "<group>"; };
+		F8983FBD2742CD4A00FC69EE /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		F8983FC1274337F400FC69EE /* RecommendCarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCarModel.swift; sourceTree = "<group>"; };
+		F8983FC3274347F100FC69EE /* ReservationCarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationCarModel.swift; sourceTree = "<group>"; };
 		F8A5DEC9273EC75B00770A6E /* SOPT-29th-JointSeminar10-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-29th-JointSeminar10-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A5DECC273EC75B00770A6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8A5DECE273EC75B00770A6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F8A5DED0273EC75B00770A6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F8A5DED3273EC75B00770A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8A5DED0273EC75B00770A6E /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
+		F8A5DED3273EC75B00770A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainTab.storyboard; sourceTree = "<group>"; };
 		F8A5DED5273EC75C00770A6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8A5DED8273EC75C00770A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8A5DEDA273EC75C00770A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8BA1EC0273F8EEA00041003 /* TempConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConstants.swift; sourceTree = "<group>"; };
-		F8BA1EC2273F8EF700041003 /* TempFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempFonts.swift; sourceTree = "<group>"; };
-		F8BA1EC4273F8F8400041003 /* CellTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTemp.swift; sourceTree = "<group>"; };
-		F8BA1EC6273F8F8E00041003 /* TempExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempExtension.swift; sourceTree = "<group>"; };
-		F8BA1EC8273F8F9500041003 /* TempAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempAppModel.swift; sourceTree = "<group>"; };
 		F8BA1ECA273F8FA300041003 /* TempNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNetworkModel.swift; sourceTree = "<group>"; };
 		F8BA1ECC273F8FAB00041003 /* TempNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNetworkService.swift; sourceTree = "<group>"; };
 		F8BA1ECE273F8FB100041003 /* TempProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempProtocol.swift; sourceTree = "<group>"; };
-		F8BA1ED0273F8FB800041003 /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
+		F8C7AF8527439483004D0BD6 /* ReservationHistoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationHistoryView.xib; sourceTree = "<group>"; };
+		F8C7AF882743949B004D0BD6 /* ReservationHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationHistoryView.swift; sourceTree = "<group>"; };
+		F8E358EF2740CEDB00E7B810 /* SpoqaHanSansNeo-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Bold.otf"; sourceTree = "<group>"; };
+		F8E358F02740CEDB00E7B810 /* SpoqaHanSansNeo-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Thin.otf"; sourceTree = "<group>"; };
+		F8E358F12740CEDC00E7B810 /* SpoqaHanSansNeo-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Medium.otf"; sourceTree = "<group>"; };
+		F8E358F22740CEDC00E7B810 /* SpoqaHanSansNeo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Regular.otf"; sourceTree = "<group>"; };
+		F8E358F32740CEDC00E7B810 /* SpoqaHanSansNeo-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Light.otf"; sourceTree = "<group>"; };
+		F8E358F92740D0FF00E7B810 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +101,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F8983FA42742C31B00FC69EE /* Tabar */ = {
+			isa = PBXGroup;
+			children = (
+				F8A5DED0273EC75B00770A6E /* MainTabVC.swift */,
+				F8983FAD2742C3AF00FC69EE /* HomeVC.swift */,
+				F8983FAF2742C3B900FC69EE /* CarPlanVC.swift */,
+				F8983FB12742C3C600FC69EE /* PairingVC.swift */,
+				F8983FB32742C3CE00FC69EE /* MyPageVC.swift */,
+			);
+			path = Tabar;
+			sourceTree = "<group>";
+		};
 		F8A5DEC0273EC75B00770A6E = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +170,12 @@
 		F8BA1EB4273F837D00041003 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				F8BA1EC4273F8F8400041003 /* CellTemp.swift */,
+				F8983FB52742C92300FC69EE /* RecommendCarCVC.swift */,
+				F8983FB62742C92300FC69EE /* RecommendCarCVC.xib */,
+				F8983FB92742C94F00FC69EE /* ReservationCVC.swift */,
+				F8983FBA2742C94F00FC69EE /* ReservationCVC.xib */,
+				154DD60127449D630089585B /* FilterCVC.swift */,
+				154DD60227449D630089585B /* FilterCVC.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -124,11 +183,10 @@
 		F8BA1EB5273F844C00041003 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F8BA1EC6273F8F8E00041003 /* TempExtension.swift */,
 				F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */,
-				F8BA1EC6273F8F8E00041003 /* TempExtension.swift */,
-				1590B3E62740D1E700F167D1 /* UIColorPlusExtension.swift */,
+				1590B3E62740D1E700F167D1 /* UIColor+Extension.swift */,
 				F8E358F92740D0FF00E7B810 /* UIFont+Extension.swift */,
+				F8983FBD2742CD4A00FC69EE /* CALayer+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -136,7 +194,7 @@
 		F8BA1EB6273F845300041003 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F8BA1ED0273F8FB800041003 /* TempView.swift */,
+				F8C7AF872743948C004D0BD6 /* ReservationHistoryView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,7 +202,8 @@
 		F8BA1EB7273F845900041003 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F8A5DED0273EC75B00770A6E /* ViewController.swift */,
+				F8983FA42742C31B00FC69EE /* Tabar */,
+				15C8EDF72743F6C400B4C486 /* FilterVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -176,7 +235,8 @@
 		F8BA1EBB273F847300041003 /* AppModel */ = {
 			isa = PBXGroup;
 			children = (
-				F8BA1EC8273F8F9500041003 /* TempAppModel.swift */,
+				F8983FC1274337F400FC69EE /* RecommendCarModel.swift */,
+				F8983FC3274347F100FC69EE /* ReservationCarModel.swift */,
 			);
 			path = AppModel;
 			sourceTree = "<group>";
@@ -184,7 +244,10 @@
 		F8BA1EBC273F847800041003 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				F8BA1EC0273F8EEA00041003 /* TempConstants.swift */,
+				F8983F9C2742BBCB00FC69EE /* Const.swift */,
+				F8983F9E2742BBD200FC69EE /* ViewController.swift */,
+				F8983FA02742BBD800FC69EE /* Storyboard.swift */,
+				F8983FA22742BD5B00FC69EE /* Xib.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -193,7 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				F8A5DED7273EC75C00770A6E /* LaunchScreen.storyboard */,
-				F8A5DED2273EC75B00770A6E /* Main.storyboard */,
+				F8A5DED2273EC75B00770A6E /* MainTab.storyboard */,
+				15C8EDF32743F60600B4C486 /* Filter.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -201,9 +265,22 @@
 		F8BA1EBE273F84BF00041003 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				F8BA1EC2273F8EF700041003 /* TempFonts.swift */,
+				F8E358EF2740CEDB00E7B810 /* SpoqaHanSansNeo-Bold.otf */,
+				F8E358F32740CEDC00E7B810 /* SpoqaHanSansNeo-Light.otf */,
+				F8E358F12740CEDC00E7B810 /* SpoqaHanSansNeo-Medium.otf */,
+				F8E358F22740CEDC00E7B810 /* SpoqaHanSansNeo-Regular.otf */,
+				F8E358F02740CEDB00E7B810 /* SpoqaHanSansNeo-Thin.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F8C7AF872743948C004D0BD6 /* ReservationHistoryView */ = {
+			isa = PBXGroup;
+			children = (
+				F8C7AF882743949B004D0BD6 /* ReservationHistoryView.swift */,
+				F8C7AF8527439483004D0BD6 /* ReservationHistoryView.xib */,
+			);
+			path = ReservationHistoryView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +342,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8A5DED9273EC75C00770A6E /* LaunchScreen.storyboard in Resources */,
+				F8E358F52740CEDC00E7B810 /* SpoqaHanSansNeo-Thin.otf in Resources */,
 				F8A5DED6273EC75C00770A6E /* Assets.xcassets in Resources */,
-				F8A5DED4273EC75B00770A6E /* Main.storyboard in Resources */,
+				154DD60427449D630089585B /* FilterCVC.xib in Resources */,
+				F8C7AF8627439483004D0BD6 /* ReservationHistoryView.xib in Resources */,
+				F8E358F72740CEDC00E7B810 /* SpoqaHanSansNeo-Regular.otf in Resources */,
+				F8983FB82742C92300FC69EE /* RecommendCarCVC.xib in Resources */,
+				F8A5DED4273EC75B00770A6E /* MainTab.storyboard in Resources */,
+				F8E358F42740CEDC00E7B810 /* SpoqaHanSansNeo-Bold.otf in Resources */,
+				15C8EDF42743F60600B4C486 /* Filter.storyboard in Resources */,
+				F8E358F62740CEDC00E7B810 /* SpoqaHanSansNeo-Medium.otf in Resources */,
+				F8E358F82740CEDC00E7B810 /* SpoqaHanSansNeo-Light.otf in Resources */,
+				F8983FBC2742C94F00FC69EE /* ReservationCVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,32 +364,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1590B3E72740D1E700F167D1 /* UIColorPlusExtension.swift in Sources */,
+				F8983FB72742C92300FC69EE /* RecommendCarCVC.swift in Sources */,
+				1590B3E72740D1E700F167D1 /* UIColor+Extension.swift in Sources */,
+				15C8EDF82743F6C400B4C486 /* FilterVC.swift in Sources */,
+				1590B3E72740D1E700F167D1 /* UIColor+Extension.swift in Sources */,
+				154DD60327449D630089585B /* FilterCVC.swift in Sources */,
+				F8983FC2274337F400FC69EE /* RecommendCarModel.swift in Sources */,
+				F8983FA12742BBD800FC69EE /* Storyboard.swift in Sources */,
+				F8A5DED1273EC75B00770A6E /* MainTabVC.swift in Sources */,
 				F6DF60342740DE8B00A334EF /* UIImage+Extension.swift in Sources */,
-				F8A5DED1273EC75B00770A6E /* ViewController.swift in Sources */,
 				F8BA1ECB273F8FA300041003 /* TempNetworkModel.swift in Sources */,
-				F8BA1EC1273F8EEA00041003 /* TempConstants.swift in Sources */,
+				F8983FB02742C3B900FC69EE /* CarPlanVC.swift in Sources */,
+				F8983F9F2742BBD200FC69EE /* ViewController.swift in Sources */,
+				F8983FB42742C3CE00FC69EE /* MyPageVC.swift in Sources */,
 				F8A5DECD273EC75B00770A6E /* AppDelegate.swift in Sources */,
-				F8BA1EC5273F8F8400041003 /* CellTemp.swift in Sources */,
 				F8A5DECF273EC75B00770A6E /* SceneDelegate.swift in Sources */,
-				F8BA1ED1273F8FB800041003 /* TempView.swift in Sources */,
-				F8BA1EC9273F8F9500041003 /* TempAppModel.swift in Sources */,
-				F8BA1EC7273F8F8E00041003 /* TempExtension.swift in Sources */,
+				F8983FB22742C3C600FC69EE /* PairingVC.swift in Sources */,
+				F8983FAE2742C3AF00FC69EE /* HomeVC.swift in Sources */,
+				F8983FA32742BD5B00FC69EE /* Xib.swift in Sources */,
 				F8BA1ECD273F8FAB00041003 /* TempNetworkService.swift in Sources */,
+				F8E358FA2740D0FF00E7B810 /* UIFont+Extension.swift in Sources */,
+				F8983FBB2742C94F00FC69EE /* ReservationCVC.swift in Sources */,
+				F8983FBE2742CD4A00FC69EE /* CALayer+Extension.swift in Sources */,
+				F8C7AF892743949B004D0BD6 /* ReservationHistoryView.swift in Sources */,
 				F8BA1ECF273F8FB100041003 /* TempProtocol.swift in Sources */,
-				F8BA1EC3273F8EF700041003 /* TempFonts.swift in Sources */,
+				F8983F9D2742BBCB00FC69EE /* Const.swift in Sources */,
+				F8983FC4274347F100FC69EE /* ReservationCarModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F8A5DED2273EC75B00770A6E /* Main.storyboard */ = {
+		F8A5DED2273EC75B00770A6E /* MainTab.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F8A5DED3273EC75B00770A6E /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainTab.storyboard;
 			sourceTree = "<group>";
 		};
 		F8A5DED7273EC75C00770A6E /* LaunchScreen.storyboard */ = {
@@ -444,9 +543,10 @@
 				INFOPLIST_FILE = "SOPT-29th-JointSeminar10-iOS/Resource/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +556,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -472,9 +572,10 @@
 				INFOPLIST_FILE = "SOPT-29th-JointSeminar10-iOS/Resource/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,7 +585,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
