@@ -23,21 +23,23 @@ class FilterVC: UIViewController {
         filterCV.dataSource = self
         reservationCV.delegate = self
         reservationCV.dataSource = self
+        
+        registerXib()
     }
     
     // TODO: - registerXib() 구현하기
     
     func registerXib() {
-        let xibName = UINib(nibName: <#T##String#>, bundle: <#T##Bundle?#>)
+        let xibName = UINib(nibName: Const.Xib.NibName.reservationCVC, bundle: nil)
+        filterCV.register(xibName, forCellWithReuseIdentifier: Const.Xib.NibName.reservationCVC)
+        reservationCV.register(xibName, forCellWithReuseIdentifier: Const.Xib.NibName.reservationCVC)
     }
 }
 
 // MARK: - Extensions
 
 extension FilterVC: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
-    }
+
 }
 
 extension FilterVC: UICollectionViewDataSource {
@@ -47,7 +49,9 @@ extension FilterVC: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.Xib.NibName.reservationCVC, for: indexPath) as? ReservationCVC else {return UICollectionViewCell()}
+        
+        return cell
     }
     
     
