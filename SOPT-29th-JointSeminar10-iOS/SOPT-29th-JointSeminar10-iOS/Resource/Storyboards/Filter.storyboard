@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -18,9 +19,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tbU-BV-ywt">
-                                <rect key="frame" x="16" y="152" width="343" height="644"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgM-Ru-urP">
+                                <rect key="frame" x="0.0" y="104" width="375" height="48"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2ve-ct-aY6">
+                                        <rect key="frame" x="0.0" y="8" width="375" height="32"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="s7r-1p-Ezw"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wVG-27-bnb">
+                                            <size key="itemSize" width="128" height="24"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCVC" id="2gV-NZ-PH4" customClass="FilterCVC" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="4" width="128" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cS1-n1-5Sp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2ve-ct-aY6" secondAttribute="bottom" constant="8" id="7qk-J2-0Jh"/>
+                                    <constraint firstItem="2ve-ct-aY6" firstAttribute="top" secondItem="hgM-Ru-urP" secondAttribute="top" constant="8" id="TTC-wb-FwG"/>
+                                    <constraint firstAttribute="trailing" secondItem="2ve-ct-aY6" secondAttribute="trailing" id="ftt-bW-MLb"/>
+                                    <constraint firstAttribute="height" constant="48" id="oj5-PQ-4mY"/>
+                                    <constraint firstItem="2ve-ct-aY6" firstAttribute="leading" secondItem="hgM-Ru-urP" secondAttribute="leading" id="yEl-X4-tMa"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tbU-BV-ywt">
+                                <rect key="frame" x="16" y="168" width="343" height="628"/>
+                                <color key="backgroundColor" name="gray020"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gal-LU-DgW">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -38,47 +75,24 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x84-UC-G6o">
-                                <rect key="frame" x="0.0" y="104" width="375" height="32"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="b8C-LV-4Me"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hmO-3p-bG4">
-                                    <size key="itemSize" width="128" height="24"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCVC" id="Flj-PE-jxq" customClass="FilterCVC" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="4" width="128" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hFy-M4-nkv">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="24"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="gray020"/>
                         <constraints>
+                            <constraint firstItem="tbU-BV-ywt" firstAttribute="top" secondItem="hgM-Ru-urP" secondAttribute="bottom" constant="16" id="2Cf-Lj-2ot"/>
                             <constraint firstAttribute="bottom" secondItem="tbU-BV-ywt" secondAttribute="bottom" constant="16" id="6Dh-yD-KO5"/>
-                            <constraint firstItem="x84-UC-G6o" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="PzX-3Z-Gvk"/>
-                            <constraint firstItem="x84-UC-G6o" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="b4e-mG-kvS"/>
-                            <constraint firstItem="x84-UC-G6o" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="dQv-a9-rvK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hgM-Ru-urP" secondAttribute="trailing" id="Ig3-LW-Wrf"/>
+                            <constraint firstItem="hgM-Ru-urP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="QBG-Qe-yZu"/>
                             <constraint firstItem="tbU-BV-ywt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="e8C-cP-SUu"/>
+                            <constraint firstItem="hgM-Ru-urP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="eZ5-OV-MwR"/>
                             <constraint firstItem="tbU-BV-ywt" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-16" id="joo-hg-h7T"/>
-                            <constraint firstItem="tbU-BV-ywt" firstAttribute="top" secondItem="x84-UC-G6o" secondAttribute="bottom" constant="16" id="k3h-Rv-OZ2"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="filterCV" destination="x84-UC-G6o" id="jQO-xJ-yDG"/>
-                        <outlet property="reservationCV" destination="tbU-BV-ywt" id="dm5-fn-5VE"/>
+                        <outlet property="filterCV" destination="2ve-ct-aY6" id="054-Me-RHY"/>
+                        <outlet property="reservationCV" destination="tbU-BV-ywt" id="U90-rH-8iB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -87,6 +101,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="gray020">
+            <color red="0.96899998188018799" green="0.97299998998641968" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
