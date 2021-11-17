@@ -15,6 +15,7 @@ class MainTabVC: UITabBarController {
         super.viewDidLoad()
         
         setTabar()
+        setUI()
     }
 }
 
@@ -33,27 +34,27 @@ extension MainTabVC {
         myPageVC.tabBarItem = UITabBarItem(title: "마이페이지", image: .defaultMypage, selectedImage: .selectedMypage)
 
         setViewControllers([homeVC, carPlanVC, pairingVC, myPageVC], animated: true)
-        
-        // set tabbar appearance
+    }
+    
+    private func setUI() {
         let appearance = UITabBarAppearance()
+        // set tabbar opacity
         appearance.configureWithOpaqueBackground()
+        
+        // remove tabbar border line
+        appearance.shadowColor = UIColor.clear
+        
+        // set tabbar background color
+        appearance.backgroundColor = .white
+
+        tabBar.standardAppearance = appearance
+        
         if #available(iOS 15.0, *) {
-            appearance.backgroundColor = .white
-            // remove tabbar border line
-            appearance.shadowColor = UIColor.clear
-            
-            tabBar.standardAppearance = appearance
-        } else {
-            // TODO: - 13 시뮬레이터에서 되는지 확인해야함
-            tabBar.isTranslucent = false
-            tabBar.barTintColor = .white
-            // remove tabbar border line
-            appearance.shadowColor = UIColor.clear
-            
-            tabBar.standardAppearance = appearance
+            // set tabbar opacity
+            tabBar.scrollEdgeAppearance = tabBar.standardAppearance
         }
+        
         tabBar.tintColor = .black
-        tabBar.scrollEdgeAppearance = tabBar.standardAppearance
         tabBar.layer.applyShadow(color: .black,
                                  alpha: 0.3,
                                  x: 0,

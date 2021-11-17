@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="71I-Xh-FbG" customClass="ReservationHistoryView" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="471" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7W-Ur-urZ">
+                    <rect key="frame" x="32" y="12" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maL-fC-i4A">
+                    <rect key="frame" x="32" y="33" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSD-cd-ZDI">
+                    <rect key="frame" x="117" y="12" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7b-HZ-i7t">
+                    <rect key="frame" x="117" y="33" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8N-ta-A33">
+                    <rect key="frame" x="98" y="12" width="3" height="86"/>
+                    <color key="backgroundColor" name="gray070"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="3" id="9qj-LO-1pM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="blue010"/>
+            <constraints>
+                <constraint firstItem="V7b-HZ-i7t" firstAttribute="leading" secondItem="FSD-cd-ZDI" secondAttribute="leading" id="9IP-5v-GIb"/>
+                <constraint firstItem="X7W-Ur-urZ" firstAttribute="top" secondItem="71I-Xh-FbG" secondAttribute="top" constant="12" id="Aiz-6J-EYi"/>
+                <constraint firstItem="Q8N-ta-A33" firstAttribute="leading" secondItem="X7W-Ur-urZ" secondAttribute="trailing" constant="24" id="HFs-pR-X1m"/>
+                <constraint firstItem="V7b-HZ-i7t" firstAttribute="top" secondItem="FSD-cd-ZDI" secondAttribute="bottom" id="aNj-ex-cb2"/>
+                <constraint firstItem="Q8N-ta-A33" firstAttribute="top" secondItem="71I-Xh-FbG" secondAttribute="top" constant="12" id="aVy-p7-f5y"/>
+                <constraint firstItem="maL-fC-i4A" firstAttribute="leading" secondItem="X7W-Ur-urZ" secondAttribute="leading" id="e1N-V1-Tb4"/>
+                <constraint firstItem="X7W-Ur-urZ" firstAttribute="leading" secondItem="71I-Xh-FbG" secondAttribute="leading" constant="32" id="edd-1j-fhA"/>
+                <constraint firstItem="FSD-cd-ZDI" firstAttribute="top" secondItem="71I-Xh-FbG" secondAttribute="top" constant="12" id="iyD-6v-XRc"/>
+                <constraint firstAttribute="bottom" secondItem="Q8N-ta-A33" secondAttribute="bottom" constant="12" id="lgJ-Ta-nA0"/>
+                <constraint firstItem="maL-fC-i4A" firstAttribute="top" secondItem="X7W-Ur-urZ" secondAttribute="bottom" id="nwr-hc-dpy"/>
+                <constraint firstItem="FSD-cd-ZDI" firstAttribute="leading" secondItem="Q8N-ta-A33" secondAttribute="trailing" constant="16" id="u8w-jY-Xur"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dayLabel" destination="X7W-Ur-urZ" id="kzA-hl-Vz5"/>
+                <outlet property="mainAddressLabel" destination="FSD-cd-ZDI" id="eO3-M0-3LQ"/>
+                <outlet property="subAddressLabel" destination="V7b-HZ-i7t" id="Eci-ej-dG6"/>
+                <outlet property="weekLabel" destination="maL-fC-i4A" id="fBf-L3-iTY"/>
+            </connections>
+            <point key="canvasLocation" x="565.94202898550725" y="-773.4375"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="blue010">
+            <color red="0.88200002908706665" green="0.96100002527236938" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray070">
+            <color red="0.15700000524520874" green="0.19599999487400055" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
