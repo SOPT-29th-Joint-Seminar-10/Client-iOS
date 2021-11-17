@@ -223,7 +223,7 @@
                                                     <constraint firstAttribute="width" constant="375" id="LgR-pB-uuc"/>
                                                     <constraint firstAttribute="height" constant="285" id="y2u-vc-cLG"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="d9L-sn-Wn9">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="d9L-sn-Wn9">
                                                     <size key="itemSize" width="128" height="128"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -285,6 +285,7 @@
                         <outlet property="firstRentalView" destination="jha-Eq-kxt" id="5eM-ey-LSu"/>
                         <outlet property="fourthRentalView" destination="fbG-JM-bj3" id="TX6-Eh-Qdz"/>
                         <outlet property="fromTextField" destination="nA3-Zv-G3E" id="QfO-RZ-zSN"/>
+                        <outlet property="recommendCollectionView" destination="Tiu-tN-vL2" id="nd2-Su-iTB"/>
                         <outlet property="reservationButton" destination="Hvn-Xb-nSK" id="mfO-QG-6X7"/>
                         <outlet property="secondRentalView" destination="bhA-Lz-X07" id="GJk-hU-VTz"/>
                         <outlet property="thridRentalView" destination="CMY-rr-69z" id="JDX-2Q-YAE"/>

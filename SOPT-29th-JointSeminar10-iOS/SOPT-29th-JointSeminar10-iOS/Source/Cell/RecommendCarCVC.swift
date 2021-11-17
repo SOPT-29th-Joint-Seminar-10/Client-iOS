@@ -8,6 +8,8 @@
 import UIKit
 
 class RecommendCarCVC: UICollectionViewCell {
+    
+    static let identifier = "RecommendCarCVC"
 
     // MARK: - @IBOutlet Properties
     
