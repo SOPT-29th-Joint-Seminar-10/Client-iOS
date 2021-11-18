@@ -30,6 +30,10 @@ class CarPlanVC: UIViewController {
         super.viewDidLoad()
 
         editChanged()
+        
+        setPlaceholder()
+        setTextField()
+        
         initRecommendCarModel()
         setCollectionView()
         registerXib()
@@ -52,6 +56,22 @@ class CarPlanVC: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    func setPlaceholder() {
+        let attributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.gray040,
+            NSAttributedString.Key.font: UIFont(name: "SpoqaHanSansNeo-Regular", size: 14)!
+        ]
+        
+        fromTextField.attributedPlaceholder = NSAttributedString(string: "YY/MM/DD", attributes: attributes)
+        toTextField.attributedPlaceholder = NSAttributedString(string: "YY/MM/DD", attributes: attributes)
+    }
+    
+    func setTextField() {
+
+        fromTextField.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 14)
+        toTextField.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 14)
     }
     
     func initRecommendCarModel() {
@@ -102,8 +122,7 @@ extension CarPlanVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendCarCVC.identifier, for: indexPath) as? RecommendCarCVC else {return UICollectionViewCell()}
         
-        // FIXME: - 이미지 부분 수정해야함...
-        cell.setDataWith(image: RecommendCarModel[indexPath.item].image, name: RecommendCarModel[indexPath.item].name, price: RecommendCarModel[indexPath.item].price, discount: RecommendCarModel[indexPath.item].discount)
+        cell.setDataWith(image: recommendCarModel[indexPath.row].setImage(recommendCarModel[indexPath.item].name), name: recommendCarModel[indexPath.item].name, price: recommendCarModel[indexPath.item].price, discount: recommendCarModel[indexPath.item].discount)
         
         return cell
     }
@@ -114,10 +133,13 @@ extension CarPlanVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        switch collectionView {
+        let itemSpacing: CGFloat = 8
+        let width = collectionView.frame.width
+        let height = collectionView.frame.height
         
+        switch collectionView {
         case recommendCollectionView:
-            return CGSize(width: 318, height: 229)
+            return CGSize(width: (width * 318 / 229) + itemSpacing, height: height)
         default:
             return CGSize(width: 0, height: 0)
         }
@@ -127,4 +149,16 @@ extension CarPlanVC: UICollectionViewDelegateFlowLayout {
         
         return 0
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        switch collectionView {
+        case recommendCollectionView:
+            return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        default:
+            return .zero
+        }
+        
+    }
+
 }
