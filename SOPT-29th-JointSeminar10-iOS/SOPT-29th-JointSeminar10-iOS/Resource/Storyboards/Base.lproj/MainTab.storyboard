@@ -40,7 +40,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dn4-S1-QLC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26.086956521739133" y="50.892857142857139"/>
+            <point key="canvasLocation" x="-28" y="23"/>
         </scene>
         <!--Item-->
         <scene sceneID="XlO-K7-sRe">
@@ -187,6 +187,9 @@
                                                                 </fragment>
                                                             </attributedString>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="touchReservationButton:" destination="wXw-js-iuA" eventType="touchUpInside" id="4X6-wf-lbM"/>
+                                                        </connections>
                                                     </button>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="YY/MM/DD" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="7fN-kj-zLb">
                                                         <rect key="frame" x="144" y="32" width="120" height="48"/>
