@@ -16,6 +16,7 @@ extension Const {
             static let pairing = "PairingVC"
             static let myPage = "MyPageVC"
             static let filter = "FilterVC"
+            static let carPlanNVC = "CarPlanNVC"
         }
     }
 }

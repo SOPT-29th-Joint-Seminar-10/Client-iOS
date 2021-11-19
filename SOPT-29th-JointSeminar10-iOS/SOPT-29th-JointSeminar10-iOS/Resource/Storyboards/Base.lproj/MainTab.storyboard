@@ -27,11 +27,25 @@
             </objects>
             <point key="canvasLocation" x="1603" y="797"/>
         </scene>
+        <!--Car PlanNVC-->
+        <scene sceneID="Lnc-ru-WHu">
+            <objects>
+                <navigationController storyboardIdentifier="CarPlanNVC" id="X42-hT-MNH" customClass="CarPlanNVC" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Td-Mb-n4V">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wtb-5o-x7N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17" y="51"/>
+        </scene>
         <!--Main TabVC-->
         <scene sceneID="wSQ-wX-sVz">
             <objects>
                 <tabBarController storyboardIdentifier="MainTabVC" automaticallyAdjustsScrollViewInsets="NO" id="Bhv-um-40n" customClass="MainTabVC" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="eX3-E8-05k"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iFe-Uj-Ls5">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -40,7 +54,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dn4-S1-QLC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-28" y="23"/>
+            <point key="canvasLocation" x="17" y="-638"/>
         </scene>
         <!--Item-->
         <scene sceneID="XlO-K7-sRe">

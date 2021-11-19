@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		151C9D1A274801B6005E6A5B /* CarPlanNVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151C9D19274801B6005E6A5B /* CarPlanNVC.swift */; };
 		154DD60327449D630089585B /* FilterCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154DD60127449D630089585B /* FilterCVC.swift */; };
 		154DD60427449D630089585B /* FilterCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154DD60227449D630089585B /* FilterCVC.xib */; };
 		1590B3E72740D1E700F167D1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B3E62740D1E700F167D1 /* UIColor+Extension.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		151C9D19274801B6005E6A5B /* CarPlanNVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPlanNVC.swift; sourceTree = "<group>"; };
 		154DD60127449D630089585B /* FilterCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCVC.swift; sourceTree = "<group>"; };
 		154DD60227449D630089585B /* FilterCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCVC.xib; sourceTree = "<group>"; };
 		1590B3E62740D1E700F167D1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		151C9D182748015E005E6A5B /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				151C9D19274801B6005E6A5B /* CarPlanNVC.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
 		F8983FA42742C31B00FC69EE /* Tabar */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +212,7 @@
 		F8BA1EB7273F845900041003 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				151C9D182748015E005E6A5B /* NavigationController */,
 				F8983FA42742C31B00FC69EE /* Tabar */,
 				15C8EDF72743F6C400B4C486 /* FilterVC.swift */,
 			);
@@ -369,6 +380,7 @@
 				15C8EDF82743F6C400B4C486 /* FilterVC.swift in Sources */,
 				1590B3E72740D1E700F167D1 /* UIColor+Extension.swift in Sources */,
 				154DD60327449D630089585B /* FilterCVC.swift in Sources */,
+				151C9D1A274801B6005E6A5B /* CarPlanNVC.swift in Sources */,
 				F8983FC2274337F400FC69EE /* RecommendCarModel.swift in Sources */,
 				F8983FA12742BBD800FC69EE /* Storyboard.swift in Sources */,
 				F8A5DED1273EC75B00770A6E /* MainTabVC.swift in Sources */,
