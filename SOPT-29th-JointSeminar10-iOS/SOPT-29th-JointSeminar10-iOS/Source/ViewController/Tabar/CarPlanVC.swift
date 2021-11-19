@@ -42,7 +42,9 @@ class CarPlanVC: UIViewController {
     // MARK: - @IBAction Properties
     
     @IBAction func touchReservationButton(_ sender: Any) {
-        guard let filterVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.filter) else { return }
+        guard let filterVC = UIStoryboard(name: Const.Storyboard.Name.filter, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.filter) as? FilterVC else { return }
+        
+        self.navigationController?.pushViewController(filterVC, animated: true)
     }
     
     // MARK: - @objc Function
