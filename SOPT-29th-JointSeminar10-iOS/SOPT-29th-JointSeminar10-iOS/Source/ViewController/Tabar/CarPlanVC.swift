@@ -107,6 +107,16 @@ extension UIView {
     }
 }
 
+extension CarPlanVC {
+    private func initRecommendCarCVC() {
+        guard let loadedNib = Bundle.main.loadNibNamed(String(describing: RecommendCarCVC.self), owner: self, options: nil) else {return}
+        guard let recommendCarCVC = loadedNib.first as? RecommendCarCVC else {return}
+        
+        recommendCarCVC.frame = CGRect(x: 162, y: 707, width: recommendCollectionView.frame.width, height: recommendCollectionView.frame.height)
+        recommendCollectionView.addSubview(recommendCarCVC)
+    }
+}
+
 extension CarPlanVC: UICollectionViewDelegate { }
 
 extension CarPlanVC: UICollectionViewDataSource {
