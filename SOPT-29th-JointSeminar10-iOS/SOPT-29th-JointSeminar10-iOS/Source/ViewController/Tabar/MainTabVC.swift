@@ -34,8 +34,11 @@ extension MainTabVC {
         myPageVC.tabBarItem = UITabBarItem(title: "마이페이지", image: .defaultMypage, selectedImage: .selectedMypage)
 
         setViewControllers([homeVC, carPlanVC, pairingVC, myPageVC], animated: true)
+        self.selectedIndex = 1
+        
     }
     
+    // set tabbar appearance
     private func setUI() {
         let appearance = UITabBarAppearance()
         // set tabbar opacity
