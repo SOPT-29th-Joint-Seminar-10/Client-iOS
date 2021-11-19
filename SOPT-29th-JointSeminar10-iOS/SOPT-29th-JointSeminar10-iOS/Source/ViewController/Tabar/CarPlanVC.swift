@@ -23,6 +23,7 @@ class CarPlanVC: UIViewController {
     @IBOutlet var toTextField: UITextField!
     @IBOutlet var reservationButton: UIButton!
     @IBOutlet var recommendCollectionView: UICollectionView!
+    @IBOutlet var reservationStackView: UIStackView!
     
     // MARK: - View Life Cycle
     
@@ -82,6 +83,23 @@ class CarPlanVC: UIViewController {
         ])
     }
     
+    // FIXME: - case 경우들
+    func addSubView() {
+        //        switch reservationStackView {
+        //        case 첫번째 예약:
+        //            reservationStackView.addSubview(firstRentalView)
+        //        case 두번째 예약:
+        //            reservationStackView.addSubView(secondRentalView)
+        //        case 세번째 예약:
+        //            reservationStackView.addSubView(thridRentalView)
+        //        case 네번째 예약:
+        //            reservationStackView.addSubView(fourthRentalView)
+        //        default:
+        //            reservationStackView.isHidden
+        //        }
+        
+    }
+    
     func setCollectionView() {
         recommendCollectionView.dataSource = self
         recommendCollectionView.delegate = self
@@ -114,6 +132,16 @@ extension CarPlanVC {
         
         recommendCarCVC.frame = CGRect(x: 162, y: 707, width: recommendCollectionView.frame.width, height: recommendCollectionView.frame.height)
         recommendCollectionView.addSubview(recommendCarCVC)
+    }
+}
+
+extension CarPlanVC {
+    private func initReservationHistoryView() {
+        guard let loadedNib = Bundle.main.loadNibNamed(String(describing: ReservationHistoryView.self), owner: self, options: nil) else {return}
+        guard let reservationHistoryView = loadedNib.first as? ReservationHistoryView else {return}
+        
+        reservationHistoryView.frame = CGRect(x: 549, y: 309, width: reservationHistoryView.frame.width, height: reservationHistoryView.frame.height)
+        reservationHistoryView.addSubview(reservationStackView)
     }
 }
 
