@@ -24,16 +24,16 @@ class MainTabVC: UITabBarController {
 extension MainTabVC {
     private func setTabar() {
         guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.home),
-              let carPlanNVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.carPlanNVC),
+              let carPlanVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.carPlan),
               let pairingVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.pairing),
               let myPageVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.myPage) else { return }
         
         homeVC.tabBarItem = UITabBarItem(title: "홈", image: .defaultHome, selectedImage: .selectedHome)
-        carPlanNVC.tabBarItem = UITabBarItem(title: "차량플랜", image: .defaultCarplan, selectedImage: .selectedCarplan)
+        carPlanVC.tabBarItem = UITabBarItem(title: "차량플랜", image: .defaultCarplan, selectedImage: .selectedCarplan)
         pairingVC.tabBarItem = UITabBarItem(title: "페어링", image: .defaultPairing, selectedImage: .selectedPairing)
         myPageVC.tabBarItem = UITabBarItem(title: "마이페이지", image: .defaultMypage, selectedImage: .selectedMypage)
 
-        setViewControllers([homeVC, carPlanNVC, pairingVC, myPageVC], animated: true)
+        setViewControllers([homeVC, carPlanVC, pairingVC, myPageVC], animated: true)
         self.selectedIndex = 1
         
     }
