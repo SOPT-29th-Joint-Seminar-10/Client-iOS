@@ -19,15 +19,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="32"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOA-75-Ncd">
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KOA-75-Ncd">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtE-rF-Qci">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtE-rF-Qci">
                                 <rect key="frame" x="0.0" y="0.0" width="63" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="5Nx-el-0Gm"/>
-                                    <constraint firstAttribute="width" constant="63" id="aZO-4A-4hL"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="gray060"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -40,12 +38,9 @@
                                     </attributedString>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hID-bf-DKv">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hID-bf-DKv">
                                 <rect key="frame" x="63" y="0.0" width="37" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="37" id="4Bq-aH-xrJ"/>
-                                    <constraint firstAttribute="height" constant="32" id="U0S-3j-6fa"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="gray060"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -61,27 +56,13 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="DtE-rF-Qci" firstAttribute="top" secondItem="KOA-75-Ncd" secondAttribute="top" id="5St-qG-0Sn"/>
-                            <constraint firstItem="hID-bf-DKv" firstAttribute="top" secondItem="KOA-75-Ncd" secondAttribute="top" id="5h8-Qh-AcO"/>
-                            <constraint firstAttribute="bottom" secondItem="hID-bf-DKv" secondAttribute="bottom" id="hhe-QR-ATk"/>
-                            <constraint firstAttribute="trailing" secondItem="hID-bf-DKv" secondAttribute="trailing" id="r0I-Co-ssp"/>
-                            <constraint firstItem="DtE-rF-Qci" firstAttribute="leading" secondItem="KOA-75-Ncd" secondAttribute="leading" id="rNq-TK-iIF"/>
-                            <constraint firstAttribute="bottom" secondItem="DtE-rF-Qci" secondAttribute="bottom" id="tLe-1h-922"/>
-                            <constraint firstItem="hID-bf-DKv" firstAttribute="leading" secondItem="DtE-rF-Qci" secondAttribute="trailing" id="uzG-dU-fPI"/>
-                        </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <constraints>
-                <constraint firstItem="KOA-75-Ncd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1MA-cQ-xs1"/>
-                <constraint firstAttribute="bottom" secondItem="KOA-75-Ncd" secondAttribute="bottom" id="502-aa-9Aw"/>
-                <constraint firstItem="KOA-75-Ncd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="LrD-ry-mXc"/>
-                <constraint firstAttribute="trailing" secondItem="KOA-75-Ncd" secondAttribute="trailing" id="PjR-eG-Tc8"/>
-            </constraints>
             <connections>
                 <outlet property="closeButton" destination="hID-bf-DKv" id="Pom-a2-uMG"/>
+                <outlet property="filterView" destination="KOA-75-Ncd" id="5xX-yc-l21"/>
                 <outlet property="titleButton" destination="DtE-rF-Qci" id="eRx-FW-Taf"/>
             </connections>
             <point key="canvasLocation" x="140.57971014492756" y="93.75"/>

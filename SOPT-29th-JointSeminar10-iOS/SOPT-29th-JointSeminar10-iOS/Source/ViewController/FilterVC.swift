@@ -15,6 +15,9 @@ class FilterVC: UIViewController {
     @IBOutlet weak var reservationCV: UICollectionView!
     
     let reserveContentList: [ReservationCarModel] = []
+    let isFilteredList: [Int] = [0, 0, 0, 0, 0, 0]
+    let beforeFiltered: [String] = ["초기화", "대여기간", "차종", "지역", "가격", "인기"]
+    let afterFiltered: [String] = ["", "", "준중형", "서울/경기/인천", "낮은 가격 순", "인기"]
     
     // MARK: - View Life Cycle
     
@@ -69,6 +72,10 @@ extension FilterVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == filterCV {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.Xib.NibName.filterCVC, for: indexPath) as? FilterCVC else {return UICollectionViewCell()}
+            cell.titleButton.setAttributedTitle(NSAttributedString(string:beforeFiltered[indexPath.row]), for: .normal)
+            let attributedTitle = cell.titleButton.attributedTitle(for: .normal)
+            
+            cell.filterView.frame.size.width = attributedTitle!.size().width + 50
             
             return cell
         } else {
@@ -84,8 +91,11 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
         if collectionView == filterCV {
             
             // TODO: - 내용에 따라 동적으로 크기 변경하기
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.Xib.NibName.filterCVC, for: indexPath) as? FilterCVC
+            cell!.titleButton.setAttributedTitle(NSAttributedString(string:beforeFiltered[indexPath.row]), for: .normal)
+            let attributedTitle = cell!.titleButton.attributedTitle(for: .normal)
             
-            return CGSize(width: 70, height: 32)
+            return CGSize(width: (attributedTitle?.size().width)! + 100, height: 32)
         } else {
             return CGSize(width: 168, height: 168)
         }
