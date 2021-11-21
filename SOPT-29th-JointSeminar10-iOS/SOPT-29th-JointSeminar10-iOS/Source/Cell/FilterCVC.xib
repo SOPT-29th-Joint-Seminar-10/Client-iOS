@@ -19,13 +19,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="32"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KOA-75-Ncd">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOA-75-Ncd">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtE-rF-Qci">
-                                <rect key="frame" x="0.0" y="0.0" width="63" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtE-rF-Qci">
+                                <rect key="frame" x="0.0" y="0.0" width="76" height="32"/>
                                 <color key="tintColor" name="gray060"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -38,28 +36,37 @@
                                     </attributedString>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hID-bf-DKv">
-                                <rect key="frame" x="63" y="0.0" width="37" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" name="gray060"/>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hID-bf-DKv">
+                                <rect key="frame" x="76" y="0.0" width="24" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="24" id="NI5-Hb-STF"/>
+                                </constraints>
+                                <color key="tintColor" name="whtie"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="뭔데">
-                                            <attributes>
-                                                <font key="NSFont" size="12" name="SpoqaHanSansNeo-Regular"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hID-bf-DKv" secondAttribute="trailing" id="1DD-8h-wH3"/>
+                            <constraint firstItem="DtE-rF-Qci" firstAttribute="leading" secondItem="KOA-75-Ncd" secondAttribute="leading" id="25F-Ib-MT6"/>
+                            <constraint firstItem="hID-bf-DKv" firstAttribute="top" secondItem="KOA-75-Ncd" secondAttribute="top" id="E5C-XW-V7C"/>
+                            <constraint firstItem="hID-bf-DKv" firstAttribute="leading" secondItem="DtE-rF-Qci" secondAttribute="trailing" id="EFF-rO-6Th"/>
+                            <constraint firstAttribute="bottom" secondItem="hID-bf-DKv" secondAttribute="bottom" id="FEY-Fq-ItB"/>
+                            <constraint firstAttribute="bottom" secondItem="DtE-rF-Qci" secondAttribute="bottom" id="KL4-Do-WXK"/>
+                            <constraint firstItem="DtE-rF-Qci" firstAttribute="top" secondItem="KOA-75-Ncd" secondAttribute="top" id="boE-oR-KdW"/>
+                            <constraint firstItem="hID-bf-DKv" firstAttribute="leading" secondItem="DtE-rF-Qci" secondAttribute="trailing" id="iAp-Ae-KVV"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="KOA-75-Ncd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4vR-RY-Qw1"/>
+                <constraint firstAttribute="bottom" secondItem="KOA-75-Ncd" secondAttribute="bottom" id="MO3-B8-tpw"/>
+                <constraint firstItem="KOA-75-Ncd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Qgv-ld-YOZ"/>
+                <constraint firstAttribute="trailing" secondItem="KOA-75-Ncd" secondAttribute="trailing" id="lED-Yk-aZb"/>
+            </constraints>
             <connections>
                 <outlet property="closeButton" destination="hID-bf-DKv" id="Pom-a2-uMG"/>
                 <outlet property="filterView" destination="KOA-75-Ncd" id="5xX-yc-l21"/>
@@ -71,6 +78,9 @@
     <resources>
         <namedColor name="gray060">
             <color red="0.21600000560283661" green="0.27099999785423279" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whtie">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -9,10 +9,11 @@ import UIKit
 
 class FilterCVC: UICollectionViewCell {
     
- 
     @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var titleButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
+    
+    var closeButtonWidth: NSLayoutConstraint! = NSLayoutConstraint()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,7 +21,7 @@ class FilterCVC: UICollectionViewCell {
     }
     
     func setUI() {
-        filterView.layer.cornerRadius = 0.15 * filterView.bounds.size.width
+        filterView.layer.cornerRadius = 0.17 * filterView.bounds.size.width
         filterView.layer.borderColor = UIColor.gray040.cgColor
         filterView.layer.borderWidth = 1.3
         
@@ -33,7 +34,10 @@ class FilterCVC: UICollectionViewCell {
         closeButton.leadingAnchor.constraint(equalTo: titleButton.trailingAnchor).isActive = true
         closeButton.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         closeButton.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        closeButton.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        closeButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
+        closeButtonWidth = closeButton.widthAnchor.constraint(lessThanOrEqualToConstant: 0)
+        closeButtonWidth.isActive = true
+        
     }
 
 }

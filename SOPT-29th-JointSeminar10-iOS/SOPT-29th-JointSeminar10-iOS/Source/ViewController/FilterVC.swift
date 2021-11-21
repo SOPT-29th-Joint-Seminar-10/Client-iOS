@@ -15,7 +15,7 @@ class FilterVC: UIViewController {
     @IBOutlet weak var reservationCV: UICollectionView!
     
     let reserveContentList: [ReservationCarModel] = []
-    let isFilteredList: [Int] = [0, 0, 0, 0, 0, 0]
+    var isClickedFilter: [Int] = [0, 0, 0, 0, 0, 0]
     let beforeFiltered: [String] = ["초기화", "대여기간", "차종", "지역", "가격", "인기"]
     let afterFiltered: [String] = ["", "", "준중형", "서울/경기/인천", "낮은 가격 순", "인기"]
     
@@ -54,7 +54,15 @@ class FilterVC: UIViewController {
 // MARK: - Extensions
 
 extension FilterVC: UICollectionViewDelegate {
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if isClickedFilter[indexPath.row] == 0 {
+            isClickedFilter[indexPath.row] = 1
+        } else {
+            isClickedFilter[indexPath.row] = 0
+        }
+        collectionView.reloadData()
+    }
 }
 
 extension FilterVC: UICollectionViewDataSource {
@@ -72,10 +80,36 @@ extension FilterVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == filterCV {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.Xib.NibName.filterCVC, for: indexPath) as? FilterCVC else {return UICollectionViewCell()}
-            cell.titleButton.setAttributedTitle(NSAttributedString(string:beforeFiltered[indexPath.row]), for: .normal)
-            let attributedTitle = cell.titleButton.attributedTitle(for: .normal)
-            
-            cell.filterView.frame.size.width = attributedTitle!.size().width + 50
+           
+            if isClickedFilter[indexPath.row] == 1 {
+                cell.closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
+                cell.closeButtonWidth.isActive = false
+                
+                let attribute = [NSAttributedString.Key.font: UIFont(name: "spoqaHanSansNeo-Regular", size: 12.0)!, NSAttributedString.Key.foregroundColor: UIColor.white]
+                cell.titleButton.setAttributedTitle(NSAttributedString(string:afterFiltered[indexPath.row], attributes: attribute), for: .normal)
+                
+                cell.filterView.backgroundColor = UIColor.gray060
+                cell.filterView.layer.borderWidth = 0
+                
+                cell.titleButton.setTitleColor(UIColor.white, for: .normal)
+                
+                let attributedTitle = cell.titleButton.attributedTitle(for: .normal)
+                cell.filterView.frame.size.width = attributedTitle!.size().width
+            } else {
+                cell.closeButton.frame.size.width = 0
+                cell.closeButton.setImage(UIImage(), for: .normal)
+                
+                let attribute = [NSAttributedString.Key.font: UIFont(name: "spoqaHanSansNeo-Regular", size: 12.0)!, NSAttributedString.Key.foregroundColor: UIColor.gray060]
+                cell.titleButton.setAttributedTitle(NSAttributedString(string:beforeFiltered[indexPath.row], attributes: attribute), for: .normal)
+                
+                cell.filterView.backgroundColor = UIColor.white
+                cell.filterView.layer.borderWidth = 1.3
+                
+                cell.titleButton.setTitleColor(UIColor.gray060, for: .normal)
+                
+                let attributedTitle = cell.titleButton.attributedTitle(for: .normal)
+                cell.filterView.frame.size.width = attributedTitle!.size().width + 37
+            }
             
             return cell
         } else {
@@ -89,13 +123,39 @@ extension FilterVC: UICollectionViewDataSource {
 extension FilterVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == filterCV {
-            
-            // TODO: - 내용에 따라 동적으로 크기 변경하기
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.Xib.NibName.filterCVC, for: indexPath) as? FilterCVC
-            cell!.titleButton.setAttributedTitle(NSAttributedString(string:beforeFiltered[indexPath.row]), for: .normal)
-            let attributedTitle = cell!.titleButton.attributedTitle(for: .normal)
+           
+            if isClickedFilter[indexPath.row] == 1 {
+                cell!.closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
+                cell!.closeButtonWidth.isActive = false
+                
+                let attribute = [NSAttributedString.Key.font: UIFont(name: "spoqaHanSansNeo-Regular", size: 12.0)!, NSAttributedString.Key.foregroundColor: UIColor.white]
+                cell!.titleButton.setAttributedTitle(NSAttributedString(string:afterFiltered[indexPath.row], attributes: attribute), for: .normal)
+                
+                cell!.filterView.backgroundColor = UIColor.gray060
+                cell!.filterView.layer.borderWidth = 0
+                
+                cell!.titleButton.setTitleColor(UIColor.white, for: .normal)
+                
+                let attributedTitle = cell!.titleButton.attributedTitle(for: .normal)
+                cell!.filterView.frame.size.width = attributedTitle!.size().width + 37
+            } else {
+                cell!.closeButton.frame.size.width = 0
+                cell!.closeButton.setImage(UIImage(), for: .normal)
+                
+                let attribute = [NSAttributedString.Key.font: UIFont(name: "spoqaHanSansNeo-Regular", size: 12.0)!, NSAttributedString.Key.foregroundColor: UIColor.gray060]
+                cell!.titleButton.setAttributedTitle(NSAttributedString(string:beforeFiltered[indexPath.row], attributes: attribute), for: .normal)
+                
+                cell!.filterView.backgroundColor = UIColor.white
+                cell!.filterView.layer.borderWidth = 1.3
+                
+                cell!.titleButton.setTitleColor(UIColor.gray060, for: .normal)
+                
+                let attributedTitle = cell!.titleButton.attributedTitle(for: .normal)
+                cell!.filterView.frame.size.width = attributedTitle!.size().width
+            }
             
-            return CGSize(width: (attributedTitle?.size().width)! + 100, height: 32)
+            return CGSize(width: cell!.filterView.frame.size.width + 37, height: 32)
         } else {
             return CGSize(width: 168, height: 168)
         }
@@ -107,7 +167,7 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         if collectionView == filterCV {
-            return 0
+            return 4
         } else {
             return 7
         }
@@ -115,7 +175,7 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         if collectionView == filterCV {
-            return 4
+            return 0
         } else {
             return 11
         }
