@@ -50,9 +50,10 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Button">
+                                        <fragment content="뭔데">
                                             <attributes>
                                                 <font key="NSFont" size="12" name="SpoqaHanSansNeo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -79,6 +80,10 @@
                 <constraint firstItem="KOA-75-Ncd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="LrD-ry-mXc"/>
                 <constraint firstAttribute="trailing" secondItem="KOA-75-Ncd" secondAttribute="trailing" id="PjR-eG-Tc8"/>
             </constraints>
+            <connections>
+                <outlet property="closeButton" destination="hID-bf-DKv" id="Pom-a2-uMG"/>
+                <outlet property="titleButton" destination="DtE-rF-Qci" id="eRx-FW-Taf"/>
+            </connections>
             <point key="canvasLocation" x="140.57971014492756" y="93.75"/>
         </collectionViewCell>
     </objects>
