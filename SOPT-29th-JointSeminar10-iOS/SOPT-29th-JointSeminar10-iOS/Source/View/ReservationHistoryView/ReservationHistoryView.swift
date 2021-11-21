@@ -23,11 +23,12 @@ class ReservationHistoryView: UIView {
     
     // MARK: - Methods
     
-    init(day: String,
+    func initView(day: String,
          week: String,
          mainAddress: String,
          subAddress: String) {
-        super.init(frame: .zero)
+//        super.init(frame: .zero)
+        super.frame = self.bounds
         setUI()
         
         dayLabel.text = day

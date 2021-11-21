@@ -15,10 +15,8 @@ class CarPlanVC: UIViewController {
     
     // MARK: - @IBOutlet Properties
     
-    @IBOutlet var firstRentalView: UIView!
-    @IBOutlet var secondRentalView: UIView!
-    @IBOutlet var thridRentalView: UIView!
-    @IBOutlet var fourthRentalView: UIView!
+
+    @IBOutlet var rentalView: ReservationHistoryView!
     @IBOutlet var fromTextField: UITextField!
     @IBOutlet var toTextField: UITextField!
     @IBOutlet var reservationButton: UIButton!
@@ -31,12 +29,11 @@ class CarPlanVC: UIViewController {
         super.viewDidLoad()
 
         editChanged()
-        
         setPlaceholder()
         setTextField()
-        
-        initRecommendCarModel()
-        setCollectionView()
+        setShadowingView()
+        setRecommendCVCList()
+        assignRecommendCollectionView()
         registerXib()
     }
     
@@ -70,7 +67,7 @@ class CarPlanVC: UIViewController {
     func setPlaceholder() {
         let attributes = [
             NSAttributedString.Key.foregroundColor: UIColor.gray040,
-            NSAttributedString.Key.font: UIFont(name: "SpoqaHanSansNeo-Regular", size: 14)!
+            NSAttributedString.Key.font: UIFont.body2R
         ]
         
         fromTextField.attributedPlaceholder = NSAttributedString(string: "YY/MM/DD", attributes: attributes)
@@ -79,36 +76,39 @@ class CarPlanVC: UIViewController {
     
     func setTextField() {
 
-        fromTextField.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 14)
-        toTextField.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 14)
+        fromTextField.font = UIFont.body2R
+        toTextField.font = UIFont.body2R
     }
     
-    func initRecommendCarModel() {
+    func setShadowingView() {
+        
+        recommendCollectionView.layer.applyShadow(color: .black, alpha: 0.1, x: 1, y: 1, blur: 7, spread: 0)
+    }
+    
+    func setRecommendCVCList() {
         recommendCarModel.append(contentsOf: [
-            RecommendCarModel(name: "더뉴아반떼", price: "연 550,0000원~ /", discount: "10 %"),
-            RecommendCarModel(name: "투싼(휘발유)", price: "연 403,0000원~ /", discount: "20 %"),
-            RecommendCarModel(name: "스포티지", price: "연 571,0000원~ /", discount: "25 %")
+            RecommendCarModel(name: "더뉴아반떼", price: "연 550,0000원~ /", discount: "10 %", image: "imgThenewavante"),
+            RecommendCarModel(name: "투싼(휘발유)", price: "연 403,0000원~ /", discount: "20 %", image: "imgTosan"),
+            RecommendCarModel(name: "스포티지", price: "연 571,0000원~ /", discount: "25 %", image: "imgSportage")
         ])
     }
     
-    // FIXME: - case 경우들
-    func addSubView() {
-        //        switch reservationStackView {
-        //        case 첫번째 예약:
-        //            reservationStackView.addSubview(firstRentalView)
-        //        case 두번째 예약:
-        //            reservationStackView.addSubView(secondRentalView)
-        //        case 세번째 예약:
-        //            reservationStackView.addSubView(thridRentalView)
-        //        case 네번째 예약:
-        //            reservationStackView.addSubView(fourthRentalView)
-        //        default:
-        //            reservationStackView.isHidden
+    // TODO: - 서버에서 주는 히스토리 리스트의 개수에 따라서 추가해주기
+    /*
+     스택뷰 아래쪽으로 넣는 코드
+     (고정된 높이 지정, count로 for문)
+     */
+    func addViewsInStackView() {
+        //        var viewDataList : [[:]] = [[:]]()
+        //        viewDataList.append()
+        //
+        //        for i in 0 ..< viewDataList.count {
+        //            reservationStackView.addArrangedSubview(i)
         //        }
         
     }
     
-    func setCollectionView() {
+    func assignRecommendCollectionView() {
         recommendCollectionView.dataSource = self
         recommendCollectionView.delegate = self
     }
@@ -138,8 +138,9 @@ extension CarPlanVC {
         guard let loadedNib = Bundle.main.loadNibNamed(String(describing: RecommendCarCVC.self), owner: self, options: nil) else {return}
         guard let recommendCarCVC = loadedNib.first as? RecommendCarCVC else {return}
         
-        recommendCarCVC.frame = CGRect(x: 162, y: 707, width: recommendCollectionView.frame.width, height: recommendCollectionView.frame.height)
-        recommendCollectionView.addSubview(recommendCarCVC)
+        rentalView.initView(day: "03", week: "wed", mainAddress: "서울특별시 관악구 신림로 29길 8", subAddress: "신림현대아파트 주차장")
+        
+        reservationStackView.addSubview(rentalView)
     }
 }
 
@@ -168,7 +169,7 @@ extension CarPlanVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendCarCVC.identifier, for: indexPath) as? RecommendCarCVC else {return UICollectionViewCell()}
         
-        cell.setDataWith(image: recommendCarModel[indexPath.row].setImage(recommendCarModel[indexPath.item].name), name: recommendCarModel[indexPath.item].name, price: recommendCarModel[indexPath.item].price, discount: recommendCarModel[indexPath.item].discount)
+        cell.setDataWith(image: recommendCarModel[indexPath.item].image, name: recommendCarModel[indexPath.item].name, price: recommendCarModel[indexPath.item].price, discount: recommendCarModel[indexPath.item].discount)
         
         return cell
     }
@@ -179,13 +180,15 @@ extension CarPlanVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let itemSpacing: CGFloat = 8
-        let width = collectionView.frame.width
-        let height = collectionView.frame.height
+//        let width = collectionView.frame.width
+//        let height = collectionView.frame.height
         
         switch collectionView {
         case recommendCollectionView:
-            return CGSize(width: (width * 318 / 229) + itemSpacing, height: height)
+//            return CGSize(width: (width * 248 / 188), height: height)
+//            return CGSize(width: UIScreen.main.bounds.width * (248/188), height: height)
+            // FIXME: - 셀 너비 비율로 대응하기
+            return CGSize(width: 248, height: 188)
         default:
             return CGSize(width: 0, height: 0)
         }
@@ -193,14 +196,14 @@ extension CarPlanVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
-        return 0
+        return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
         switch collectionView {
         case recommendCollectionView:
-            return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+            return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         default:
             return .zero
         }

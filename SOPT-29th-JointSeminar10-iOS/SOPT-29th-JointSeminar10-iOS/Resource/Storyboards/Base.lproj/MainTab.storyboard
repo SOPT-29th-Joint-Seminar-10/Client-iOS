@@ -76,20 +76,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLw-hp-u8d">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvA-Nb-gFh">
-                                                        <rect key="frame" x="156" y="14.999999999999998" width="63" height="20.333333333333329"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="차량플랜">
-                                                                <attributes>
-                                                                    <font key="NSFont" size="16" name="SpoqaHanSansNeo-Medium"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvc-qP-NAP">
-                                                        <rect key="frame" x="16" y="75.333333333333329" width="154" height="45.333333333333329"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvc-qP-NAP">
+                                                        <rect key="frame" x="16" y="75.333333333333343" width="154" height="45.333333333333329"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="내 계획에 맞게 쏘카를 예약해보세요">
                                                                 <attributes>
@@ -104,47 +92,35 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="375" id="0zC-rp-rcO"/>
                                                     <constraint firstAttribute="height" constant="143" id="2of-DE-RjV"/>
-                                                    <constraint firstItem="rvA-Nb-gFh" firstAttribute="leading" secondItem="nLw-hp-u8d" secondAttribute="leading" constant="156" id="AkW-gg-kQf"/>
-                                                    <constraint firstAttribute="trailing" secondItem="rvA-Nb-gFh" secondAttribute="trailing" constant="156" id="Grx-9o-QOg"/>
                                                     <constraint firstItem="Mvc-qP-NAP" firstAttribute="leading" secondItem="nLw-hp-u8d" secondAttribute="leading" constant="16" id="M86-49-dQ7"/>
                                                     <constraint firstAttribute="trailing" secondItem="Mvc-qP-NAP" secondAttribute="trailing" constant="205" id="l5V-i6-xZp"/>
-                                                    <constraint firstItem="Mvc-qP-NAP" firstAttribute="top" secondItem="rvA-Nb-gFh" secondAttribute="bottom" constant="40" id="laM-85-tYA"/>
-                                                    <constraint firstItem="rvA-Nb-gFh" firstAttribute="top" secondItem="nLw-hp-u8d" secondAttribute="top" constant="15" id="xkf-at-9W5"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="155-pl-h6m">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="155-pl-h6m" userLabel="Reservation Stack View">
                                                 <rect key="frame" x="16" y="143" width="343" height="288"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jha-Eq-kxt" customClass="ReservationHistoryView" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="66"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jha-Eq-kxt" userLabel="Rental View" customClass="ReservationHistoryView" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="288"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqJ-vV-AOE">
+                                                                <rect key="frame" x="103" y="130" width="123" height="17.666666666666657"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="Label">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.77254901960784317" green="0.78431372549019607" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" size="14" name="SpoqaHanSansNeo-Regular"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="8"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhA-Lz-X07" customClass="ReservationHistoryView" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="74" width="343" height="66"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="8"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMY-rr-69z" customClass="ReservationHistoryView" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="148" width="343" height="66"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="8"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbG-JM-bj3" customClass="ReservationHistoryView" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="222" width="343" height="66"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="jqJ-vV-AOE" secondAttribute="trailing" constant="117" id="OQy-x8-8NS"/>
+                                                            <constraint firstItem="jqJ-vV-AOE" firstAttribute="leading" secondItem="jha-Eq-kxt" secondAttribute="leading" constant="103" id="uRS-hN-qpO"/>
+                                                        </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="8"/>
@@ -160,6 +136,14 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jct-Nb-Gcw">
                                                 <rect key="frame" x="0.0" y="431" width="375" height="112"/>
                                                 <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eh4-31-B5x" userLabel="Bottom Line View">
+                                                        <rect key="frame" x="16" y="0.0" width="343" height="2"/>
+                                                        <color key="backgroundColor" name="gray040"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="343" id="BfD-R5-GVO"/>
+                                                            <constraint firstAttribute="height" constant="2" id="gpv-ba-iDY"/>
+                                                        </constraints>
+                                                    </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="YY/MM/DD" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="nA3-Zv-G3E">
                                                         <rect key="frame" x="16" y="32" width="120" height="48"/>
                                                         <color key="backgroundColor" name="gray020"/>
@@ -176,7 +160,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hvn-Xb-nSK">
-                                                        <rect key="frame" x="298" y="40" width="45" height="27"/>
+                                                        <rect key="frame" x="284" y="40" width="75" height="29.333333333333329"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button">
                                                             <attributedString key="attributedTitle">
@@ -188,6 +172,16 @@
                                                                 </fragment>
                                                             </attributedString>
                                                         </state>
+                                                        <buttonConfiguration key="configuration" style="plain">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="적용하기">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="12" name="SpoqaHanSansNeo-Regular"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </buttonConfiguration>
                                                         <connections>
                                                             <action selector="touchReservationButton:" destination="wXw-js-iuA" eventType="touchUpInside" id="4X6-wf-lbM"/>
                                                         </connections>
@@ -211,18 +205,21 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="nA3-Zv-G3E" firstAttribute="leading" secondItem="jct-Nb-Gcw" secondAttribute="leading" constant="16" id="682-fU-d3B"/>
-                                                    <constraint firstItem="Hvn-Xb-nSK" firstAttribute="leading" secondItem="7fN-kj-zLb" secondAttribute="trailing" constant="34" id="BDa-f0-sPh"/>
+                                                    <constraint firstItem="Hvn-Xb-nSK" firstAttribute="leading" secondItem="7fN-kj-zLb" secondAttribute="trailing" constant="20" id="BDa-f0-sPh"/>
                                                     <constraint firstItem="nA3-Zv-G3E" firstAttribute="top" secondItem="jct-Nb-Gcw" secondAttribute="top" constant="32" id="LW5-VW-xC2"/>
                                                     <constraint firstItem="7fN-kj-zLb" firstAttribute="top" secondItem="jct-Nb-Gcw" secondAttribute="top" constant="32" id="RZx-Mj-eb4"/>
                                                     <constraint firstAttribute="width" constant="375" id="UNP-Z4-8PF"/>
                                                     <constraint firstAttribute="height" constant="112" id="ah3-TV-VGp"/>
+                                                    <constraint firstItem="Eh4-31-B5x" firstAttribute="leading" secondItem="jct-Nb-Gcw" secondAttribute="leading" constant="16" id="jPl-an-9eN"/>
                                                     <constraint firstItem="7fN-kj-zLb" firstAttribute="leading" secondItem="nA3-Zv-G3E" secondAttribute="trailing" constant="8" id="mnb-5x-aNI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Hvn-Xb-nSK" secondAttribute="trailing" constant="16" id="sho-Yc-rZz"/>
                                                     <constraint firstItem="Hvn-Xb-nSK" firstAttribute="top" secondItem="jct-Nb-Gcw" secondAttribute="top" constant="40" id="sje-k4-KFa"/>
+                                                    <constraint firstItem="Eh4-31-B5x" firstAttribute="top" secondItem="jct-Nb-Gcw" secondAttribute="top" id="tM9-Sx-m2z"/>
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tiu-tN-vL2">
                                                 <rect key="frame" x="0.0" y="543" width="375" height="285"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="gray020"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="375" id="LgR-pB-uuc"/>
                                                     <constraint firstAttribute="height" constant="285" id="y2u-vc-cLG"/>
@@ -286,13 +283,11 @@
                     <tabBarItem key="tabBarItem" title="Item" id="Tdh-lX-dJX"/>
                     <size key="freeformSize" width="375" height="942"/>
                     <connections>
-                        <outlet property="firstRentalView" destination="jha-Eq-kxt" id="5eM-ey-LSu"/>
-                        <outlet property="fourthRentalView" destination="fbG-JM-bj3" id="TX6-Eh-Qdz"/>
                         <outlet property="fromTextField" destination="nA3-Zv-G3E" id="QfO-RZ-zSN"/>
                         <outlet property="recommendCollectionView" destination="Tiu-tN-vL2" id="nd2-Su-iTB"/>
+                        <outlet property="rentalView" destination="jha-Eq-kxt" id="X2G-Yb-wVT"/>
                         <outlet property="reservationButton" destination="Hvn-Xb-nSK" id="mfO-QG-6X7"/>
-                        <outlet property="secondRentalView" destination="bhA-Lz-X07" id="GJk-hU-VTz"/>
-                        <outlet property="thridRentalView" destination="CMY-rr-69z" id="JDX-2Q-YAE"/>
+                        <outlet property="reservationStackView" destination="155-pl-h6m" id="cQt-g9-oSv"/>
                         <outlet property="toTextField" destination="7fN-kj-zLb" id="ieb-wz-eDi"/>
                     </connections>
                 </viewController>

@@ -42,8 +42,11 @@ extension RecommendCarCVC {
         contentView.layer.applyShadow()
     }
     
-    func setDataWith(image: UIImage?, name: String, price: String, discount: String) {
-        carImageView.image = image
+    func setDataWith(image: String, name: String, price: String, discount: String) {
+        
+        if let image = UIImage(named: image) {
+            carImageView.image = image
+        }
         nameLabel.text = name
         priceLabel.text = price
         discountLabel.text = discount
