@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bhv-um-40n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wXw-js-iuA">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -59,7 +59,7 @@
             </objects>
             <point key="canvasLocation" x="823" y="797"/>
         </scene>
-        <!--Item-->
+        <!--차량 플랜-->
         <scene sceneID="6uX-2g-7c9">
             <objects>
                 <viewController storyboardIdentifier="CarPlanVC" id="wXw-js-iuA" customClass="CarPlanVC" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,8 +76,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLw-hp-u8d">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvc-qP-NAP">
-                                                        <rect key="frame" x="16" y="75.333333333333343" width="154" height="45.333333333333329"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvc-qP-NAP">
+                                                        <rect key="frame" x="16" y="40" width="154" height="45.333333333333343"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="내 계획에 맞게 쏘카를 예약해보세요">
                                                                 <attributes>
@@ -93,6 +93,7 @@
                                                     <constraint firstAttribute="width" constant="375" id="0zC-rp-rcO"/>
                                                     <constraint firstAttribute="height" constant="143" id="2of-DE-RjV"/>
                                                     <constraint firstItem="Mvc-qP-NAP" firstAttribute="leading" secondItem="nLw-hp-u8d" secondAttribute="leading" constant="16" id="M86-49-dQ7"/>
+                                                    <constraint firstItem="Mvc-qP-NAP" firstAttribute="top" secondItem="nLw-hp-u8d" secondAttribute="top" constant="40" id="UKn-XE-MRj"/>
                                                     <constraint firstAttribute="trailing" secondItem="Mvc-qP-NAP" secondAttribute="trailing" constant="205" id="l5V-i6-xZp"/>
                                                 </constraints>
                                             </view>
@@ -102,8 +103,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jha-Eq-kxt" userLabel="Rental View" customClass="ReservationHistoryView" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="288"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqJ-vV-AOE">
-                                                                <rect key="frame" x="103" y="130" width="123" height="17.666666666666657"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqJ-vV-AOE">
+                                                                <rect key="frame" x="103" y="120.00000000000001" width="123" height="17.666666666666671"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Label">
                                                                         <attributes>
@@ -120,6 +121,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="jqJ-vV-AOE" secondAttribute="trailing" constant="117" id="OQy-x8-8NS"/>
                                                             <constraint firstItem="jqJ-vV-AOE" firstAttribute="leading" secondItem="jha-Eq-kxt" secondAttribute="leading" constant="103" id="uRS-hN-qpO"/>
+                                                            <constraint firstItem="jqJ-vV-AOE" firstAttribute="top" secondItem="jha-Eq-kxt" secondAttribute="top" constant="120" id="xLn-gt-VRg"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -281,8 +283,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Tdh-lX-dJX"/>
+                    <navigationItem key="navigationItem" title="차량 플랜" id="TZq-cr-b0T"/>
                     <size key="freeformSize" width="375" height="942"/>
                     <connections>
+                        <outlet property="applyView" destination="jct-Nb-Gcw" id="7Qr-jl-hFb"/>
                         <outlet property="fromTextField" destination="nA3-Zv-G3E" id="QfO-RZ-zSN"/>
                         <outlet property="recommendCollectionView" destination="Tiu-tN-vL2" id="nd2-Su-iTB"/>
                         <outlet property="rentalView" destination="jha-Eq-kxt" id="X2G-Yb-wVT"/>

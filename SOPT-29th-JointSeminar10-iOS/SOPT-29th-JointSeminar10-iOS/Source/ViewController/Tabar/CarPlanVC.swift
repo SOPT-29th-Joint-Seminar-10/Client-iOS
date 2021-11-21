@@ -22,6 +22,7 @@ class CarPlanVC: UIViewController {
     @IBOutlet var reservationButton: UIButton!
     @IBOutlet var recommendCollectionView: UICollectionView!
     @IBOutlet var reservationStackView: UIStackView!
+    @IBOutlet var applyView: UIView!
     
     // MARK: - View Life Cycle
     
@@ -83,6 +84,7 @@ class CarPlanVC: UIViewController {
     func setShadowingView() {
         
         recommendCollectionView.layer.applyShadow(color: .black, alpha: 0.1, x: 1, y: 1, blur: 7, spread: 0)
+        applyView.layer.applyShadow(color: .black, alpha: 0.1, x: 1, y: 1, blur: 7, spread: 0)
     }
     
     func setRecommendCVCList() {
@@ -91,6 +93,8 @@ class CarPlanVC: UIViewController {
             RecommendCarModel(name: "투싼(휘발유)", price: "연 403,0000원~ /", discount: "20 %", image: "imgTosan"),
             RecommendCarModel(name: "스포티지", price: "연 571,0000원~ /", discount: "25 %", image: "imgSportage")
         ])
+        
+        recommendCollectionView.isPagingEnabled = true
     }
     
     // TODO: - 서버에서 주는 히스토리 리스트의 개수에 따라서 추가해주기
