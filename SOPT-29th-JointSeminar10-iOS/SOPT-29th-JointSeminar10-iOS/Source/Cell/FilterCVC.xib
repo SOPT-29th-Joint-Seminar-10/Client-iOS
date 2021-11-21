@@ -6,26 +6,88 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FilterCVC" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="100" height="32"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="100" height="32"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOA-75-Ncd">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="32"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtE-rF-Qci">
+                                <rect key="frame" x="0.0" y="0.0" width="63" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="5Nx-el-0Gm"/>
+                                    <constraint firstAttribute="width" constant="63" id="aZO-4A-4hL"/>
+                                </constraints>
+                                <color key="tintColor" name="gray060"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="SpoqaHanSansNeo-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hID-bf-DKv">
+                                <rect key="frame" x="63" y="0.0" width="37" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="4Bq-aH-xrJ"/>
+                                    <constraint firstAttribute="height" constant="32" id="U0S-3j-6fa"/>
+                                </constraints>
+                                <color key="tintColor" name="gray060"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="SpoqaHanSansNeo-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DtE-rF-Qci" firstAttribute="top" secondItem="KOA-75-Ncd" secondAttribute="top" id="5St-qG-0Sn"/>
+                            <constraint firstItem="hID-bf-DKv" firstAttribute="top" secondItem="KOA-75-Ncd" secondAttribute="top" id="5h8-Qh-AcO"/>
+                            <constraint firstAttribute="bottom" secondItem="hID-bf-DKv" secondAttribute="bottom" id="hhe-QR-ATk"/>
+                            <constraint firstAttribute="trailing" secondItem="hID-bf-DKv" secondAttribute="trailing" id="r0I-Co-ssp"/>
+                            <constraint firstItem="DtE-rF-Qci" firstAttribute="leading" secondItem="KOA-75-Ncd" secondAttribute="leading" id="rNq-TK-iIF"/>
+                            <constraint firstAttribute="bottom" secondItem="DtE-rF-Qci" secondAttribute="bottom" id="tLe-1h-922"/>
+                            <constraint firstItem="hID-bf-DKv" firstAttribute="leading" secondItem="DtE-rF-Qci" secondAttribute="trailing" id="uzG-dU-fPI"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" name="blue040"/>
+            <constraints>
+                <constraint firstItem="KOA-75-Ncd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1MA-cQ-xs1"/>
+                <constraint firstAttribute="bottom" secondItem="KOA-75-Ncd" secondAttribute="bottom" id="502-aa-9Aw"/>
+                <constraint firstItem="KOA-75-Ncd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="LrD-ry-mXc"/>
+                <constraint firstAttribute="trailing" secondItem="KOA-75-Ncd" secondAttribute="trailing" id="PjR-eG-Tc8"/>
+            </constraints>
             <point key="canvasLocation" x="140.57971014492756" y="93.75"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <namedColor name="blue040">
-            <color red="0.2669999897480011" green="0.76899999380111694" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="gray060">
+            <color red="0.21600000560283661" green="0.27099999785423279" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
