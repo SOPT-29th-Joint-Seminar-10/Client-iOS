@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1590B3E72740D1E700F167D1 /* UIColorPlusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B3E62740D1E700F167D1 /* UIColorPlusExtension.swift */; };
+		154DD60327449D630089585B /* FilterCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154DD60127449D630089585B /* FilterCVC.swift */; };
+		154DD60427449D630089585B /* FilterCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154DD60227449D630089585B /* FilterCVC.xib */; };
+		1590B3E72740D1E700F167D1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B3E62740D1E700F167D1 /* UIColor+Extension.swift */; };
+		15C8EDF42743F60600B4C486 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C8EDF32743F60600B4C486 /* Filter.storyboard */; };
+		15C8EDF82743F6C400B4C486 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8EDF72743F6C400B4C486 /* FilterVC.swift */; };
 		F6DF60342740DE8B00A334EF /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */; };
 		F8983F9D2742BBCB00FC69EE /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983F9C2742BBCB00FC69EE /* Const.swift */; };
 		F8983F9F2742BBD200FC69EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983F9E2742BBD200FC69EE /* ViewController.swift */; };
@@ -44,7 +48,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1590B3E62740D1E700F167D1 /* UIColorPlusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorPlusExtension.swift; sourceTree = "<group>"; };
+		154DD60127449D630089585B /* FilterCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCVC.swift; sourceTree = "<group>"; };
+		154DD60227449D630089585B /* FilterCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCVC.xib; sourceTree = "<group>"; };
+		1590B3E62740D1E700F167D1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		15C8EDF32743F60600B4C486 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
+		15C8EDF72743F6C400B4C486 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		F8983F9C2742BBCB00FC69EE /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		F8983F9E2742BBD200FC69EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +101,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		151C9D182748015E005E6A5B /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
 		F8983FA42742C31B00FC69EE /* Tabar */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +181,8 @@
 				F8983FB62742C92300FC69EE /* RecommendCarCVC.xib */,
 				F8983FB92742C94F00FC69EE /* ReservationCVC.swift */,
 				F8983FBA2742C94F00FC69EE /* ReservationCVC.xib */,
+				154DD60127449D630089585B /* FilterCVC.swift */,
+				154DD60227449D630089585B /* FilterCVC.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -174,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */,
-				1590B3E62740D1E700F167D1 /* UIColorPlusExtension.swift */,
+				1590B3E62740D1E700F167D1 /* UIColor+Extension.swift */,
 				F8E358F92740D0FF00E7B810 /* UIFont+Extension.swift */,
 				F8983FBD2742CD4A00FC69EE /* CALayer+Extension.swift */,
 			);
@@ -192,7 +209,9 @@
 		F8BA1EB7273F845900041003 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				151C9D182748015E005E6A5B /* NavigationController */,
 				F8983FA42742C31B00FC69EE /* Tabar */,
+				15C8EDF72743F6C400B4C486 /* FilterVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -246,6 +265,7 @@
 			children = (
 				F8A5DED7273EC75C00770A6E /* LaunchScreen.storyboard */,
 				F8A5DED2273EC75B00770A6E /* MainTab.storyboard */,
+				15C8EDF32743F60600B4C486 /* Filter.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -332,11 +352,13 @@
 				F8A5DED9273EC75C00770A6E /* LaunchScreen.storyboard in Resources */,
 				F8E358F52740CEDC00E7B810 /* SpoqaHanSansNeo-Thin.otf in Resources */,
 				F8A5DED6273EC75C00770A6E /* Assets.xcassets in Resources */,
+				154DD60427449D630089585B /* FilterCVC.xib in Resources */,
 				F8C7AF8627439483004D0BD6 /* ReservationHistoryView.xib in Resources */,
 				F8E358F72740CEDC00E7B810 /* SpoqaHanSansNeo-Regular.otf in Resources */,
 				F8983FB82742C92300FC69EE /* RecommendCarCVC.xib in Resources */,
 				F8A5DED4273EC75B00770A6E /* MainTab.storyboard in Resources */,
 				F8E358F42740CEDC00E7B810 /* SpoqaHanSansNeo-Bold.otf in Resources */,
+				15C8EDF42743F60600B4C486 /* Filter.storyboard in Resources */,
 				F8E358F62740CEDC00E7B810 /* SpoqaHanSansNeo-Medium.otf in Resources */,
 				F8E358F82740CEDC00E7B810 /* SpoqaHanSansNeo-Light.otf in Resources */,
 				F8983FBC2742C94F00FC69EE /* ReservationCVC.xib in Resources */,
@@ -351,7 +373,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8983FB72742C92300FC69EE /* RecommendCarCVC.swift in Sources */,
-				1590B3E72740D1E700F167D1 /* UIColorPlusExtension.swift in Sources */,
+				1590B3E72740D1E700F167D1 /* UIColor+Extension.swift in Sources */,
+				15C8EDF82743F6C400B4C486 /* FilterVC.swift in Sources */,
+				1590B3E72740D1E700F167D1 /* UIColor+Extension.swift in Sources */,
+				154DD60327449D630089585B /* FilterCVC.swift in Sources */,
 				F8983FC2274337F400FC69EE /* RecommendCarModel.swift in Sources */,
 				F8983FA12742BBD800FC69EE /* Storyboard.swift in Sources */,
 				F8A5DED1273EC75B00770A6E /* MainTabVC.swift in Sources */,

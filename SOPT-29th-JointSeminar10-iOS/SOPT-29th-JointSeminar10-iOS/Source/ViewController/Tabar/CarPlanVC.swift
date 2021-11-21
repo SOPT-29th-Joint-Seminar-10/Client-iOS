@@ -40,6 +40,14 @@ class CarPlanVC: UIViewController {
         registerXib()
     }
     
+    // MARK: - @IBAction Properties
+    
+    @IBAction func touchReservationButton(_ sender: Any) {
+        guard let filterVC = UIStoryboard(name: Const.Storyboard.Name.filter, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.filter) as? FilterVC else { return }
+        
+        self.navigationController?.pushViewController(filterVC, animated: true)
+    }
+    
     // MARK: - @objc Function
 
     @objc func textFieldCompleted(_ textField: UITextField) {

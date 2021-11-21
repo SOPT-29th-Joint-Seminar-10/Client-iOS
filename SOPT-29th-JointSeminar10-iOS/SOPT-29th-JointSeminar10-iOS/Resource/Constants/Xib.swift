@@ -12,6 +12,7 @@ extension Const {
         struct NibName {
             static let recommendCarCVC = "RecommendCarCVC"
             static let reservationCVC = "ReservationCVC"
+            static let filterCVC = "FilterCVC"
         }
     }
 }

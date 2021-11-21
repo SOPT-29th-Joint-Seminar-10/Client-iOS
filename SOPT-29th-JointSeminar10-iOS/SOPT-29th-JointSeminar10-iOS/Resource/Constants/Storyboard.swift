@@ -15,6 +15,7 @@ extension Const {
             static let carPlan = "CarPlan"
             static let pairing = "Pairing"
             static let myPage = "MyPage"
+            static let filter = "Filter"
         }
     }
 }

@@ -32,6 +32,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="MainTabVC" automaticallyAdjustsScrollViewInsets="NO" id="Bhv-um-40n" customClass="MainTabVC" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="eX3-E8-05k"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iFe-Uj-Ls5">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -40,7 +41,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dn4-S1-QLC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26.086956521739133" y="50.892857142857139"/>
+            <point key="canvasLocation" x="14" y="38"/>
         </scene>
         <!--Item-->
         <scene sceneID="XlO-K7-sRe">
@@ -187,6 +188,9 @@
                                                                 </fragment>
                                                             </attributedString>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="touchReservationButton:" destination="wXw-js-iuA" eventType="touchUpInside" id="4X6-wf-lbM"/>
+                                                        </connections>
                                                     </button>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="YY/MM/DD" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="7fN-kj-zLb">
                                                         <rect key="frame" x="144" y="32" width="120" height="48"/>
