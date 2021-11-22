@@ -85,7 +85,7 @@ extension FilterVC: UICollectionViewDataSource {
                 cell.closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
                 cell.closeButtonWidth.isActive = false
                 
-                let attribute = [NSAttributedString.Key.font: UIFont(name: "spoqaHanSansNeo-Regular", size: 12.0)!, NSAttributedString.Key.foregroundColor: UIColor.white]
+                let attribute = [NSAttributedString.Key.font: UIFont.cap1R, NSAttributedString.Key.foregroundColor: UIColor.white]
                 cell.titleButton.setAttributedTitle(NSAttributedString(string:afterFiltered[indexPath.row], attributes: attribute), for: .normal)
                 
                 cell.filterView.backgroundColor = UIColor.gray060
@@ -99,7 +99,7 @@ extension FilterVC: UICollectionViewDataSource {
                 cell.closeButton.frame.size.width = 0
                 cell.closeButton.setImage(UIImage(), for: .normal)
                 
-                let attribute = [NSAttributedString.Key.font: UIFont(name: "spoqaHanSansNeo-Regular", size: 12.0)!, NSAttributedString.Key.foregroundColor: UIColor.gray060]
+                let attribute = [NSAttributedString.Key.font: UIFont.cap1R, NSAttributedString.Key.foregroundColor: UIColor.gray060]
                 cell.titleButton.setAttributedTitle(NSAttributedString(string:beforeFiltered[indexPath.row], attributes: attribute), for: .normal)
                 
                 cell.filterView.backgroundColor = UIColor.white
@@ -129,7 +129,7 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
                 cell!.closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
                 cell!.closeButtonWidth.isActive = false
                 
-                let attribute = [NSAttributedString.Key.font: UIFont(name: "spoqaHanSansNeo-Regular", size: 12.0)!, NSAttributedString.Key.foregroundColor: UIColor.white]
+                let attribute = [NSAttributedString.Key.font: UIFont.cap1R, NSAttributedString.Key.foregroundColor: UIColor.white]
                 cell!.titleButton.setAttributedTitle(NSAttributedString(string:afterFiltered[indexPath.row], attributes: attribute), for: .normal)
                 
                 cell!.filterView.backgroundColor = UIColor.gray060
@@ -143,7 +143,7 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
                 cell!.closeButton.frame.size.width = 0
                 cell!.closeButton.setImage(UIImage(), for: .normal)
                 
-                let attribute = [NSAttributedString.Key.font: UIFont(name: "spoqaHanSansNeo-Regular", size: 12.0)!, NSAttributedString.Key.foregroundColor: UIColor.gray060]
+                let attribute = [NSAttributedString.Key.font: UIFont.cap1R, NSAttributedString.Key.foregroundColor: UIColor.gray060]
                 cell!.titleButton.setAttributedTitle(NSAttributedString(string:beforeFiltered[indexPath.row], attributes: attribute), for: .normal)
                 
                 cell!.filterView.backgroundColor = UIColor.white
@@ -157,7 +157,12 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
             
             return CGSize(width: cell!.filterView.frame.size.width + 37, height: 32)
         } else {
-            return CGSize(width: 168, height: 168)
+            guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { return CGSize() }
+            let numberOfCellsOfWidth: CGFloat = 2
+            let numberOfCellsOfHeight: CGFloat = 5
+            let width = collectionView.frame.size.width - (flowLayout.minimumInteritemSpacing * (numberOfCellsOfWidth-1))
+            let height = collectionView.frame.size.height - (flowLayout.minimumLineSpacing * (numberOfCellsOfHeight-1))
+            return CGSize(width: width/(numberOfCellsOfWidth), height: width/(numberOfCellsOfWidth))
         }
     }
     
