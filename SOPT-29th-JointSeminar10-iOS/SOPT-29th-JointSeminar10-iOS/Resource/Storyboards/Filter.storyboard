@@ -22,7 +22,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgM-Ru-urP">
                                 <rect key="frame" x="0.0" y="88" width="375" height="64"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2ve-ct-aY6">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2ve-ct-aY6">
                                         <rect key="frame" x="0.0" y="16" width="375" height="32"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -54,7 +54,7 @@
                                     <constraint firstAttribute="trailing" secondItem="2ve-ct-aY6" secondAttribute="trailing" id="oat-51-Nif"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tbU-BV-ywt">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tbU-BV-ywt">
                                 <rect key="frame" x="16" y="168" width="343" height="594"/>
                                 <color key="backgroundColor" name="gray020"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gal-LU-DgW">
@@ -91,6 +91,7 @@
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="filterCV" destination="2ve-ct-aY6" id="054-Me-RHY"/>
+                        <outlet property="filterView" destination="hgM-Ru-urP" id="Whf-hx-Pgq"/>
                         <outlet property="reservationCV" destination="tbU-BV-ywt" id="U90-rH-8iB"/>
                     </connections>
                 </viewController>

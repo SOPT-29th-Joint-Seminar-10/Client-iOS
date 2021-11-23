@@ -13,6 +13,7 @@ class FilterVC: UIViewController {
 
     @IBOutlet weak var filterCV: UICollectionView!
     @IBOutlet weak var reservationCV: UICollectionView!
+    @IBOutlet weak var filterView: UIView!
     
     let reserveContentList: [ReservationCarModel] = []
     var isClickedFilter: [Int] = [0, 0, 0, 0, 0, 0]
@@ -36,6 +37,9 @@ class FilterVC: UIViewController {
         self.navigationItem.backButtonTitle = ""
         let backbutton = UIBarButtonItem(image: UIImage(systemName: "arrow.left"), style: .done, target: self, action: #selector(touchNavBackButton))
         self.navigationItem.leftBarButtonItem = backbutton
+        
+        self.filterView.layer.applyShadow(color: .black, alpha: 0.04, x: 0, y: 3.62319, blur: 3.62319, spread: 0)
+        
     }
     
     func setDelegate() {
