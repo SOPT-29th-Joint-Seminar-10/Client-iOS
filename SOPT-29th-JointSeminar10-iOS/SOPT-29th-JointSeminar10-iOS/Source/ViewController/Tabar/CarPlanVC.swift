@@ -15,7 +15,6 @@ class CarPlanVC: UIViewController {
     
     // MARK: - @IBOutlet Properties
     
-
     @IBOutlet var rentalView: ReservationHistoryView!
     @IBOutlet var fromTextField: UITextField!
     @IBOutlet var toTextField: UITextField!
@@ -142,7 +141,7 @@ extension CarPlanVC {
         guard let loadedNib = Bundle.main.loadNibNamed(String(describing: RecommendCarCVC.self), owner: self, options: nil) else {return}
         guard let recommendCarCVC = loadedNib.first as? RecommendCarCVC else {return}
         
-        rentalView.initView(day: "03", week: "wed", mainAddress: "서울특별시 관악구 신림로 29길 8", subAddress: "신림현대아파트 주차장")
+        rentalView = .init(day: "03", week: "wed", mainAddress: "서울특별시 관악구 신림로 29길 8", subAddress: "신림현대아파트 주차장")
         
         reservationStackView.addSubview(rentalView)
     }
