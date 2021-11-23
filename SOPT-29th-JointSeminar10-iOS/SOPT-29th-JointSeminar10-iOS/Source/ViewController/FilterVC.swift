@@ -26,9 +26,17 @@ class FilterVC: UIViewController {
         
         setDelegate()
         registerXib()
+        setUI()
     }
     
     // MARK: - Custom Methods
+    
+    func setUI() {
+        self.navigationItem.title = "차량 예약"
+        self.navigationItem.backButtonTitle = ""
+        let backbutton = UIBarButtonItem(image: UIImage(systemName: "arrow.left"), style: .done, target: self, action: #selector(touchNavBackButton))
+        self.navigationItem.leftBarButtonItem = backbutton
+    }
     
     func setDelegate() {
         filterCV.delegate = self
@@ -48,6 +56,12 @@ class FilterVC: UIViewController {
         filterCV.register(filterXibName, forCellWithReuseIdentifier: Const.Xib.NibName.filterCVC)
         let reservationXibName = UINib(nibName: Const.Xib.NibName.reservationCVC, bundle: nil)
         reservationCV.register(reservationXibName, forCellWithReuseIdentifier: Const.Xib.NibName.reservationCVC)
+    }
+    
+    // MARK: - @objc functions
+    
+    @objc func touchNavBackButton() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
