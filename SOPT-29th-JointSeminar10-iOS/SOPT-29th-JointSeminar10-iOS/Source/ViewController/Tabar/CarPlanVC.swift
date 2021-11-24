@@ -82,7 +82,6 @@ class CarPlanVC: UIViewController {
     
     func setShadowingView() {
         
-        recommendCollectionView.layer.applyShadow(color: .black, alpha: 0.1, x: 1, y: 1, blur: 7, spread: 0)
         applyView.layer.applyShadow(color: .black, alpha: 0.1, x: 1, y: 1, blur: 7, spread: 0)
     }
     
@@ -183,15 +182,9 @@ extension CarPlanVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-//        let width = collectionView.frame.width
-//        let height = collectionView.frame.height
-        
         switch collectionView {
         case recommendCollectionView:
-//            return CGSize(width: (width * 248 / 188), height: height)
-//            return CGSize(width: UIScreen.main.bounds.width * (248/188), height: height)
-            // FIXME: - 셀 너비 비율로 대응하기
-            return CGSize(width: 248, height: 188)
+            return CGSize(width: (collectionView.frame.height * 248 / 188), height: collectionView.frame.height)
         default:
             return CGSize(width: 0, height: 0)
         }
@@ -199,7 +192,16 @@ extension CarPlanVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
-        return 8
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        switch collectionView {
+        case recommendCollectionView:
+            return 8
+        default:
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
