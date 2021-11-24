@@ -12,7 +12,12 @@
 		1590B3E72740D1E700F167D1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B3E62740D1E700F167D1 /* UIColor+Extension.swift */; };
 		15C8EDF42743F60600B4C486 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C8EDF32743F60600B4C486 /* Filter.storyboard */; };
 		15C8EDF82743F6C400B4C486 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8EDF72743F6C400B4C486 /* FilterVC.swift */; };
+		254BE8F2B262A33A9DF6C84E /* Pods_SOPT_29th_JointSeminar10_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E6CE6F546873AD89EC8355 /* Pods_SOPT_29th_JointSeminar10_iOS.framework */; };
 		F6DF60342740DE8B00A334EF /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */; };
+		F86CFFF6274DC0EF0091B907 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CFFF5274DC0EF0091B907 /* APIConstants.swift */; };
+		F86CFFF8274DC1390091B907 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CFFF7274DC1390091B907 /* NetworkResult.swift */; };
+		F86CFFFA274DC3DA0091B907 /* TempLoginResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CFFF9274DC3DA0091B907 /* TempLoginResponseData.swift */; };
+		F86CFFFC274DC5510091B907 /* TempUserSignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CFFFB274DC5510091B907 /* TempUserSignService.swift */; };
 		F8983F9D2742BBCB00FC69EE /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983F9C2742BBCB00FC69EE /* Const.swift */; };
 		F8983F9F2742BBD200FC69EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983F9E2742BBD200FC69EE /* ViewController.swift */; };
 		F8983FA12742BBD800FC69EE /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FA02742BBD800FC69EE /* Storyboard.swift */; };
@@ -34,8 +39,6 @@
 		F8A5DED4273EC75B00770A6E /* MainTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A5DED2273EC75B00770A6E /* MainTab.storyboard */; };
 		F8A5DED6273EC75C00770A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8A5DED5273EC75C00770A6E /* Assets.xcassets */; };
 		F8A5DED9273EC75C00770A6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A5DED7273EC75C00770A6E /* LaunchScreen.storyboard */; };
-		F8BA1ECB273F8FA300041003 /* TempNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ECA273F8FA300041003 /* TempNetworkModel.swift */; };
-		F8BA1ECD273F8FAB00041003 /* TempNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ECC273F8FAB00041003 /* TempNetworkService.swift */; };
 		F8BA1ECF273F8FB100041003 /* TempProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA1ECE273F8FB100041003 /* TempProtocol.swift */; };
 		F8C7AF8627439483004D0BD6 /* ReservationHistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C7AF8527439483004D0BD6 /* ReservationHistoryView.xib */; };
 		F8C7AF892743949B004D0BD6 /* ReservationHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C7AF882743949B004D0BD6 /* ReservationHistoryView.swift */; };
@@ -53,7 +56,14 @@
 		1590B3E62740D1E700F167D1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		15C8EDF32743F60600B4C486 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		15C8EDF72743F6C400B4C486 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		24CB111B595FAF89B7A2FF4D /* Pods-SOPT-29th-JointSeminar10-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-JointSeminar10-iOS.release.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-JointSeminar10-iOS/Pods-SOPT-29th-JointSeminar10-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		64E6CE6F546873AD89EC8355 /* Pods_SOPT_29th_JointSeminar10_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOPT_29th_JointSeminar10_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7E6244D503A59AA5544D399 /* Pods-SOPT-29th-JointSeminar10-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-JointSeminar10-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-JointSeminar10-iOS/Pods-SOPT-29th-JointSeminar10-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		F86CFFF5274DC0EF0091B907 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		F86CFFF7274DC1390091B907 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		F86CFFF9274DC3DA0091B907 /* TempLoginResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempLoginResponseData.swift; sourceTree = "<group>"; };
+		F86CFFFB274DC5510091B907 /* TempUserSignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempUserSignService.swift; sourceTree = "<group>"; };
 		F8983F9C2742BBCB00FC69EE /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		F8983F9E2742BBD200FC69EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F8983FA02742BBD800FC69EE /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
@@ -77,8 +87,6 @@
 		F8A5DED5273EC75C00770A6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8A5DED8273EC75C00770A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8A5DEDA273EC75C00770A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8BA1ECA273F8FA300041003 /* TempNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNetworkModel.swift; sourceTree = "<group>"; };
-		F8BA1ECC273F8FAB00041003 /* TempNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNetworkService.swift; sourceTree = "<group>"; };
 		F8BA1ECE273F8FB100041003 /* TempProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempProtocol.swift; sourceTree = "<group>"; };
 		F8C7AF8527439483004D0BD6 /* ReservationHistoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationHistoryView.xib; sourceTree = "<group>"; };
 		F8C7AF882743949B004D0BD6 /* ReservationHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationHistoryView.swift; sourceTree = "<group>"; };
@@ -95,17 +103,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				254BE8F2B262A33A9DF6C84E /* Pods_SOPT_29th_JointSeminar10_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		151C9D182748015E005E6A5B /* NavigationController */ = {
+		5C59F7C6625ABC5C83E83F6B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				B7E6244D503A59AA5544D399 /* Pods-SOPT-29th-JointSeminar10-iOS.debug.xcconfig */,
+				24CB111B595FAF89B7A2FF4D /* Pods-SOPT-29th-JointSeminar10-iOS.release.xcconfig */,
 			);
-			path = NavigationController;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		76796E46917519C20C59483B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64E6CE6F546873AD89EC8355 /* Pods_SOPT_29th_JointSeminar10_iOS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F8983FA42742C31B00FC69EE /* Tabar */ = {
@@ -125,6 +144,8 @@
 			children = (
 				F8A5DECB273EC75B00770A6E /* SOPT-29th-JointSeminar10-iOS */,
 				F8A5DECA273EC75B00770A6E /* Products */,
+				5C59F7C6625ABC5C83E83F6B /* Pods */,
+				76796E46917519C20C59483B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,7 +230,6 @@
 		F8BA1EB7273F845900041003 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				151C9D182748015E005E6A5B /* NavigationController */,
 				F8983FA42742C31B00FC69EE /* Tabar */,
 				15C8EDF72743F6C400B4C486 /* FilterVC.swift */,
 			);
@@ -227,7 +247,7 @@
 		F8BA1EB9273F846500041003 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
-				F8BA1ECC273F8FAB00041003 /* TempNetworkService.swift */,
+				F86CFFFB274DC5510091B907 /* TempUserSignService.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -235,7 +255,8 @@
 		F8BA1EBA273F846E00041003 /* NetworkModel */ = {
 			isa = PBXGroup;
 			children = (
-				F8BA1ECA273F8FA300041003 /* TempNetworkModel.swift */,
+				F86CFFF7274DC1390091B907 /* NetworkResult.swift */,
+				F86CFFF9274DC3DA0091B907 /* TempLoginResponseData.swift */,
 			);
 			path = NetworkModel;
 			sourceTree = "<group>";
@@ -256,6 +277,7 @@
 				F8983F9E2742BBD200FC69EE /* ViewController.swift */,
 				F8983FA02742BBD800FC69EE /* Storyboard.swift */,
 				F8983FA22742BD5B00FC69EE /* Xib.swift */,
+				F86CFFF5274DC0EF0091B907 /* APIConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -298,9 +320,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8A5DEDD273EC75C00770A6E /* Build configuration list for PBXNativeTarget "SOPT-29th-JointSeminar10-iOS" */;
 			buildPhases = (
+				BA4F95173EFD3825C2EC3048 /* [CP] Check Pods Manifest.lock */,
 				F8A5DEC5273EC75B00770A6E /* Sources */,
 				F8A5DEC6273EC75B00770A6E /* Frameworks */,
 				F8A5DEC7273EC75B00770A6E /* Resources */,
+				6156839C54023C466A154696 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -367,6 +391,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6156839C54023C466A154696 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOPT-29th-JointSeminar10-iOS/Pods-SOPT-29th-JointSeminar10-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOPT-29th-JointSeminar10-iOS/Pods-SOPT-29th-JointSeminar10-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOPT-29th-JointSeminar10-iOS/Pods-SOPT-29th-JointSeminar10-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA4F95173EFD3825C2EC3048 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SOPT-29th-JointSeminar10-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F8A5DEC5273EC75B00770A6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -381,23 +447,25 @@
 				F8983FA12742BBD800FC69EE /* Storyboard.swift in Sources */,
 				F8A5DED1273EC75B00770A6E /* MainTabVC.swift in Sources */,
 				F6DF60342740DE8B00A334EF /* UIImage+Extension.swift in Sources */,
-				F8BA1ECB273F8FA300041003 /* TempNetworkModel.swift in Sources */,
 				F8983FB02742C3B900FC69EE /* CarPlanVC.swift in Sources */,
 				F8983F9F2742BBD200FC69EE /* ViewController.swift in Sources */,
 				F8983FB42742C3CE00FC69EE /* MyPageVC.swift in Sources */,
 				F8A5DECD273EC75B00770A6E /* AppDelegate.swift in Sources */,
 				F8A5DECF273EC75B00770A6E /* SceneDelegate.swift in Sources */,
 				F8983FB22742C3C600FC69EE /* PairingVC.swift in Sources */,
+				F86CFFFC274DC5510091B907 /* TempUserSignService.swift in Sources */,
 				F8983FAE2742C3AF00FC69EE /* HomeVC.swift in Sources */,
 				F8983FA32742BD5B00FC69EE /* Xib.swift in Sources */,
-				F8BA1ECD273F8FAB00041003 /* TempNetworkService.swift in Sources */,
 				F8E358FA2740D0FF00E7B810 /* UIFont+Extension.swift in Sources */,
 				F8983FBB2742C94F00FC69EE /* ReservationCVC.swift in Sources */,
 				F8983FBE2742CD4A00FC69EE /* CALayer+Extension.swift in Sources */,
 				F8C7AF892743949B004D0BD6 /* ReservationHistoryView.swift in Sources */,
+				F86CFFFA274DC3DA0091B907 /* TempLoginResponseData.swift in Sources */,
+				F86CFFF6274DC0EF0091B907 /* APIConstants.swift in Sources */,
 				F8BA1ECF273F8FB100041003 /* TempProtocol.swift in Sources */,
 				F8983F9D2742BBCB00FC69EE /* Const.swift in Sources */,
 				F8983FC4274347F100FC69EE /* ReservationCarModel.swift in Sources */,
+				F86CFFF8274DC1390091B907 /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +609,7 @@
 		};
 		F8A5DEDE273EC75C00770A6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7E6244D503A59AA5544D399 /* Pods-SOPT-29th-JointSeminar10-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -570,6 +639,7 @@
 		};
 		F8A5DEDF273EC75C00770A6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24CB111B595FAF89B7A2FF4D /* Pods-SOPT-29th-JointSeminar10-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

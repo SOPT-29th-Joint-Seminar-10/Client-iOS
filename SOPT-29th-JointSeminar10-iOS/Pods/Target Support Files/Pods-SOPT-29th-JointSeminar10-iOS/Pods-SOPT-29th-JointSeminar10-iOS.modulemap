@@ -1,0 +1,6 @@
+framework module Pods_SOPT_29th_JointSeminar10_iOS {
+  umbrella header "Pods-SOPT-29th-JointSeminar10-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
