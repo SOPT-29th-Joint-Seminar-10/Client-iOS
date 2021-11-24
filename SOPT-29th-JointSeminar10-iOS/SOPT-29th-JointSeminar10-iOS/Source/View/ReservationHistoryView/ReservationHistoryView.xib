@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="71I-Xh-FbG" customClass="ReservationHistoryView" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="471" height="110"/>
+            <rect key="frame" x="0.0" y="0.0" width="343" height="58"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7W-Ur-urZ">
@@ -39,7 +39,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8N-ta-A33">
-                    <rect key="frame" x="98" y="12" width="3" height="86"/>
+                    <rect key="frame" x="98" y="12" width="3" height="34"/>
                     <color key="backgroundColor" name="gray070"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="3" id="9qj-LO-1pM"/>
@@ -61,6 +61,11 @@
                 <constraint firstItem="FSD-cd-ZDI" firstAttribute="leading" secondItem="Q8N-ta-A33" secondAttribute="trailing" constant="16" id="u8w-jY-Xur"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="dayLabel" destination="X7W-Ur-urZ" id="kzA-hl-Vz5"/>
                 <outlet property="mainAddressLabel" destination="FSD-cd-ZDI" id="eO3-M0-3LQ"/>

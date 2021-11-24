@@ -76,17 +76,17 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="864"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbd-aZ-PNq" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="864"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="848"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLw-hp-u8d">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvc-qP-NAP">
                                                         <rect key="frame" x="16" y="40" width="154" height="45.333333333333343"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="내 계획에 맞게 쏘카를 예약해보세요">
                                                                 <attributes>
-                                                                    <font key="NSFont" size="18" name="SpoqaHanSansNeo-Regular"/>
+                                                                    <font key="NSFont" size="18" name="SpoqaHanSansNeo-Medium"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
@@ -96,20 +96,34 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="375" id="0zC-rp-rcO"/>
-                                                    <constraint firstAttribute="height" constant="143" id="2of-DE-RjV"/>
+                                                    <constraint firstAttribute="height" constant="127" id="2of-DE-RjV"/>
                                                     <constraint firstItem="Mvc-qP-NAP" firstAttribute="leading" secondItem="nLw-hp-u8d" secondAttribute="leading" constant="16" id="M86-49-dQ7"/>
                                                     <constraint firstItem="Mvc-qP-NAP" firstAttribute="top" secondItem="nLw-hp-u8d" secondAttribute="top" constant="40" id="UKn-XE-MRj"/>
                                                     <constraint firstAttribute="trailing" secondItem="Mvc-qP-NAP" secondAttribute="trailing" constant="205" id="l5V-i6-xZp"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="155-pl-h6m" userLabel="Reservation Stack View">
-                                                <rect key="frame" x="16" y="143" width="343" height="288"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="155-pl-h6m" userLabel="Reservation Stack View">
+                                                <rect key="frame" x="16" y="127" width="343" height="304"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jha-Eq-kxt" userLabel="Rental View" customClass="ReservationHistoryView" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="288"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="58"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="343" id="5JG-0c-P7u"/>
+                                                            <constraint firstAttribute="height" constant="58" id="JAY-fo-euJ"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBI-oO-mSp" userLabel="Message View">
+                                                        <rect key="frame" x="0.0" y="58" width="343" height="246"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqJ-vV-AOE">
-                                                                <rect key="frame" x="103" y="120.00000000000001" width="123" height="17.666666666666671"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqJ-vV-AOE">
+                                                                <rect key="frame" x="81" y="114" width="181" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Label">
                                                                         <attributes>
@@ -123,20 +137,16 @@
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="jqJ-vV-AOE" secondAttribute="trailing" constant="117" id="OQy-x8-8NS"/>
-                                                            <constraint firstItem="jqJ-vV-AOE" firstAttribute="leading" secondItem="jha-Eq-kxt" secondAttribute="leading" constant="103" id="uRS-hN-qpO"/>
-                                                            <constraint firstItem="jqJ-vV-AOE" firstAttribute="top" secondItem="jha-Eq-kxt" secondAttribute="top" constant="120" id="xLn-gt-VRg"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="8"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="288" id="v81-34-hHG"/>
+                                                    <constraint firstItem="jha-Eq-kxt" firstAttribute="leading" secondItem="155-pl-h6m" secondAttribute="leading" id="0EA-58-RvL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jha-Eq-kxt" secondAttribute="trailing" id="FU0-e5-0LD"/>
+                                                    <constraint firstItem="bBI-oO-mSp" firstAttribute="leading" secondItem="155-pl-h6m" secondAttribute="leading" id="abK-xd-Gy8"/>
+                                                    <constraint firstItem="bBI-oO-mSp" firstAttribute="top" secondItem="jha-Eq-kxt" secondAttribute="bottom" id="eud-SJ-ZTF"/>
+                                                    <constraint firstItem="jha-Eq-kxt" firstAttribute="top" secondItem="155-pl-h6m" secondAttribute="top" id="iP4-MM-ham"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bBI-oO-mSp" secondAttribute="trailing" id="iyz-Lc-wRe"/>
+                                                    <constraint firstAttribute="height" constant="304" id="v81-34-hHG"/>
                                                     <constraint firstAttribute="width" constant="343" id="zNi-hY-kYH"/>
                                                 </constraints>
                                             </stackView>
@@ -276,7 +286,6 @@
                                             <constraint firstAttribute="trailing" secondItem="Tiu-tN-vL2" secondAttribute="trailing" id="CEx-D3-YZs"/>
                                             <constraint firstAttribute="bottom" secondItem="nLw-hp-u8d" secondAttribute="bottom" constant="721" id="N7D-VI-hqm"/>
                                             <constraint firstItem="bI3-gl-v7o" firstAttribute="top" secondItem="jct-Nb-Gcw" secondAttribute="bottom" id="NVx-uy-GOQ"/>
-                                            <constraint firstItem="155-pl-h6m" firstAttribute="leading" secondItem="nbd-aZ-PNq" secondAttribute="leading" constant="16" id="PQl-hv-yYi"/>
                                             <constraint firstItem="Tiu-tN-vL2" firstAttribute="top" secondItem="bI3-gl-v7o" secondAttribute="bottom" id="Qq3-47-X7w"/>
                                             <constraint firstItem="jct-Nb-Gcw" firstAttribute="top" secondItem="155-pl-h6m" secondAttribute="bottom" id="YmC-ez-AV4"/>
                                             <constraint firstAttribute="trailing" secondItem="nLw-hp-u8d" secondAttribute="trailing" id="iLQ-TJ-e7n"/>
@@ -316,6 +325,7 @@
                     <connections>
                         <outlet property="applyView" destination="jct-Nb-Gcw" id="7Qr-jl-hFb"/>
                         <outlet property="fromTextField" destination="nA3-Zv-G3E" id="QfO-RZ-zSN"/>
+                        <outlet property="messageLabel" destination="jqJ-vV-AOE" id="xvM-1P-AU6"/>
                         <outlet property="recommendCollectionView" destination="Tiu-tN-vL2" id="nd2-Su-iTB"/>
                         <outlet property="rentalView" destination="jha-Eq-kxt" id="X2G-Yb-wVT"/>
                         <outlet property="reservationButton" destination="Hvn-Xb-nSK" id="mfO-QG-6X7"/>
