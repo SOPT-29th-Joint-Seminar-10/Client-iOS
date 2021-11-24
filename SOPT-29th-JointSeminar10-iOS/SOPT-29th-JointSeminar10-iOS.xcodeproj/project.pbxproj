@@ -101,13 +101,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		151C9D182748015E005E6A5B /* NavigationController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NavigationController;
-			sourceTree = "<group>";
-		};
 		F8983FA42742C31B00FC69EE /* Tabar */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +202,6 @@
 		F8BA1EB7273F845900041003 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				151C9D182748015E005E6A5B /* NavigationController */,
 				F8983FA42742C31B00FC69EE /* Tabar */,
 				15C8EDF72743F6C400B4C486 /* FilterVC.swift */,
 			);
