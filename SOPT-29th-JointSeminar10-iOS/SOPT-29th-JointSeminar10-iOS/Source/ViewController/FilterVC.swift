@@ -189,7 +189,7 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
                 let attributedTitle = cell!.titleButton.attributedTitle(for: .normal)
                 cell!.layer.frame.size.width = attributedTitle!.size().width + 30
                 
-                if indexPath.row == 0{
+                if indexPath.row == 0 {
                     cell!.titleButton.setImage(UIImage(named: "defaultHome"), for: .normal)
                     cell!.layer.frame.size.width = attributedTitle!.size().width + 30 + 15
                 } else if indexPath.row == 5 {
@@ -210,7 +210,11 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.zero
+        if collectionView == filterCV {
+            return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        } else {
+            return UIEdgeInsets.zero
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
