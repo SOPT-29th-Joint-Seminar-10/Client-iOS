@@ -29,6 +29,18 @@ extension MainTabVC {
               let myPageVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.myPage) else { return }
         let carPlanNVC = UINavigationController(rootViewController: carPlanVC)
         
+        // TODO: - 네비게이션 바 iOS 15 미만 대응
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()    // 불투명하게
+        appearance.backgroundColor = UIColor.white
+        appearance.shadowColor = .white
+        appearance.shadowImage = UIImage()
+        appearance.titleTextAttributes = [NSAttributedString.Key.font: UIFont.sub2M]
+        carPlanNVC.navigationBar.standardAppearance = appearance
+        carPlanNVC.navigationBar.scrollEdgeAppearance = carPlanNVC.navigationBar.standardAppearance    // 동일하게 만들기
+        carPlanNVC.navigationBar.tintColor = UIColor.gray070
+        
         homeVC.tabBarItem = UITabBarItem(title: "홈", image: .defaultHome, selectedImage: .selectedHome)
         carPlanNVC.tabBarItem = UITabBarItem(title: "차량플랜", image: .defaultCarplan, selectedImage: .selectedCarplan)
         pairingVC.tabBarItem = UITabBarItem(title: "페어링", image: .defaultPairing, selectedImage: .selectedPairing)
