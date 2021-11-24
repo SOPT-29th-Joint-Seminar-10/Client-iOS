@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="64"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2ve-ct-aY6">
-                                        <rect key="frame" x="0.0" y="16" width="375" height="32"/>
+                                        <rect key="frame" x="16" y="16" width="359" height="32"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="m7r-FT-qPw"/>
@@ -50,7 +50,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="2ve-ct-aY6" secondAttribute="bottom" constant="16" id="OdW-Uc-3Xg"/>
                                     <constraint firstItem="2ve-ct-aY6" firstAttribute="top" secondItem="hgM-Ru-urP" secondAttribute="top" constant="16" id="T5z-Wj-cKg"/>
-                                    <constraint firstItem="2ve-ct-aY6" firstAttribute="leading" secondItem="hgM-Ru-urP" secondAttribute="leading" id="TIZ-pi-qD0"/>
+                                    <constraint firstItem="2ve-ct-aY6" firstAttribute="leading" secondItem="hgM-Ru-urP" secondAttribute="leading" constant="16" id="TIZ-pi-qD0"/>
                                     <constraint firstAttribute="trailing" secondItem="2ve-ct-aY6" secondAttribute="trailing" id="oat-51-Nif"/>
                                 </constraints>
                             </view>
