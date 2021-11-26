@@ -115,6 +115,13 @@ extension FilterVC: UICollectionViewDataSource {
                 let attributedTitle = cell.titleButton.attributedTitle(for: .normal)
                 cell.titleButton.frame.size.width = attributedTitle!.size().width + 25
                 cell.layer.frame.size.width = cell.titleButton.frame.size.width + 37
+                
+               if indexPath.row == 5 {
+                    cell.titleButton.setImage(UIImage(named: "icSelectedPopular"), for: .normal)
+                    cell.layer.frame.size.width = attributedTitle!.size().width + 30 + 15 + 8
+                    cell.titleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 0)
+                    cell.titleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 0)
+                }
             } else {
                 cell.closeButton.setImage(UIImage(), for: .normal)
                 
@@ -133,10 +140,14 @@ extension FilterVC: UICollectionViewDataSource {
                 
                 if indexPath.row == 0{
                     cell.titleButton.setImage(UIImage(named: "icFilterIns"), for: .normal)
+                    cell.titleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 0)
+                    cell.titleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 0)
                     cell.layer.frame.size.width = attributedTitle!.size().width + 30 + 15
                 } else if indexPath.row == 5 {
-                    cell.titleButton.setImage(UIImage(named: "icFilterIns"), for: .normal)
+                    cell.titleButton.setImage(UIImage(named: "icDefaultPopular"), for: .normal)
                     cell.layer.frame.size.width = attributedTitle!.size().width + 30 + 15
+                    cell.titleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 0)
+                    cell.titleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 0)
                 }
             }
             
@@ -173,6 +184,13 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
                 cell!.titleButton.frame.size.width = attributedTitle!.size().width + 25
                 cell!.layer.frame.size.width = cell!.titleButton.frame.size.width + 37
                 
+                if indexPath.row == 5 {
+                     cell!.titleButton.setImage(UIImage(named: "icSelectedPopular"), for: .normal)
+                     cell!.layer.frame.size.width = attributedTitle!.size().width + 30 + 15 + 8
+                    cell!.titleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 0)
+                    cell!.titleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 0)
+                }
+                
             } else {
                 cell!.closeButton.setImage(UIImage(), for: .normal)
                 
@@ -191,9 +209,13 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
                 if indexPath.row == 0 {
                     cell!.titleButton.setImage(UIImage(named: "icFilterIns"), for: .normal)
                     cell!.layer.frame.size.width = attributedTitle!.size().width + 30 + 15
+                    cell!.titleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 0)
+                    cell!.titleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 0)
                 } else if indexPath.row == 5 {
-                    cell!.titleButton.setImage(UIImage(named: "icFilterIns"), for: .normal)
+                    cell!.titleButton.setImage(UIImage(named: "icDefaultPopular"), for: .normal)
                     cell!.layer.frame.size.width = attributedTitle!.size().width + 30 + 15
+                    cell!.titleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 0)
+                    cell!.titleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 0)
                 }
             }
             
