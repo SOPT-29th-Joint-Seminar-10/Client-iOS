@@ -19,19 +19,19 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hID-bf-DKv">
-                        <rect key="frame" x="59" y="0.0" width="41" height="32"/>
+                        <rect key="frame" x="39" y="0.0" width="61" height="32"/>
                         <color key="tintColor" name="whtie"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="" buttonSize="mini"/>
                     </button>
-                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtE-rF-Qci">
-                        <rect key="frame" x="0.0" y="0.0" width="59" height="32"/>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DtE-rF-Qci">
+                        <rect key="frame" x="0.0" y="0.0" width="39" height="32"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="IoG-lt-gyK"/>
                         </constraints>
                         <color key="tintColor" name="gray005"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" buttonSize="mini">
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Button">
                             <attributedString key="attributedTitle">
                                 <fragment content="Button">
                                     <attributes>
@@ -39,7 +39,7 @@
                                     </attributes>
                                 </fragment>
                             </attributedString>
-                        </buttonConfiguration>
+                        </state>
                     </button>
                 </subviews>
             </view>
