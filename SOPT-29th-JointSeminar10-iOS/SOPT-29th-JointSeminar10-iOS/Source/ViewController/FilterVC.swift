@@ -39,7 +39,6 @@ class FilterVC: UIViewController {
         self.navigationItem.leftBarButtonItem = backbutton
         
         self.filterView.layer.applyShadow(color: .black, alpha: 0.04, x: 0, y: 3.62319, blur: 3.62319, spread: 0)
-        
     }
     
     func setDelegate() {
@@ -100,9 +99,9 @@ extension FilterVC: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.Xib.NibName.filterCVC, for: indexPath) as? FilterCVC else {return UICollectionViewCell()}
            
             if isClickedFilter[indexPath.row] == 1 {
-                cell.closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
+                cell.closeButton.setImage(UIImage(named: "icFilterClose"), for: .normal)
                 cell.closeButton.widthAnchor.constraint(equalToConstant: 37).isActive = true
-                cell.closeButton.leadingAnchor.constraint(equalTo: cell.titleButton.trailingAnchor, constant: -20).isActive = true
+                cell.closeButton.leadingAnchor.constraint(equalTo: cell.titleButton.trailingAnchor, constant: -30).isActive = true
                 
                 let attribute = [NSAttributedString.Key.font: UIFont.cap1R, NSAttributedString.Key.foregroundColor: UIColor.white]
                 cell.titleButton.setAttributedTitle(NSAttributedString(string:afterFiltered[indexPath.row], attributes: attribute), for: .normal)
@@ -116,6 +115,13 @@ extension FilterVC: UICollectionViewDataSource {
                 let attributedTitle = cell.titleButton.attributedTitle(for: .normal)
                 cell.titleButton.frame.size.width = attributedTitle!.size().width + 25
                 cell.layer.frame.size.width = cell.titleButton.frame.size.width + 37
+                
+               if indexPath.row == 5 {
+                    cell.titleButton.setImage(UIImage(named: "icSelectedPopular"), for: .normal)
+                    cell.layer.frame.size.width = attributedTitle!.size().width + 30 + 15 + 8
+                    cell.titleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 0)
+                    cell.titleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 0)
+                }
             } else {
                 cell.closeButton.setImage(UIImage(), for: .normal)
                 
@@ -133,11 +139,15 @@ extension FilterVC: UICollectionViewDataSource {
                 cell.layer.frame.size.width = attributedTitle!.size().width + 30
                 
                 if indexPath.row == 0{
-                    cell.titleButton.setImage(UIImage(named: "defaultHome"), for: .normal)
+                    cell.titleButton.setImage(UIImage(named: "icFilterIns"), for: .normal)
+                    cell.titleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 0)
+                    cell.titleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 0)
                     cell.layer.frame.size.width = attributedTitle!.size().width + 30 + 15
                 } else if indexPath.row == 5 {
-                    cell.titleButton.setImage(UIImage(named: "group17"), for: .normal)
+                    cell.titleButton.setImage(UIImage(named: "icDefaultPopular"), for: .normal)
                     cell.layer.frame.size.width = attributedTitle!.size().width + 30 + 15
+                    cell.titleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 0)
+                    cell.titleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 0)
                 }
             }
             
@@ -156,9 +166,9 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.Xib.NibName.filterCVC, for: indexPath) as? FilterCVC
            
             if isClickedFilter[indexPath.row] == 1 {
-                cell!.closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
+                cell!.closeButton.setImage(UIImage(named: "icFilterClose"), for: .normal)
                 cell!.closeButton.widthAnchor.constraint(equalToConstant: 37).isActive = true
-                cell!.closeButton.leadingAnchor.constraint(equalTo: cell!.titleButton.trailingAnchor, constant: -10).isActive = true
+                cell!.closeButton.leadingAnchor.constraint(equalTo: cell!.titleButton.trailingAnchor, constant: -30).isActive = true
                 
                 let attribute = [NSAttributedString.Key.font: UIFont.cap1R, NSAttributedString.Key.foregroundColor: UIColor.white]
                 cell!.titleButton.setAttributedTitle(NSAttributedString(string:afterFiltered[indexPath.row], attributes: attribute), for: .normal)
@@ -173,6 +183,13 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
                 let attributedTitle = cell!.titleButton.attributedTitle(for: .normal)
                 cell!.titleButton.frame.size.width = attributedTitle!.size().width + 25
                 cell!.layer.frame.size.width = cell!.titleButton.frame.size.width + 37
+                
+                if indexPath.row == 5 {
+                     cell!.titleButton.setImage(UIImage(named: "icSelectedPopular"), for: .normal)
+                     cell!.layer.frame.size.width = attributedTitle!.size().width + 30 + 15 + 8
+                    cell!.titleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 0)
+                    cell!.titleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 0)
+                }
                 
             } else {
                 cell!.closeButton.setImage(UIImage(), for: .normal)
@@ -190,11 +207,15 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
                 cell!.layer.frame.size.width = attributedTitle!.size().width + 30
                 
                 if indexPath.row == 0 {
-                    cell!.titleButton.setImage(UIImage(named: "defaultHome"), for: .normal)
+                    cell!.titleButton.setImage(UIImage(named: "icFilterIns"), for: .normal)
                     cell!.layer.frame.size.width = attributedTitle!.size().width + 30 + 15
+                    cell!.titleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 0)
+                    cell!.titleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 0)
                 } else if indexPath.row == 5 {
-                    cell!.titleButton.setImage(UIImage(named: "group17"), for: .normal)
+                    cell!.titleButton.setImage(UIImage(named: "icDefaultPopular"), for: .normal)
                     cell!.layer.frame.size.width = attributedTitle!.size().width + 30 + 15
+                    cell!.titleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 0)
+                    cell!.titleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 0)
                 }
             }
             
