@@ -15,13 +15,14 @@ class CarPlanVC: UIViewController {
     
     // MARK: - @IBOutlet Properties
     
-    @IBOutlet var rentalView: ReservationHistoryView!
+    @IBOutlet var rentalView: UIView!
     @IBOutlet var fromTextField: UITextField!
     @IBOutlet var toTextField: UITextField!
     @IBOutlet var reservationButton: UIButton!
     @IBOutlet var recommendCollectionView: UICollectionView!
     @IBOutlet var reservationStackView: UIStackView!
     @IBOutlet var applyView: UIView!
+    @IBOutlet var messageLabel: UILabel!
     
     // MARK: - View Life Cycle
     
@@ -33,6 +34,8 @@ class CarPlanVC: UIViewController {
         setTextField()
         setShadowingView()
         setRecommendCVCList()
+        addCustomView()
+        addViewsInStackView()
         assignRecommendCollectionView()
         registerXib()
     }
@@ -107,7 +110,16 @@ class CarPlanVC: UIViewController {
         //        for i in 0 ..< viewDataList.count {
         //            reservationStackView.addArrangedSubview(i)
         //        }
+        messageLabel.text = "더 많은 쏘카를 대여해보세요!"
+    }
+    
+    func addCustomView() {
+
+        guard let loadedNib = Bundle.main.loadNibNamed(String(describing: ReservationHistoryView.self), owner: self, options: nil) else {return}
+        guard let reservationHistory = loadedNib.first as? ReservationHistoryView else {return}
         
+        reservationHistory.frame = CGRect(x: 0, y: 0, width: reservationHistory.frame.width, height: reservationHistory.frame.height)
+        reservationStackView.addSubview(reservationHistory)
     }
     
     func assignRecommendCollectionView() {
@@ -132,27 +144,6 @@ extension UIView {
         get {
             return layer.cornerRadius
         }
-    }
-}
-
-extension CarPlanVC {
-    private func initRecommendCarCVC() {
-        guard let loadedNib = Bundle.main.loadNibNamed(String(describing: RecommendCarCVC.self), owner: self, options: nil) else {return}
-        guard let recommendCarCVC = loadedNib.first as? RecommendCarCVC else {return}
-        
-        rentalView = .init(day: "03", week: "wed", mainAddress: "서울특별시 관악구 신림로 29길 8", subAddress: "신림현대아파트 주차장")
-        
-        reservationStackView.addSubview(rentalView)
-    }
-}
-
-extension CarPlanVC {
-    private func initReservationHistoryView() {
-        guard let loadedNib = Bundle.main.loadNibNamed(String(describing: ReservationHistoryView.self), owner: self, options: nil) else {return}
-        guard let reservationHistoryView = loadedNib.first as? ReservationHistoryView else {return}
-        
-        reservationHistoryView.frame = CGRect(x: 549, y: 309, width: reservationHistoryView.frame.width, height: reservationHistoryView.frame.height)
-        reservationHistoryView.addSubview(reservationStackView)
     }
 }
 

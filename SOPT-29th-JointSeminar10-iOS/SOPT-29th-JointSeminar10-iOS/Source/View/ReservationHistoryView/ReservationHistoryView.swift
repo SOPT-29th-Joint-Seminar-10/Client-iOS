@@ -29,6 +29,7 @@ class ReservationHistoryView: UIView {
          subAddress: String) {
         super.init(frame: .zero)
         super.frame = self.bounds
+        customInit()
         setUI()
         
         dayLabel.text = day
@@ -42,6 +43,13 @@ class ReservationHistoryView: UIView {
         super.init(coder: coder)
     }
     
+    func customInit() {
+        if let view = Bundle.main.loadNibNamed("ReservationHistoryView", owner: self, options: nil)?.first as? UIView {
+            view.frame = self.bounds
+            addSubview(view)
+        }
+    }
+    
     private func setUI() {
         dayLabel.font = .sub2M
         dayLabel.textColor = .gray070
@@ -51,6 +59,15 @@ class ReservationHistoryView: UIView {
         mainAddressLabel.textColor = .gray070
         subAddressLabel.font = .cap2R
         subAddressLabel.textColor = .gray070
+    }
+    
+    @IBInspectable override var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
     }
     
 }
