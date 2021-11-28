@@ -17,7 +17,7 @@ struct ReservationService {
         
         let header: [String: Any] = [
             "Content-Type": "apllication/json",
-            "userId": 3
+            "userId": userId
         ]
     
         let dataRequest = AF.request(url,
@@ -37,7 +37,6 @@ struct ReservationService {
                 completion(.networkFail)
             }
         }
-        
     }
     
     // 📌 400 - 499 상태코드 대응.
@@ -45,7 +44,7 @@ struct ReservationService {
         let decoder = JSONDecoder()
         guard let decodeData = try? decoder.decode(ReservationResponseData.self, from: data) else { return .pathErr }
         switch statusCode {
-        case 200: return .success(decodeData.data ?? "None-Data")
+        case 200: return .success(decodeData ?? "None-Data")
         case 400..<500: return .requestErr(decodeData.message)
         case 500: return .serverErr
         default: return .networkFail
