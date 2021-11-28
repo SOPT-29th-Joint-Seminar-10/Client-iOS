@@ -16,7 +16,7 @@ struct TempUserSignService {
     func login(email: String,
                password: String,
                completion: @escaping (NetworkResult<Any>) -> Void) {
-        let url = APIConstants.loginURL
+        let url = APIConstants.reservationURL
         
         let header: HTTPHeaders = [
             "Content-Type": "apllication/json"

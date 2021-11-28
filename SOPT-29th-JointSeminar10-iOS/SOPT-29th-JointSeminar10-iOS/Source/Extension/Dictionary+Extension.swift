@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 extension Dictionary where Key == String, Value == Any {
     func toHTTPHeaders() -> HTTPHeaders {
