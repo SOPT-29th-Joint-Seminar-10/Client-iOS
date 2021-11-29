@@ -17,9 +17,9 @@ class FilterVC: UIViewController {
     
     var reserveContentList: [FilterResultData] = []
     var isClickedFilter: [Int] = [0, 0, 0, 0, 0, 0]
+    var date: [String] = []
     let beforeFiltered: [String] = ["초기화", "대여기간", "차종", "지역", "가격", "인기"]
-    let afterFiltered: [String] = ["초기화", "3개월 | 2021", "준중형", "서울/경기/인천", "낮은 가격 순", "인기"]
-    let date: [String] = []
+    var afterFiltered: [String] = ["초기화", "3개월 | 2021", "준중형", "서울/경기/인천", "낮은 가격 순", "인기"]
     var sendParameter: [String] = ["", "", "", "", "", ""]
     
     // MARK: - View Life Cycle
@@ -27,12 +27,41 @@ class FilterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initContentList()
         setDelegate()
         registerXib()
         setUI()
     }
     
     // MARK: - Custom Methods
+    
+    func initContentList() {
+        afterFiltered[1] = date[0] + " ~ "
+        isClickedFilter[1] = 1
+        
+        FilterService.shared.filter(userId: 3, start: sendParameter[0], end: sendParameter[1], type: sendParameter[2], location: sendParameter[3], price: sendParameter[4], trend: sendParameter[5]) { responseData in
+            switch responseData {
+            case .success(let filterResponse):
+                guard let response = filterResponse as? FilterResponseData else {return}
+                
+                if let response = response.data {
+                    self.reserveContentList = response
+                    print(response)
+                }
+                
+                self.reservationCV.reloadData()
+                self.filterCV.reloadData()
+            case .requestErr(let msg):
+                print("requestErr \(msg)")
+            case .pathErr :
+                print("pathErr")
+            case .serverErr :
+                print("serveErr")
+            case .networkFail :
+                print("networkFail")
+            }
+        }
+    }
     
     func setUI() {
         self.navigationItem.title = "차량 예약"
@@ -125,6 +154,9 @@ extension FilterVC: UICollectionViewDelegate {
                     self.reserveContentList = response
                     print(response)
                 }
+                
+                self.reservationCV.reloadData()
+                self.filterCV.reloadData()
             case .requestErr(let msg):
                 print("requestErr \(msg)")
             case .pathErr :
@@ -135,9 +167,6 @@ extension FilterVC: UICollectionViewDelegate {
                 print("networkFail")
             }
         }
-        
-        reservationCV.reloadData()
-        filterCV.reloadData()
     }
 }
 
