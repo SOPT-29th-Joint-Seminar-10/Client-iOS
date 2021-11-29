@@ -8,15 +8,15 @@
 import Foundation
 
 // MARK: - FilterResponseModel
-struct FilterResponseModel: Codable {
+struct FilterResponseData: Codable {
     let status: Int
     let success: Bool
     let message: String
-    let data: [FilterResultModel]?
+    let data: [FilterResultData]?
 }
 
 // MARK: - FilterResultModel
-struct FilterResultModel: Codable {
+struct FilterResultData: Codable {
     let carID: Int
     let carName, modelYear, priceUnit: String
     let price, discountRate: Int

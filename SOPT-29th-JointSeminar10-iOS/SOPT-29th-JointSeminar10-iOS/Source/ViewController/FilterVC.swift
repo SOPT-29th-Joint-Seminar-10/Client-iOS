@@ -19,6 +19,7 @@ class FilterVC: UIViewController {
     var isClickedFilter: [Int] = [0, 0, 0, 0, 0, 0]
     let beforeFiltered: [String] = ["초기화", "대여기간", "차종", "지역", "가격", "인기"]
     let afterFiltered: [String] = ["초기화", "3개월 | 2021", "준중형", "서울/경기/인천", "낮은 가격 순", "인기"]
+    var sendParameter: [String] = ["20210331", "20210331", "", "", "", ""]
     
     // MARK: - View Life Cycle
     
@@ -73,11 +74,70 @@ class FilterVC: UIViewController {
 extension FilterVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if isClickedFilter[indexPath.row] == 0 {
+        // 초기화인 경우
+        if indexPath.row == 0 {
+            sendParameter.indices.forEach{sendParameter[$0] = ""}
+        } else if isClickedFilter[indexPath.row] == 0 {
+            
             isClickedFilter[indexPath.row] = 1
+            
+            switch indexPath.row {
+            case 1:
+                sendParameter[0] = "20210331"
+                sendParameter[1] = "20210883"
+            case 2:
+                sendParameter[2] = "준중형"
+            case 3:
+                sendParameter[3] = "서울/경기/인천"
+            case 4:
+                sendParameter[4] = "desc"
+            case 5:
+                sendParameter[4] = "true"
+            default:
+                print("none")
+            }
         } else {
+            
             isClickedFilter[indexPath.row] = 0
+            
+            switch indexPath.row {
+            case 1:
+                sendParameter[0] = ""
+                sendParameter[1] = ""
+            case 2:
+                sendParameter[2] = ""
+            case 3:
+                sendParameter[2] = ""
+            case 4:
+                sendParameter[3] = ""
+            case 5:
+                sendParameter[4] = "false"
+            default:
+                print("none")
+            }
         }
+        
+        print(sendParameter)
+        
+        FilterService.shared.filter(userId: 3, start: sendParameter[0], end: sendParameter[1], type: sendParameter[2], location: sendParameter[3], price: sendParameter[4], trend: sendParameter[5]) { responseData in
+            switch responseData {
+            case .success(let filterResponse):
+                guard let response = filterResponse as? FilterResponseData else {return}
+                
+                if let response = response.data {
+                    print(response)
+                }
+            case .requestErr(let msg):
+                print("requestErr \(msg)")
+            case .pathErr :
+                print("pathErr")
+            case .serverErr :
+                print("serveErr")
+            case .networkFail :
+                print("networkFail")
+            }
+        }
+        
         collectionView.reloadData()
     }
 }
@@ -95,6 +155,7 @@ extension FilterVC: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         if collectionView == filterCV {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.Xib.NibName.filterCVC, for: indexPath) as? FilterCVC else {return UICollectionViewCell()}
            

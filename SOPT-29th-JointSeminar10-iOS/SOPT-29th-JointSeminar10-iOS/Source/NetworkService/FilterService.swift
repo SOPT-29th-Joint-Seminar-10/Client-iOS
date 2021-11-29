@@ -14,28 +14,27 @@ struct FilterService {
     func filter(userId: Int,
                 start: String,
                 end: String,
-                type: String?,
-                location: String?,
-                price: String?,
-                trend: Bool?,
+                type: String,
+                location: String,
+                price: String,
+                trend: String,
                 completion: @escaping (NetworkResult<Any>) -> Void) {
         
-        let url = addParameter(url: APIConstants.filterURL, type: type, location: location, price: price, trend: trend)
+        let url = APIConstants.filterURL
         
         let header: [String: Any] = [
             "Content-Type": "apllication/json",
             "userId": userId
         ]
         
-        let parameters: Parameters = [
-            "start": start,
-            "end" : end
-        ]
-
+        let parameters: Parameters = getParameter(start: start, end: end, type: type, location: location, price: price, trend: trend)
+        
+        print(parameters)
+        
         let dataRequest = AF.request(url,
                                      method: .get,
                                      parameters: parameters,
-                                     encoding: URLEncoding.queryString,
+                                     encoding: JSONEncoding.default,
                                      headers: header.toHTTPHeaders())
         
         dataRequest.responseData { dataResponse in
@@ -54,6 +53,7 @@ struct FilterService {
     
     // 📌 400 - 499 상태코드 대응.
     private func judgeReservationStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
+        print(data)
         let decoder = JSONDecoder()
         guard let decodeData = try? decoder.decode(ReservationResponseData.self, from: data) else { return .pathErr }
         switch statusCode {
@@ -64,29 +64,36 @@ struct FilterService {
         }
     }
     
-    func addParameter(url: String,
-                      type: String?,
-                      location: String?,
-                      price: String?,
-                      trend: Bool?) -> String {
+    func getParameter(start: String,
+                      end: String,
+                      type: String,
+                      location: String,
+                      price: String,
+                      trend: String) -> Parameters {
         
-        var url = url + "&"
+        var parameters: Parameters = [
+            "start": start,
+            "end" : end
+        ]
         
-        if let type = type {
-            url += "=\(type)&"
+        if type != "" {
+            parameters["type"] = type
         }
-        if let location = location {
-            url += "=\(location)&"
+        if location != "" {
+            parameters["location"] = location
         }
-        if let price = price {
-            url += "=\(price)&"
-        }
-        if let trend = trend {
-            url += "=\(trend)&"
+        if price != "" {
+            parameters["price"] = price
         }
         
-        url.removeLast()
+        if trend != "" {
+            parameters["trend"] = true
+        } else {
+            parameters["trend"] = false
+        }
         
-        return url
+        
+        
+        return parameters
     }
 }
