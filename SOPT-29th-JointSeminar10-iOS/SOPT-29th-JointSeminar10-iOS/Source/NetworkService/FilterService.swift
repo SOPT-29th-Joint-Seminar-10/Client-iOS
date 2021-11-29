@@ -57,7 +57,7 @@ struct FilterService {
         guard let decodeData = try? decoder.decode(FilterResponseData.self, from: data) else { return .pathErr }
         switch statusCode {
         case 200: return .success(decodeData)
-        case 400..<500: return .requestErr("")//(decodeData.message)
+        case 400..<500: return .requestErr(decodeData.message)
         case 500: return .serverErr
         default: return .networkFail
         }
@@ -87,10 +87,7 @@ struct FilterService {
         
         if trend != "" {
             parameters["trend"] = "true"
-        } else {
-            parameters["trend"] = "false"
         }
-        
         
         
         return parameters

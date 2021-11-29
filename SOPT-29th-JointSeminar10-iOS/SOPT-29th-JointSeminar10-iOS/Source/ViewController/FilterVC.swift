@@ -15,7 +15,7 @@ class FilterVC: UIViewController {
     @IBOutlet weak var reservationCV: UICollectionView!
     @IBOutlet weak var filterView: UIView!
     
-    let reserveContentList: [ReservationCarModel] = []
+    var reserveContentList: [FilterResultData] = []
     var isClickedFilter: [Int] = [0, 0, 0, 0, 0, 0]
     let beforeFiltered: [String] = ["초기화", "대여기간", "차종", "지역", "가격", "인기"]
     let afterFiltered: [String] = ["초기화", "3개월 | 2021", "준중형", "서울/경기/인천", "낮은 가격 순", "인기"]
@@ -49,12 +49,6 @@ class FilterVC: UIViewController {
         reservationCV.dataSource = self
     }
     
-    func initAppContentList() {
-        
-        // TODO: - 서버 연결되면 데이터 넣기
-        
-    }
-    
     func registerXib() {
         let filterXibName = UINib(nibName: Const.Xib.NibName.filterCVC, bundle: nil)
         filterCV.register(filterXibName, forCellWithReuseIdentifier: Const.Xib.NibName.filterCVC)
@@ -77,6 +71,7 @@ extension FilterVC: UICollectionViewDelegate {
         // 초기화인 경우
         if indexPath.row == 0 {
             sendParameter.indices.forEach{sendParameter[$0] = ""}
+            isClickedFilter = [0, 0, 0, 0, 0, 0]
         } else if isClickedFilter[indexPath.row] == 0 {
             
             isClickedFilter[indexPath.row] = 1
@@ -124,6 +119,7 @@ extension FilterVC: UICollectionViewDelegate {
                 guard let response = filterResponse as? FilterResponseData else {return}
                 
                 if let response = response.data {
+                    self.reserveContentList = response
                     print(response)
                 }
             case .requestErr(let msg):
@@ -137,7 +133,8 @@ extension FilterVC: UICollectionViewDelegate {
             }
         }
         
-        collectionView.reloadData()
+        reservationCV.reloadData()
+        filterCV.reloadData()
     }
 }
 
@@ -146,10 +143,8 @@ extension FilterVC: UICollectionViewDataSource {
         if collectionView == filterCV {
             return 6
         } else {
-            
-            // TODO: - 서버 붙이면 reservationContentList.count로 변경하기
-            
-            return 10
+            print(reserveContentList.count)
+            return reserveContentList.count
         }
     }
     
@@ -214,6 +209,17 @@ extension FilterVC: UICollectionViewDataSource {
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.Xib.NibName.reservationCVC, for: indexPath) as? ReservationCVC else {return UICollectionViewCell()}
+            
+            // TODO: - imageURL 없는 경우 에러 처리
+            let url = URL(string: reserveContentList[indexPath.row].imageURL)
+            let data = try? Data(contentsOf: url!)
+            cell.carImageView.image = UIImage(data: data!)
+            
+            cell.nameLabel.text = reserveContentList[indexPath.row].carName
+            cell.priceLabel.text = String(reserveContentList[indexPath.row].price)
+            cell.termLabel.text = reserveContentList[indexPath.row].modelYear
+            cell.discountLabel.text = String(reserveContentList[indexPath.row].discountRate)
+            cell.locationLabel.text = reserveContentList[indexPath.row].currentLocation
             
             return cell
         }
