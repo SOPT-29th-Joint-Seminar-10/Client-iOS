@@ -92,12 +92,11 @@ extension FilterVC: UICollectionViewDelegate {
             case 4:
                 sendParameter[4] = "desc"
             case 5:
-                sendParameter[4] = "true"
+                sendParameter[5] = "true"
             default:
                 print("none")
             }
         } else {
-            
             isClickedFilter[indexPath.row] = 0
             
             switch indexPath.row {
@@ -107,16 +106,16 @@ extension FilterVC: UICollectionViewDelegate {
             case 2:
                 sendParameter[2] = ""
             case 3:
-                sendParameter[2] = ""
-            case 4:
                 sendParameter[3] = ""
+            case 4:
+                sendParameter[4] = ""
             case 5:
-                sendParameter[4] = "false"
+                sendParameter[5] = "false"
             default:
                 print("none")
             }
+
         }
-        
         print(sendParameter)
         
         FilterService.shared.filter(userId: 3, start: sendParameter[0], end: sendParameter[1], type: sendParameter[2], location: sendParameter[3], price: sendParameter[4], trend: sendParameter[5]) { responseData in

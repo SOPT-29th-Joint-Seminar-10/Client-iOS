@@ -34,7 +34,7 @@ struct FilterService {
         let dataRequest = AF.request(url,
                                      method: .get,
                                      parameters: parameters,
-                                     encoding: JSONEncoding.default,
+                                     encoding: URLEncoding.queryString,
                                      headers: header.toHTTPHeaders())
         
         dataRequest.responseData { dataResponse in
@@ -53,12 +53,11 @@ struct FilterService {
     
     // 📌 400 - 499 상태코드 대응.
     private func judgeReservationStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
-        print(data)
         let decoder = JSONDecoder()
-        guard let decodeData = try? decoder.decode(ReservationResponseData.self, from: data) else { return .pathErr }
+        guard let decodeData = try? decoder.decode(FilterResponseData.self, from: data) else { return .pathErr }
         switch statusCode {
         case 200: return .success(decodeData)
-        case 400..<500: return .requestErr(decodeData.message)
+        case 400..<500: return .requestErr("")//(decodeData.message)
         case 500: return .serverErr
         default: return .networkFail
         }
@@ -87,9 +86,9 @@ struct FilterService {
         }
         
         if trend != "" {
-            parameters["trend"] = true
+            parameters["trend"] = "true"
         } else {
-            parameters["trend"] = false
+            parameters["trend"] = "false"
         }
         
         
