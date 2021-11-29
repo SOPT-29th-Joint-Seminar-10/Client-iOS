@@ -11,6 +11,7 @@ class CarPlanVC: UIViewController {
     
     // MARK: - Properties
     
+    var reservationData: [ReservationResultData] = []
     var recommendCarModel: [RecommendCarModel] = []
     
     // MARK: - @IBOutlet Properties
@@ -29,6 +30,7 @@ class CarPlanVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        getReservationDataList()
         editChanged()
         setPlaceholder()
         setTextField()
@@ -55,6 +57,30 @@ class CarPlanVC: UIViewController {
     }
 
     // MARK: - Custom Method
+    
+    func getReservationDataList() {
+        ReservationService.shared.showReservation(userId: 3) { responseData in
+            switch responseData {
+            case .success(let reservationResponse):
+                guard let response = reservationResponse as? ReservationResponseData else {return}
+                
+                if let userData = response.data {
+                    for i in userData {
+                        self.reservationData.append(i)
+                    }
+                }
+                print(self.reservationData)
+            case .requestErr(let msg):
+                print("requestErr \(msg)")
+            case .pathErr :
+                print("pathErr")
+            case .serverErr :
+                print("serveErr")
+            case .networkFail :
+                print("networkFail")
+            }
+        }
+    }
 
     func editChanged() {
         reservationButton.isEnabled = false
