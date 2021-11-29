@@ -19,7 +19,8 @@ class FilterVC: UIViewController {
     var isClickedFilter: [Int] = [0, 0, 0, 0, 0, 0]
     let beforeFiltered: [String] = ["초기화", "대여기간", "차종", "지역", "가격", "인기"]
     let afterFiltered: [String] = ["초기화", "3개월 | 2021", "준중형", "서울/경기/인천", "낮은 가격 순", "인기"]
-    var sendParameter: [String] = ["20210331", "20210331", "", "", "", ""]
+    let date: [String] = []
+    var sendParameter: [String] = ["", "", "", "", "", ""]
     
     // MARK: - View Life Cycle
     
@@ -71,6 +72,8 @@ extension FilterVC: UICollectionViewDelegate {
         // 초기화인 경우
         if indexPath.row == 0 {
             sendParameter.indices.forEach{sendParameter[$0] = ""}
+            sendParameter[0] = date[0]
+            sendParameter[1] = date[1]
             isClickedFilter = [0, 0, 0, 0, 0, 0]
         } else if isClickedFilter[indexPath.row] == 0 {
             
@@ -78,8 +81,8 @@ extension FilterVC: UICollectionViewDelegate {
             
             switch indexPath.row {
             case 1:
-                sendParameter[0] = "20210331"
-                sendParameter[1] = "20210883"
+                sendParameter[0] = date[0]
+                sendParameter[1] = date[1]
             case 2:
                 sendParameter[2] = "준중형"
             case 3:
