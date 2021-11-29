@@ -63,4 +63,30 @@ struct FilterService {
         default: return .networkFail
         }
     }
+    
+    func addParameter(url: String,
+                      type: String?,
+                      location: String?,
+                      price: String?,
+                      trend: Bool?) -> String {
+        
+        var url = url + "&"
+        
+        if let type = type {
+            url += "=\(type)&"
+        }
+        if let location = location {
+            url += "=\(location)&"
+        }
+        if let price = price {
+            url += "=\(price)&"
+        }
+        if let trend = trend {
+            url += "=\(trend)&"
+        }
+        
+        url.removeLast()
+        
+        return url
+    }
 }
