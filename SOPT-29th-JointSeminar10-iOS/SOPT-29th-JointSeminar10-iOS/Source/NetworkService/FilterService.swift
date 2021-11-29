@@ -12,17 +12,30 @@ struct FilterService {
     static let shared = FilterService()
     
     func filter(userId: Int,
-                         completion: @escaping (NetworkResult<Any>) -> Void) {
-        let url = APIConstants.reservationURL
+                start: String,
+                end: String,
+                type: String?,
+                location: String?,
+                price: String?,
+                trend: Bool?,
+                completion: @escaping (NetworkResult<Any>) -> Void) {
+        
+        let url = addParameter(url: APIConstants.filterURL, type: type, location: location, price: price, trend: trend)
         
         let header: [String: Any] = [
             "Content-Type": "apllication/json",
             "userId": userId
         ]
-    
+        
+        let parameters: Parameters = [
+            "start": start,
+            "end" : end
+        ]
+
         let dataRequest = AF.request(url,
                                      method: .get,
-                                     encoding: JSONEncoding.default,
+                                     parameters: parameters,
+                                     encoding: URLEncoding.queryString,
                                      headers: header.toHTTPHeaders())
         
         dataRequest.responseData { dataResponse in
@@ -44,7 +57,7 @@ struct FilterService {
         let decoder = JSONDecoder()
         guard let decodeData = try? decoder.decode(ReservationResponseData.self, from: data) else { return .pathErr }
         switch statusCode {
-        case 200: return .success(decodeData ?? "None-Data")
+        case 200: return .success(decodeData)
         case 400..<500: return .requestErr(decodeData.message)
         case 500: return .serverErr
         default: return .networkFail
