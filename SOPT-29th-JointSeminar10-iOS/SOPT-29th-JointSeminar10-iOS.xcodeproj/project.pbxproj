@@ -13,6 +13,7 @@
 		159A91FE2753C72500658CC9 /* ReservationResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159A91FD2753C72500658CC9 /* ReservationResponseData.swift */; };
 		159A92042753DB4500658CC9 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159A92032753DB4500658CC9 /* Dictionary+Extension.swift */; };
 		159A92062753DBA600658CC9 /* ReservationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159A92052753DBA600658CC9 /* ReservationService.swift */; };
+		159A92082754D76100658CC9 /* FilterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159A92072754D76100658CC9 /* FilterResponseModel.swift */; };
 		15C8EDF42743F60600B4C486 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C8EDF32743F60600B4C486 /* Filter.storyboard */; };
 		15C8EDF82743F6C400B4C486 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8EDF72743F6C400B4C486 /* FilterVC.swift */; };
 		254BE8F2B262A33A9DF6C84E /* Pods_SOPT_29th_JointSeminar10_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E6CE6F546873AD89EC8355 /* Pods_SOPT_29th_JointSeminar10_iOS.framework */; };
@@ -60,6 +61,7 @@
 		159A91FD2753C72500658CC9 /* ReservationResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationResponseData.swift; sourceTree = "<group>"; };
 		159A92032753DB4500658CC9 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		159A92052753DBA600658CC9 /* ReservationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationService.swift; sourceTree = "<group>"; };
+		159A92072754D76100658CC9 /* FilterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResponseModel.swift; sourceTree = "<group>"; };
 		15C8EDF32743F60600B4C486 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		15C8EDF72743F6C400B4C486 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		24CB111B595FAF89B7A2FF4D /* Pods-SOPT-29th-JointSeminar10-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-JointSeminar10-iOS.release.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-JointSeminar10-iOS/Pods-SOPT-29th-JointSeminar10-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				F86CFFF7274DC1390091B907 /* NetworkResult.swift */,
 				F86CFFF9274DC3DA0091B907 /* TempLoginResponseData.swift */,
 				159A91FD2753C72500658CC9 /* ReservationResponseData.swift */,
+				159A92072754D76100658CC9 /* FilterResponseModel.swift */,
 			);
 			path = NetworkModel;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				F86CFFFA274DC3DA0091B907 /* TempLoginResponseData.swift in Sources */,
 				159A91FE2753C72500658CC9 /* ReservationResponseData.swift in Sources */,
 				F86CFFF6274DC0EF0091B907 /* APIConstants.swift in Sources */,
+				159A92082754D76100658CC9 /* FilterResponseModel.swift in Sources */,
 				F8BA1ECF273F8FB100041003 /* TempProtocol.swift in Sources */,
 				F8983F9D2742BBCB00FC69EE /* Const.swift in Sources */,
 				F8983FC4274347F100FC69EE /* ReservationCarModel.swift in Sources */,
