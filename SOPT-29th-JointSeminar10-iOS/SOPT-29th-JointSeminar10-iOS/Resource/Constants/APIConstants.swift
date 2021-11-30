@@ -15,4 +15,5 @@ struct APIConstants {
     
     static let reservationURL = baseURL + "/my/rent"
     static let recommendURL = baseURL + "/my/recommend"
+    static let favoriteURL = baseURL + "/my/favorite"
 }
