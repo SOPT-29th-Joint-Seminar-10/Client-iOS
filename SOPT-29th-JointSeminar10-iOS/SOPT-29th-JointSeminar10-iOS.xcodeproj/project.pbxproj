@@ -18,6 +18,7 @@
 		254BE8F2B262A33A9DF6C84E /* Pods_SOPT_29th_JointSeminar10_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E6CE6F546873AD89EC8355 /* Pods_SOPT_29th_JointSeminar10_iOS.framework */; };
 		F6359D482755B71800EB3DEC /* RecommendResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6359D472755B71800EB3DEC /* RecommendResponseData.swift */; };
 		F6359D4A2755B88D00EB3DEC /* RecommendDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6359D492755B88C00EB3DEC /* RecommendDataService.swift */; };
+		F647818C27567C6C005A8C8F /* FavoriteResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647818B27567C6C005A8C8F /* FavoriteResponseData.swift */; };
 		F6DF60342740DE8B00A334EF /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */; };
 		F86CFFF6274DC0EF0091B907 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CFFF5274DC0EF0091B907 /* APIConstants.swift */; };
 		F86CFFF8274DC1390091B907 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CFFF7274DC1390091B907 /* NetworkResult.swift */; };
@@ -69,6 +70,7 @@
 		B7E6244D503A59AA5544D399 /* Pods-SOPT-29th-JointSeminar10-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-JointSeminar10-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-JointSeminar10-iOS/Pods-SOPT-29th-JointSeminar10-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F6359D472755B71800EB3DEC /* RecommendResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendResponseData.swift; sourceTree = "<group>"; };
 		F6359D492755B88C00EB3DEC /* RecommendDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendDataService.swift; sourceTree = "<group>"; };
+		F647818B27567C6C005A8C8F /* FavoriteResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteResponseData.swift; sourceTree = "<group>"; };
 		F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		F86CFFF5274DC0EF0091B907 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		F86CFFF7274DC1390091B907 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				F86CFFF7274DC1390091B907 /* NetworkResult.swift */,
 				F86CFFF9274DC3DA0091B907 /* TempLoginResponseData.swift */,
 				F6359D472755B71800EB3DEC /* RecommendResponseData.swift */,
+				F647818B27567C6C005A8C8F /* FavoriteResponseData.swift */,
 				159A91FD2753C72500658CC9 /* ReservationResponseData.swift */,
 			);
 			path = NetworkModel;
@@ -477,6 +480,7 @@
 				F8983FBB2742C94F00FC69EE /* ReservationCVC.swift in Sources */,
 				F8983FBE2742CD4A00FC69EE /* CALayer+Extension.swift in Sources */,
 				F8C7AF892743949B004D0BD6 /* ReservationHistoryView.swift in Sources */,
+				F647818C27567C6C005A8C8F /* FavoriteResponseData.swift in Sources */,
 				F86CFFFA274DC3DA0091B907 /* TempLoginResponseData.swift in Sources */,
 				159A91FE2753C72500658CC9 /* ReservationResponseData.swift in Sources */,
 				F6359D482755B71800EB3DEC /* RecommendResponseData.swift in Sources */,
