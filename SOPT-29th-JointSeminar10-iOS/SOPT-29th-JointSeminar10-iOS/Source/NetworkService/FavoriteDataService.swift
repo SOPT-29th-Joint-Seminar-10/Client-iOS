@@ -15,7 +15,6 @@ struct FavoriteDataService {
                isLiked: Bool,
                completion: @escaping (NetworkResult<Any>) -> (Void)) {
         
-        // 1. 데이터를 받아오기 위한 준비
         let url = APIConstants.favoriteURL
         let header: HTTPHeaders = [
             "Content-Type": "application/json"
@@ -25,14 +24,12 @@ struct FavoriteDataService {
             "isLiked": isLiked
         ]
         
-        // 2. 통신을 위한 요청서 작성
         let dataRequest = AF.request(url,
                                      method: .put,
                                      parameters: body,
                                      encoding: JSONEncoding.default,
                                      headers: header)
         
-        // 3. 2번에서 정의한 요청서로 서버에 통신 request
         dataRequest.responseData { dataResponse in
             switch dataResponse.result {
             case .success:
