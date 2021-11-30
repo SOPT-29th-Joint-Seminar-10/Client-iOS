@@ -19,6 +19,7 @@
 		F6359D482755B71800EB3DEC /* RecommendResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6359D472755B71800EB3DEC /* RecommendResponseData.swift */; };
 		F6359D4A2755B88D00EB3DEC /* RecommendDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6359D492755B88C00EB3DEC /* RecommendDataService.swift */; };
 		F647818C27567C6C005A8C8F /* FavoriteResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647818B27567C6C005A8C8F /* FavoriteResponseData.swift */; };
+		F647818E27567D62005A8C8F /* FavoriteDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647818D27567D62005A8C8F /* FavoriteDataService.swift */; };
 		F6DF60342740DE8B00A334EF /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */; };
 		F86CFFF6274DC0EF0091B907 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CFFF5274DC0EF0091B907 /* APIConstants.swift */; };
 		F86CFFF8274DC1390091B907 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CFFF7274DC1390091B907 /* NetworkResult.swift */; };
@@ -71,6 +72,7 @@
 		F6359D472755B71800EB3DEC /* RecommendResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendResponseData.swift; sourceTree = "<group>"; };
 		F6359D492755B88C00EB3DEC /* RecommendDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendDataService.swift; sourceTree = "<group>"; };
 		F647818B27567C6C005A8C8F /* FavoriteResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteResponseData.swift; sourceTree = "<group>"; };
+		F647818D27567D62005A8C8F /* FavoriteDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDataService.swift; sourceTree = "<group>"; };
 		F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		F86CFFF5274DC0EF0091B907 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		F86CFFF7274DC1390091B907 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				F86CFFFB274DC5510091B907 /* TempUserSignService.swift */,
 				159A92052753DBA600658CC9 /* ReservationService.swift */,
 				F6359D492755B88C00EB3DEC /* RecommendDataService.swift */,
+				F647818D27567D62005A8C8F /* FavoriteDataService.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				154DD60327449D630089585B /* FilterCVC.swift in Sources */,
 				F8983FC2274337F400FC69EE /* RecommendCarModel.swift in Sources */,
 				F8983FA12742BBD800FC69EE /* Storyboard.swift in Sources */,
+				F647818E27567D62005A8C8F /* FavoriteDataService.swift in Sources */,
 				F8A5DED1273EC75B00770A6E /* MainTabVC.swift in Sources */,
 				F6DF60342740DE8B00A334EF /* UIImage+Extension.swift in Sources */,
 				F8983FB02742C3B900FC69EE /* CarPlanVC.swift in Sources */,
