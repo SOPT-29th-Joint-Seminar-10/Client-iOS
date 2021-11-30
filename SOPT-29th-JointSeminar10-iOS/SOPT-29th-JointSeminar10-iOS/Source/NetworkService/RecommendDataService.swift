@@ -36,6 +36,7 @@ struct RecommendDataService
                 guard let value = dataResponse.value else {return}
                 let networkResult = self.judgeRecommendStatus(by: statusCode, value)
                 completion(networkResult)
+                print(networkResult)
                 
             case .failure: completion(.pathErr)
             }
@@ -57,7 +58,7 @@ struct RecommendDataService
         let decoder = JSONDecoder()
         
         guard let decodedData = try? decoder.decode(RecommendResponseData.self, from: data) else {return .pathErr}
-        return .success(decodedData.data ?? "None-Data")
+        return .success(decodedData)
     }
     
     private func isUsedPathErrData(data: Data)  -> NetworkResult<Any> {

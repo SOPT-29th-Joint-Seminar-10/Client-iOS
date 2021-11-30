@@ -12,7 +12,7 @@ class CarPlanVC: UIViewController {
     // MARK: - Properties
     
     var reservationData: [ReservationResultData] = []
-    var recommendCarModel: [RecommendCarModel] = []
+    var recommendContentList: [RecommendResultData] = []
     
     // MARK: - @IBOutlet Properties
     
@@ -31,13 +31,13 @@ class CarPlanVC: UIViewController {
         super.viewDidLoad()
 
         getReservationDataList()
+        getRecommendDataList()
         editChanged()
         setPlaceholder()
         setTextField()
         setShadowingView()
         setRecommendCVCList()
         addCustomView()
-        addViewsInStackView()
         assignRecommendCollectionView()
         registerXib()
     }
@@ -81,6 +81,29 @@ class CarPlanVC: UIViewController {
             }
         }
     }
+    
+    func getRecommendDataList() {
+        RecommendDataService.shared.getRecommendInfo(userId: 4) { responseData in
+
+            switch responseData {
+            case .success(let recommendResponse):
+                guard let response = recommendResponse as? RecommendResponseData else {return}
+                if let response = response.data {
+                    self.recommendContentList = response
+                    print(response)
+                    self.recommendCollectionView.reloadData()
+                }
+                case .requestErr(let msg):
+                    print("requestErr \(msg)")
+                case .pathErr:
+                    print("pathErr")
+                case .serverErr:
+                    print("serverErr")
+                case .networkFail:
+                    print("networkFail")
+                }
+            }
+    }
 
     func editChanged() {
         reservationButton.isEnabled = false
@@ -115,28 +138,8 @@ class CarPlanVC: UIViewController {
     }
     
     func setRecommendCVCList() {
-        recommendCarModel.append(contentsOf: [
-            RecommendCarModel(name: "더뉴아반떼", price: "연 550,0000원~ /", discount: "10 %", image: "imgThenewavante"),
-            RecommendCarModel(name: "투싼(휘발유)", price: "연 403,0000원~ /", discount: "20 %", image: "imgTosan"),
-            RecommendCarModel(name: "스포티지", price: "연 571,0000원~ /", discount: "25 %", image: "imgSportage")
-        ])
         
         recommendCollectionView.isPagingEnabled = true
-    }
-    
-    // TODO: - 서버에서 주는 히스토리 리스트의 개수에 따라서 추가해주기
-    /*
-     스택뷰 아래쪽으로 넣는 코드
-     (고정된 높이 지정, count로 for문)
-     */
-    func addViewsInStackView() {
-        //        var viewDataList : [[:]] = [[:]]()
-        //        viewDataList.append()
-        //
-        //        for i in 0 ..< viewDataList.count {
-        //            reservationStackView.addArrangedSubview(i)
-        //        }
-        messageLabel.text = "더 많은 쏘카를 대여해보세요!"
     }
     
     func addCustomView() {
@@ -179,7 +182,7 @@ extension CarPlanVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case recommendCollectionView:
-            return recommendCarModel.count
+            return recommendContentList.count
         default:
             return 0
         }
@@ -188,7 +191,13 @@ extension CarPlanVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendCarCVC.identifier, for: indexPath) as? RecommendCarCVC else {return UICollectionViewCell()}
         
-        cell.setDataWith(image: recommendCarModel[indexPath.item].image, name: recommendCarModel[indexPath.item].name, price: recommendCarModel[indexPath.item].price, discount: recommendCarModel[indexPath.item].discount)
+        let url = URL(string: recommendContentList[indexPath.row].imageURL)
+        let data = try? Data(contentsOf: url!)
+        cell.carImageView.image = UIImage(data: data!)
+
+        cell.nameLabel.text = recommendContentList[indexPath.row].carName
+        cell.priceLabel.text = recommendContentList[indexPath.row].priceUnit + " " +  String(recommendContentList[indexPath.row].price) + "원~"
+        cell.discountLabel.text = String(recommendContentList[indexPath.row].discountRate) + "%"
         
         return cell
     }
