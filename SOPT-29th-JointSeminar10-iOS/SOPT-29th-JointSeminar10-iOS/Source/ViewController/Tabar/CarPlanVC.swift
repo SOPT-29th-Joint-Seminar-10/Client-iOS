@@ -47,6 +47,8 @@ class CarPlanVC: UIViewController {
     @IBAction func touchReservationButton(_ sender: Any) {
         guard let filterVC = UIStoryboard(name: Const.Storyboard.Name.filter, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.filter) as? FilterVC else { return }
         
+        filterVC.date.append(fromTextField.text!)
+        filterVC.date.append(toTextField.text!)
         self.navigationController?.pushViewController(filterVC, animated: true)
     }
     

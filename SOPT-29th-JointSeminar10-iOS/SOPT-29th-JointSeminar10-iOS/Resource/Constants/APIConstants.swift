@@ -14,4 +14,5 @@ struct APIConstants {
     static let baseURL = "https://asia-northeast3-socar-server-814e9.cloudfunctions.net/api"
     
     static let reservationURL = baseURL + "/my/rent"
+    static let filterURL = baseURL + "/reserve"
 }
