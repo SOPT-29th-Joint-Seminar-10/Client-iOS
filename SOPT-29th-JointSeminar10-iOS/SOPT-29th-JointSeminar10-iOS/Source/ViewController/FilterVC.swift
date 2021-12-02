@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Kingfisher
+
 class FilterVC: UIViewController {
     
     // MARK: - @IBOutlet Properties
@@ -250,9 +252,7 @@ extension FilterVC: UICollectionViewDataSource {
             
             // TODO: - imageURL 없는 경우 에러 처리
             let url = URL(string: reserveContentList[indexPath.row].imageURL)
-            let data = try? Data(contentsOf: url!)
-            cell.carImageView.image = UIImage(data: data!)
-            
+            cell.carImageView.kf.setImage(with: url)
             cell.nameLabel.text = reserveContentList[indexPath.row].carName
             cell.priceLabel.text = String(reserveContentList[indexPath.row].price)
             cell.termLabel.text = reserveContentList[indexPath.row].modelYear
