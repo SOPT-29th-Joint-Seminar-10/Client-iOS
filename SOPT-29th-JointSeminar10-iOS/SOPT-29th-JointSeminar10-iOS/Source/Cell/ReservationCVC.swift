@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol HeartCellDelegate {
+    func heartCellSelected(cell: ReservationCVC)
+    func heartCellUnselected(cell: ReservationCVC, unselectedID: Int)
+}
+
 class ReservationCVC: UICollectionViewCell {
+    
+    // MARK: - Properties
+    static let identifier = "ReservationCVC"
+    var heardID: Int = 0
+    var selectedStatus: Bool = false
+    var heartDelegate: HeartCellDelegate?
     
     // MARK: - @IBOutlet Properties
     
@@ -25,6 +36,21 @@ class ReservationCVC: UICollectionViewCell {
         super.awakeFromNib()
         
         setUI()
+    }
+    
+    // MARK: - @IBAction Properties
+
+    @IBAction func clickToHeart(_ sender: Any) {
+        if selectedStatus {
+            heartDelegate?.heartCellUnselected(cell: self, unselectedID: heardID)
+        } else {
+            heartDelegate?.heartCellSelected(cell: self)
+        }
+        selectedStatus.toggle()
+    }
+    
+    func setButtonImage(image: UIImage) {
+        // 버튼 이미지 설정해주는 부분
     }
 }
 

@@ -204,6 +204,7 @@
 				F8BA1EB9273F846500041003 /* NetworkService */,
 				F8BA1EB8273F845F00041003 /* Protocol */,
 				F8BA1EB7273F845900041003 /* ViewController */,
+				15C8EDF72743F6C400B4C486 /* FilterVC.swift */,
 				F8BA1EB6273F845300041003 /* View */,
 			);
 			path = Source;
@@ -246,7 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				F8983FA42742C31B00FC69EE /* Tabar */,
-				15C8EDF72743F6C400B4C486 /* FilterVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
