@@ -19,7 +19,7 @@ class FilterVC: UIViewController {
     var isClickedFilter: [Int] = [0, 0, 0, 0, 0, 0]
     let beforeFiltered: [String] = ["초기화", "대여기간", "차종", "지역", "가격", "인기"]
     let afterFiltered: [String] = ["초기화", "3개월 | 2021", "준중형", "서울/경기/인천", "낮은 가격 순", "인기"]
-    var favoriteContentList: [FavoriteResultData] = []
+    var favoriteContentList: FavoriteResultData?
     var selectedHeartList: [Int] = []
     
     // MARK: - View Life Cycle
@@ -51,12 +51,6 @@ class FilterVC: UIViewController {
         reservationCV.dataSource = self
     }
     
-    func initAppContentList() {
-        
-        // TODO: - 서버 연결되면 데이터 넣기
-        
-    }
-    
     func registerXib() {
         let filterXibName = UINib(nibName: Const.Xib.NibName.filterCVC, bundle: nil)
         filterCV.register(filterXibName, forCellWithReuseIdentifier: Const.Xib.NibName.filterCVC)
@@ -72,13 +66,11 @@ class FilterVC: UIViewController {
     
     func putFavoriteDataList() {
         FavoriteDataService.shared.putFavoriteInfo(carID: 2, isLiked: false) { responseData in
-
             switch responseData {
             case .success(let favoriteResponse):
-                guard let response = favoriteResponse as? [FavoriteResponseData] else {return}
+                guard let response = favoriteResponse as? FavoriteResponseData else {return}
                 if let response = response.data {
                     self.favoriteContentList = response
-                    print(response)
                     self.reservationCV.reloadData()
                 }
                 case .requestErr(let msg):
