@@ -20,6 +20,7 @@ class FilterVC: UIViewController {
     var date: [String] = []
     let beforeFiltered: [String] = ["초기화", "대여기간", "차종", "지역", "가격", "인기"]
     var afterFiltered: [String] = ["초기화", "3개월 | 2021", "준중형", "서울/경기/인천", "낮은 가격 순", "인기"]
+    var requestData: FilterRequestData?
     var sendParameter: [String] = ["", "", "", "", "", ""]
     
     // MARK: - View Life Cycle
@@ -37,6 +38,9 @@ class FilterVC: UIViewController {
     
     func initContentList() {
         afterFiltered[1] = date[0] + " ~ "
+        requestData = FilterRequestData(from: <#T##Decoder#>)
+        sendParameter[1] = date[0]
+        sendParameter[2] = date[1]
         isClickedFilter[1] = 1
         
         FilterService.shared.filter(userId: 3, start: sendParameter[0], end: sendParameter[1], type: sendParameter[2], location: sendParameter[3], price: sendParameter[4], trend: sendParameter[5]) { responseData in
