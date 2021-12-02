@@ -15,22 +15,53 @@ class FilterVC: UIViewController {
     @IBOutlet weak var reservationCV: UICollectionView!
     @IBOutlet weak var filterView: UIView!
     
-    let reserveContentList: [ReservationCarModel] = []
+    var reserveContentList: [FilterResultData] = []
     var isClickedFilter: [Int] = [0, 0, 0, 0, 0, 0]
+    var date: [String] = []
     let beforeFiltered: [String] = ["초기화", "대여기간", "차종", "지역", "가격", "인기"]
-    let afterFiltered: [String] = ["초기화", "3개월 | 2021", "준중형", "서울/경기/인천", "낮은 가격 순", "인기"]
+    var afterFiltered: [String] = ["초기화", "3개월 | 2021", "준중형", "서울/경기/인천", "낮은 가격 순", "인기"]
+    var sendParameter: [String] = ["", "", "", "", "", ""]
     
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initContentList()
         setDelegate()
         registerXib()
         setUI()
     }
     
     // MARK: - Custom Methods
+    
+    func initContentList() {
+        afterFiltered[1] = date[0] + " ~ "
+        isClickedFilter[1] = 1
+        
+        FilterService.shared.filter(userId: 3, start: sendParameter[0], end: sendParameter[1], type: sendParameter[2], location: sendParameter[3], price: sendParameter[4], trend: sendParameter[5]) { responseData in
+            switch responseData {
+            case .success(let filterResponse):
+                guard let response = filterResponse as? FilterResponseData else {return}
+                
+                if let response = response.data {
+                    self.reserveContentList = response
+                    print(response)
+                }
+                
+                self.reservationCV.reloadData()
+                self.filterCV.reloadData()
+            case .requestErr(let msg):
+                print("requestErr \(msg)")
+            case .pathErr :
+                print("pathErr")
+            case .serverErr :
+                print("serveErr")
+            case .networkFail :
+                print("networkFail")
+            }
+        }
+    }
     
     func setUI() {
         self.navigationItem.title = "차량 예약"
@@ -46,12 +77,6 @@ class FilterVC: UIViewController {
         filterCV.dataSource = self
         reservationCV.delegate = self
         reservationCV.dataSource = self
-    }
-    
-    func initAppContentList() {
-        
-        // TODO: - 서버 연결되면 데이터 넣기
-        
     }
     
     func registerXib() {
@@ -73,12 +98,75 @@ class FilterVC: UIViewController {
 extension FilterVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if isClickedFilter[indexPath.row] == 0 {
+        // 초기화인 경우
+        if indexPath.row == 0 {
+            sendParameter.indices.forEach{sendParameter[$0] = ""}
+            sendParameter[0] = date[0]
+            sendParameter[1] = date[1]
+            isClickedFilter = [0, 0, 0, 0, 0, 0]
+        } else if isClickedFilter[indexPath.row] == 0 {
+            
             isClickedFilter[indexPath.row] = 1
+            
+            switch indexPath.row {
+            case 1:
+                sendParameter[0] = date[0]
+                sendParameter[1] = date[1]
+            case 2:
+                sendParameter[2] = "준중형"
+            case 3:
+                sendParameter[3] = "서울/경기/인천"
+            case 4:
+                sendParameter[4] = "desc"
+            case 5:
+                sendParameter[5] = "true"
+            default:
+                print("none")
+            }
         } else {
             isClickedFilter[indexPath.row] = 0
+            
+            switch indexPath.row {
+            case 1:
+                sendParameter[0] = ""
+                sendParameter[1] = ""
+            case 2:
+                sendParameter[2] = ""
+            case 3:
+                sendParameter[3] = ""
+            case 4:
+                sendParameter[4] = ""
+            case 5:
+                sendParameter[5] = "false"
+            default:
+                print("none")
+            }
+
         }
-        collectionView.reloadData()
+        print(sendParameter)
+        
+        FilterService.shared.filter(userId: 3, start: sendParameter[0], end: sendParameter[1], type: sendParameter[2], location: sendParameter[3], price: sendParameter[4], trend: sendParameter[5]) { responseData in
+            switch responseData {
+            case .success(let filterResponse):
+                guard let response = filterResponse as? FilterResponseData else {return}
+                
+                if let response = response.data {
+                    self.reserveContentList = response
+                    print(response)
+                }
+                
+                self.reservationCV.reloadData()
+                self.filterCV.reloadData()
+            case .requestErr(let msg):
+                print("requestErr \(msg)")
+            case .pathErr :
+                print("pathErr")
+            case .serverErr :
+                print("serveErr")
+            case .networkFail :
+                print("networkFail")
+            }
+        }
     }
 }
 
@@ -87,14 +175,13 @@ extension FilterVC: UICollectionViewDataSource {
         if collectionView == filterCV {
             return 6
         } else {
-            
-            // TODO: - 서버 붙이면 reservationContentList.count로 변경하기
-            
-            return 10
+            print(reserveContentList.count)
+            return reserveContentList.count
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         if collectionView == filterCV {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.Xib.NibName.filterCVC, for: indexPath) as? FilterCVC else {return UICollectionViewCell()}
            
@@ -154,6 +241,17 @@ extension FilterVC: UICollectionViewDataSource {
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.Xib.NibName.reservationCVC, for: indexPath) as? ReservationCVC else {return UICollectionViewCell()}
+            
+            // TODO: - imageURL 없는 경우 에러 처리
+            let url = URL(string: reserveContentList[indexPath.row].imageURL)
+            let data = try? Data(contentsOf: url!)
+            cell.carImageView.image = UIImage(data: data!)
+            
+            cell.nameLabel.text = reserveContentList[indexPath.row].carName
+            cell.priceLabel.text = String(reserveContentList[indexPath.row].price)
+            cell.termLabel.text = reserveContentList[indexPath.row].modelYear
+            cell.discountLabel.text = String(reserveContentList[indexPath.row].discountRate)
+            cell.locationLabel.text = reserveContentList[indexPath.row].currentLocation
             
             return cell
         }
