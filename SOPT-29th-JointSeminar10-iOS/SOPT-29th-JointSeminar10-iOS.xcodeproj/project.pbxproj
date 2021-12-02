@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1549C77E2758FF0B000BCC3B /* FilterRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1549C77D2758FF0B000BCC3B /* FilterRequestModel.swift */; };
 		154DD60327449D630089585B /* FilterCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154DD60127449D630089585B /* FilterCVC.swift */; };
 		154DD60427449D630089585B /* FilterCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154DD60227449D630089585B /* FilterCVC.xib */; };
 		1590B3E72740D1E700F167D1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B3E62740D1E700F167D1 /* UIColor+Extension.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1549C77D2758FF0B000BCC3B /* FilterRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRequestModel.swift; sourceTree = "<group>"; };
 		154DD60127449D630089585B /* FilterCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCVC.swift; sourceTree = "<group>"; };
 		154DD60227449D630089585B /* FilterCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCVC.xib; sourceTree = "<group>"; };
 		1590B3E62740D1E700F167D1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				F6359D472755B71800EB3DEC /* RecommendResponseData.swift */,
 				159A91FD2753C72500658CC9 /* ReservationResponseData.swift */,
 				159A92072754D76100658CC9 /* FilterResponseModel.swift */,
+				1549C77D2758FF0B000BCC3B /* FilterRequestModel.swift */,
 			);
 			path = NetworkModel;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				F8A5DED1273EC75B00770A6E /* MainTabVC.swift in Sources */,
 				F6DF60342740DE8B00A334EF /* UIImage+Extension.swift in Sources */,
 				F8983FB02742C3B900FC69EE /* CarPlanVC.swift in Sources */,
+				1549C77E2758FF0B000BCC3B /* FilterRequestModel.swift in Sources */,
 				F8983F9F2742BBD200FC69EE /* ViewController.swift in Sources */,
 				F8983FB42742C3CE00FC69EE /* MyPageVC.swift in Sources */,
 				F8A5DECD273EC75B00770A6E /* AppDelegate.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - FilterResponseModel
+// MARK: - FilterResponseData
 struct FilterResponseData: Codable {
     let status: Int
     let success: Bool
@@ -15,7 +15,7 @@ struct FilterResponseData: Codable {
     let data: [FilterResultData]?
 }
 
-// MARK: - FilterResultModel
+// MARK: - FilterResultData
 struct FilterResultData: Codable {
     let carID: Int
     let carName, modelYear, priceUnit: String
