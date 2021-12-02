@@ -7,5 +7,7 @@ target 'SOPT-29th-JointSeminar10-iOS' do
 
   # Pods for SOPT-29th-JointSeminar10-iOS
 pod 'Alamofire', '~> 5.4'
-
+pod 'RxSwift', '6.2.0'
+pod 'RxCocoa', '6.2.0'
+pod 'Kingfisher', '~> 7.0'
 end
