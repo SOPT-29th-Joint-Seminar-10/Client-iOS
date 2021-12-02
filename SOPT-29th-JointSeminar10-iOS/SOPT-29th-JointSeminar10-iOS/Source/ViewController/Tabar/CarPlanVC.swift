@@ -39,14 +39,6 @@ class CarPlanVC: UIViewController {
         setStackView()
         assignRecommendCollectionView()
         registerXib()
-        reservationData.append(contentsOf: [
-            ReservationResultData(date: "03", location: "신림현대아파트 주차장", address: "신림현대아파트 주차장"),
-            ReservationResultData(date: "03", location: "신림현대아파트 주차장", address: "신림현대아파트 주차장"),
-            ReservationResultData(date: "03", location: "신림현대아파트 주차장", address: "신림현대아파트 주차장"),
-            ReservationResultData(date: "03", location: "신림현대아파트 주차장", address: "신림현대아파트 주차장")
-        ])
-        // 🪓 서버통신 성공 시 호출.
-        setHistoryViewWithAPI()
     }
     
     // MARK: - @IBAction Properties
@@ -68,17 +60,15 @@ class CarPlanVC: UIViewController {
     // MARK: - Custom Method
     
     func getReservationDataList() {
-        ReservationService.shared.showReservation(userId: 3) { responseData in
+        ReservationService.shared.showReservation(userId: 0) { responseData in
             switch responseData {
             case .success(let reservationResponse):
-                guard let response = reservationResponse as? ReservationResponseData else {return}
+                guard let response = reservationResponse as? ReservationResponseData else { return }
                 
-                if let userData = response.data {
-                    for i in userData {
-                        self.reservationData.append(i)
-                    }
+                if let data = response.data {
+                    self.reservationData = data
+                    self.setHistoryView()
                 }
-                print(self.reservationData)
             case .requestErr(let msg):
                 print("requestErr \(msg)")
             case .pathErr :
@@ -92,7 +82,7 @@ class CarPlanVC: UIViewController {
     }
     
     func getRecommendDataList() {
-        RecommendDataService.shared.getRecommendInfo(userId: 4) { responseData in
+        RecommendDataService.shared.getRecommendInfo(userId: 3) { responseData in
 
             switch responseData {
             case .success(let recommendResponse):
@@ -150,7 +140,6 @@ class CarPlanVC: UIViewController {
         messageLabel.text = "더 많은 쏘카를 대여해보세요!"
     }
     
-    // 🪓 ReservationHistoryView 추가.
     func addCustomView(day: String, week: String, mainAddress: String, subAddress: String, index: Int) {
 
         guard let loadedNib = Bundle.main.loadNibNamed(String(describing: ReservationHistoryView.self), owner: self, options: nil) else { return }
@@ -161,8 +150,7 @@ class CarPlanVC: UIViewController {
         reservationStackView.insertArrangedSubview(reservationHistory, at: index)
     }
     
-    // 🪓 서버통신으로 히스토리 뷰를 가져와서 적용
-    func setHistoryViewWithAPI() {
+    func setHistoryView() {
         if reservationData.count == 4 {
             defaultHistoryView.removeFromSuperview()
         }
@@ -180,7 +168,6 @@ class CarPlanVC: UIViewController {
         recommendCollectionView.register(UINib(nibName: RecommendCarCVC.identifier, bundle: nil), forCellWithReuseIdentifier: RecommendCarCVC.identifier)
     }
 }
-
 
 // MARK: - Extensions
 

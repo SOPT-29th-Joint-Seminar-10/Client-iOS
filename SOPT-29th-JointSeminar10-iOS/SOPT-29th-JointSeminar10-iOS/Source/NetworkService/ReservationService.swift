@@ -44,7 +44,7 @@ struct ReservationService {
         let decoder = JSONDecoder()
         guard let decodeData = try? decoder.decode(ReservationResponseData.self, from: data) else { return .pathErr }
         switch statusCode {
-        case 200: return .success(decodeData ?? "None-Data")
+        case 200: return .success(decodeData)
         case 400..<500: return .requestErr(decodeData.message)
         case 500: return .serverErr
         default: return .networkFail
