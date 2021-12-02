@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wXw-js-iuA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wXw-js-iuA">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -76,17 +76,17 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="864"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbd-aZ-PNq" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="848"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="864"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLw-hp-u8d">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+                                                <rect key="frame" x="0.0" y="16" width="375" height="127"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvc-qP-NAP">
-                                                        <rect key="frame" x="16" y="40" width="154" height="45.333333333333343"/>
+                                                        <rect key="frame" x="16" y="40" width="154" height="43"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="내 계획에 맞게 쏘카를 예약해보세요">
                                                                 <attributes>
-                                                                    <font key="NSFont" size="18" name="SpoqaHanSansNeo-Medium"/>
+                                                                    <font key="NSFont" metaFont="system" size="18"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
@@ -102,33 +102,19 @@
                                                     <constraint firstAttribute="trailing" secondItem="Mvc-qP-NAP" secondAttribute="trailing" constant="205" id="l5V-i6-xZp"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="155-pl-h6m" userLabel="Reservation Stack View">
-                                                <rect key="frame" x="16" y="127" width="343" height="304"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="155-pl-h6m" userLabel="Reservation Stack View">
+                                                <rect key="frame" x="16" y="143" width="343" height="256"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jha-Eq-kxt" userLabel="Rental View" customClass="ReservationHistoryView" customModule="SOPT_29th_JointSeminar10_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="58"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="343" id="5JG-0c-P7u"/>
-                                                            <constraint firstAttribute="height" constant="58" id="JAY-fo-euJ"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="8"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBI-oO-mSp" userLabel="Message View">
-                                                        <rect key="frame" x="0.0" y="58" width="343" height="246"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="256"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqJ-vV-AOE">
-                                                                <rect key="frame" x="81" y="114" width="181" height="18"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqJ-vV-AOE">
+                                                                <rect key="frame" x="154" y="119.66666666666669" width="35.333333333333343" height="17"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Label">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.77254901960784317" green="0.78431372549019607" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <font key="NSFont" size="14" name="SpoqaHanSansNeo-Regular"/>
+                                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -137,21 +123,18 @@
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="jqJ-vV-AOE" firstAttribute="centerX" secondItem="bBI-oO-mSp" secondAttribute="centerX" id="FMK-Df-TGa"/>
+                                                            <constraint firstItem="jqJ-vV-AOE" firstAttribute="centerY" secondItem="bBI-oO-mSp" secondAttribute="centerY" id="HTu-9i-4Mb"/>
+                                                        </constraints>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="jha-Eq-kxt" firstAttribute="leading" secondItem="155-pl-h6m" secondAttribute="leading" id="0EA-58-RvL"/>
-                                                    <constraint firstAttribute="trailing" secondItem="jha-Eq-kxt" secondAttribute="trailing" id="FU0-e5-0LD"/>
-                                                    <constraint firstItem="bBI-oO-mSp" firstAttribute="leading" secondItem="155-pl-h6m" secondAttribute="leading" id="abK-xd-Gy8"/>
-                                                    <constraint firstItem="bBI-oO-mSp" firstAttribute="top" secondItem="jha-Eq-kxt" secondAttribute="bottom" id="eud-SJ-ZTF"/>
-                                                    <constraint firstItem="jha-Eq-kxt" firstAttribute="top" secondItem="155-pl-h6m" secondAttribute="top" id="iP4-MM-ham"/>
-                                                    <constraint firstAttribute="trailing" secondItem="bBI-oO-mSp" secondAttribute="trailing" id="iyz-Lc-wRe"/>
-                                                    <constraint firstAttribute="height" constant="304" id="v81-34-hHG"/>
-                                                    <constraint firstAttribute="width" constant="343" id="zNi-hY-kYH"/>
+                                                    <constraint firstAttribute="height" constant="256" id="v81-34-hHG"/>
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jct-Nb-Gcw">
-                                                <rect key="frame" x="0.0" y="431" width="375" height="112"/>
+                                                <rect key="frame" x="0.0" y="430" width="375" height="112"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eh4-31-B5x" userLabel="Bottom Line View">
                                                         <rect key="frame" x="16" y="0.0" width="343" height="2"/>
@@ -177,13 +160,13 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hvn-Xb-nSK">
-                                                        <rect key="frame" x="284" y="40" width="75" height="29.333333333333329"/>
+                                                        <rect key="frame" x="284" y="40" width="75" height="28.333333333333329"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button">
                                                             <attributedString key="attributedTitle">
                                                                 <fragment content="적용하기">
                                                                     <attributes>
-                                                                        <font key="NSFont" size="12" name="SpoqaHanSansNeo-Regular"/>
+                                                                        <font key="NSFont" metaFont="cellTitle"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
@@ -193,7 +176,7 @@
                                                             <attributedString key="attributedTitle">
                                                                 <fragment content="적용하기">
                                                                     <attributes>
-                                                                        <font key="NSFont" size="12" name="SpoqaHanSansNeo-Regular"/>
+                                                                        <font key="NSFont" metaFont="cellTitle"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
@@ -252,7 +235,7 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tiu-tN-vL2">
-                                                <rect key="frame" x="0.0" y="614" width="375" height="188"/>
+                                                <rect key="frame" x="0.0" y="613" width="375" height="188"/>
                                                 <color key="backgroundColor" name="gray020"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="375" id="LgR-pB-uuc"/>
@@ -287,8 +270,9 @@
                                             <constraint firstAttribute="bottom" secondItem="nLw-hp-u8d" secondAttribute="bottom" constant="721" id="N7D-VI-hqm"/>
                                             <constraint firstItem="bI3-gl-v7o" firstAttribute="top" secondItem="jct-Nb-Gcw" secondAttribute="bottom" id="NVx-uy-GOQ"/>
                                             <constraint firstItem="Tiu-tN-vL2" firstAttribute="top" secondItem="bI3-gl-v7o" secondAttribute="bottom" id="Qq3-47-X7w"/>
-                                            <constraint firstItem="jct-Nb-Gcw" firstAttribute="top" secondItem="155-pl-h6m" secondAttribute="bottom" id="YmC-ez-AV4"/>
+                                            <constraint firstItem="jct-Nb-Gcw" firstAttribute="top" secondItem="155-pl-h6m" secondAttribute="bottom" constant="31" id="YmC-ez-AV4"/>
                                             <constraint firstAttribute="trailing" secondItem="nLw-hp-u8d" secondAttribute="trailing" id="iLQ-TJ-e7n"/>
+                                            <constraint firstItem="155-pl-h6m" firstAttribute="leading" secondItem="nbd-aZ-PNq" secondAttribute="leading" constant="16" id="jU1-L2-sPs"/>
                                             <constraint firstItem="155-pl-h6m" firstAttribute="top" secondItem="nLw-hp-u8d" secondAttribute="bottom" id="jwk-kq-aIQ"/>
                                             <constraint firstItem="Tiu-tN-vL2" firstAttribute="leading" secondItem="nbd-aZ-PNq" secondAttribute="leading" id="pfP-an-exb"/>
                                             <constraint firstItem="Tiu-tN-vL2" firstAttribute="top" secondItem="bI3-gl-v7o" secondAttribute="bottom" id="rs4-Z8-nyo"/>
@@ -324,10 +308,10 @@
                     <size key="freeformSize" width="375" height="942"/>
                     <connections>
                         <outlet property="applyView" destination="jct-Nb-Gcw" id="7Qr-jl-hFb"/>
+                        <outlet property="defaultHistoryView" destination="bBI-oO-mSp" id="XBG-cH-ki2"/>
                         <outlet property="fromTextField" destination="nA3-Zv-G3E" id="QfO-RZ-zSN"/>
                         <outlet property="messageLabel" destination="jqJ-vV-AOE" id="xvM-1P-AU6"/>
                         <outlet property="recommendCollectionView" destination="Tiu-tN-vL2" id="nd2-Su-iTB"/>
-                        <outlet property="rentalView" destination="jha-Eq-kxt" id="X2G-Yb-wVT"/>
                         <outlet property="reservationButton" destination="Hvn-Xb-nSK" id="mfO-QG-6X7"/>
                         <outlet property="reservationStackView" destination="155-pl-h6m" id="cQt-g9-oSv"/>
                         <outlet property="toTextField" destination="7fN-kj-zLb" id="ieb-wz-eDi"/>

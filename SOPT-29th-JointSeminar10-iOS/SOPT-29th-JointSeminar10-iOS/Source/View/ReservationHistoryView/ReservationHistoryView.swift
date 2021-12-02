@@ -23,42 +23,44 @@ class ReservationHistoryView: UIView {
     
     // MARK: - Methods
     
-    required init(day: String,
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        //        customInit()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    func initView(day: String,
          week: String,
          mainAddress: String,
          subAddress: String) {
-        super.init(frame: .zero)
-        super.frame = self.bounds
-        customInit()
         setUI()
-        
+
         dayLabel.text = day
         weekLabel.text = week
         mainAddressLabel.text = mainAddress
         subAddressLabel.text = subAddress
     }
     
-    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-        super.init(coder: coder)
-    }
-    
-    func customInit() {
-        if let view = Bundle.main.loadNibNamed("ReservationHistoryView", owner: self, options: nil)?.first as? UIView {
-            view.frame = self.bounds
-            addSubview(view)
-        }
-    }
+// 🪓 xib 를 custom class 의 class 로 지정하면 init() 에서 사용하면 앱이 멈춤.
+//    func customInit() {
+//        if let view = Bundle.main.loadNibNamed("ReservationHistoryView", owner: self, options: nil)?.first as? UIView {
+//            view.frame = self.bounds
+//            addSubview(view)
+//        }
+//    }
     
     private func setUI() {
         dayLabel.font = .sub2M
         dayLabel.textColor = .gray070
         weekLabel.font = .cap2R
         weekLabel.textColor = .gray070
-        mainAddressLabel.font = .sub2M
-        mainAddressLabel.textColor = .gray070
-        subAddressLabel.font = .cap2R
+        subAddressLabel.font = .sub2M
         subAddressLabel.textColor = .gray070
+        mainAddressLabel.font = .cap2R
+        mainAddressLabel.textColor = .gray070
     }
     
     @IBInspectable override var cornerRadius: CGFloat {

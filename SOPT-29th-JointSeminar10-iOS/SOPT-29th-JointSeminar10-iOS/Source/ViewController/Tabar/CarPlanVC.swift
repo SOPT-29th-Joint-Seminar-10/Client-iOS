@@ -16,7 +16,6 @@ class CarPlanVC: UIViewController {
     
     // MARK: - @IBOutlet Properties
     
-    @IBOutlet var rentalView: UIView!
     @IBOutlet var fromTextField: UITextField!
     @IBOutlet var toTextField: UITextField!
     @IBOutlet var reservationButton: UIButton!
@@ -24,6 +23,7 @@ class CarPlanVC: UIViewController {
     @IBOutlet var reservationStackView: UIStackView!
     @IBOutlet var applyView: UIView!
     @IBOutlet var messageLabel: UILabel!
+    @IBOutlet weak var defaultHistoryView: UIView!
     
     // MARK: - View Life Cycle
     
@@ -36,10 +36,17 @@ class CarPlanVC: UIViewController {
         setPlaceholder()
         setTextField()
         setShadowingView()
-        setRecommendCVCList()
-        addCustomView()
+        setStackView()
         assignRecommendCollectionView()
         registerXib()
+        reservationData.append(contentsOf: [
+            ReservationResultData(date: "03", location: "신림현대아파트 주차장", address: "신림현대아파트 주차장"),
+            ReservationResultData(date: "03", location: "신림현대아파트 주차장", address: "신림현대아파트 주차장"),
+            ReservationResultData(date: "03", location: "신림현대아파트 주차장", address: "신림현대아파트 주차장"),
+            ReservationResultData(date: "03", location: "신림현대아파트 주차장", address: "신림현대아파트 주차장")
+        ])
+        // 🪓 서버통신 성공 시 호출.
+        setHistoryViewWithAPI()
     }
     
     // MARK: - @IBAction Properties
@@ -139,18 +146,29 @@ class CarPlanVC: UIViewController {
         applyView.layer.applyShadow(color: .black, alpha: 0.1, x: 1, y: 1, blur: 7, spread: 0)
     }
     
-    func setRecommendCVCList() {
-        
-        recommendCollectionView.isPagingEnabled = true
+    func setStackView() {
+        messageLabel.text = "더 많은 쏘카를 대여해보세요!"
     }
     
-    func addCustomView() {
+    // 🪓 ReservationHistoryView 추가.
+    func addCustomView(day: String, week: String, mainAddress: String, subAddress: String, index: Int) {
 
-        guard let loadedNib = Bundle.main.loadNibNamed(String(describing: ReservationHistoryView.self), owner: self, options: nil) else {return}
-        guard let reservationHistory = loadedNib.first as? ReservationHistoryView else {return}
+        guard let loadedNib = Bundle.main.loadNibNamed(String(describing: ReservationHistoryView.self), owner: self, options: nil) else { return }
+        guard let reservationHistory = loadedNib.first as? ReservationHistoryView else { return }
         
-        reservationHistory.frame = CGRect(x: 0, y: 0, width: reservationHistory.frame.width, height: reservationHistory.frame.height)
-        reservationStackView.addSubview(reservationHistory)
+        reservationHistory.initView(day: day, week: week, mainAddress: mainAddress, subAddress: subAddress)
+        reservationHistory.heightAnchor.constraint(equalToConstant: 58).isActive = true
+        reservationStackView.insertArrangedSubview(reservationHistory, at: index)
+    }
+    
+    // 🪓 서버통신으로 히스토리 뷰를 가져와서 적용
+    func setHistoryViewWithAPI() {
+        if reservationData.count == 4 {
+            defaultHistoryView.removeFromSuperview()
+        }
+        for (index, data) in reservationData.enumerated() {
+            addCustomView(day: data.date, week: data.date, mainAddress: data.address, subAddress: data.location, index: index)
+        }
     }
     
     func assignRecommendCollectionView() {
