@@ -6,24 +6,28 @@
 //
 
 import Foundation
+
 import Alamofire
 
 struct FavoriteDataService {
     static let shared = FavoriteDataService()
     
-    func liked(carID: Int,
-               isLiked: Bool,
-               completion: @escaping (NetworkResult<Any>) -> (Void)) {
+    func putFavoriteInfo(carID: Int,
+                         isLiked: Bool,
+                         completion: @escaping (NetworkResult<Any>) -> (Void)) {
         
         let url = APIConstants.favoriteURL
+        print(url)
+        dump(url)
+        
         let header: HTTPHeaders = [
             "Content-Type": "application/json"
         ]
+        
         let body: Parameters = [
             "carID": carID,
             "isLiked": isLiked
         ]
-        
         let dataRequest = AF.request(url,
                                      method: .put,
                                      parameters: body,
@@ -31,14 +35,19 @@ struct FavoriteDataService {
                                      headers: header)
         
         dataRequest.responseData { dataResponse in
+            print(dataResponse)
+            dump(dataResponse)
             switch dataResponse.result {
             case .success:
                 guard let statusCode = dataResponse.response?.statusCode else {return}
                 guard let value = dataResponse.value else {return}
                 let networkResult = self.judgeClickedStatus(by: statusCode, value)
                 completion(networkResult)
+                print(networkResult)
+                
             case .failure(let err):
                 print(err)
+                print("----------------")
                 completion(.networkFail)
             }
         }
