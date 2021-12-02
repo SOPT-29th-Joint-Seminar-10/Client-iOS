@@ -11,23 +11,17 @@ import Alamofire
 struct FilterService {
     static let shared = FilterService()
     
-    func filter(userId: Int,
-                start: String,
-                end: String,
-                type: String,
-                location: String,
-                price: String,
-                trend: String,
+    func filter(parameter: FilterRequestData,
                 completion: @escaping (NetworkResult<Any>) -> Void) {
         
         let url = APIConstants.filterURL
         
         let header: [String: Any] = [
             "Content-Type": "apllication/json",
-            "userId": userId
+            "userId": parameter.userId
         ]
         
-        let parameters: Parameters = getParameter(start: start, end: end, type: type, location: location, price: price, trend: trend)
+        let parameters: Parameters = getParameter(parameter: parameter)
         
         print(parameters)
         
@@ -63,32 +57,30 @@ struct FilterService {
         }
     }
     
-    func getParameter(start: String,
-                      end: String,
-                      type: String,
-                      location: String,
-                      price: String,
-                      trend: String) -> Parameters {
+    func getParameter(parameter: FilterRequestData) -> Parameters {
         
-        var parameters: Parameters = [
-            "start": start,
-            "end" : end
-        ]
+        var parameters: Parameters = [:]
         
-        if type != "" {
-            parameters["type"] = type
+        if parameter.start != nil {
+            parameters["start"] = parameter.start
         }
-        if location != "" {
-            parameters["location"] = location
+        if parameter.end != nil {
+            parameters["end"] = parameter.end
         }
-        if price != "" {
-            parameters["price"] = price
+        if parameter.type != nil {
+            parameters["type"] = parameter.type
         }
-        
-        if trend != "" {
+        if parameter.location != nil {
+            parameters["location"] = parameter.location
+        }
+        if parameter.price != nil {
+            parameters["price"] = parameter.price
+        }
+        if parameter.trend != nil {
             parameters["trend"] = "true"
+        } else {
+            parameters["trend"] = nil
         }
-        
         
         return parameters
     }

@@ -9,10 +9,30 @@ import Foundation
 
 struct FilterRequestData {
     let userId: Int
-    let start: String?
-    let end: String?
-    let type: String?
-    let location: String?
-    let price: String?
-    let trend: String?
+    var start: String?
+    var end: String?
+    var type: String?
+    var location: String?
+    var price: String?
+    var trend: String?
+    
+    init(userId: Int, start: String, end: String) {
+        self.userId = userId
+        self.start = start
+        self.end = end
+    }
+    
+    init() {
+        self.userId = -1
+        self.start = nil
+        self.end = nil
+        self.type = nil
+        self.location = nil
+        self.price = nil
+        self.trend = nil
+    }
+    
+    init(userId: Int) {
+        self.userId = userId
+    }
 }

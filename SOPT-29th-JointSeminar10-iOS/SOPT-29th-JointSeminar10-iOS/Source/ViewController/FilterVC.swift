@@ -20,8 +20,7 @@ class FilterVC: UIViewController {
     var date: [String] = []
     let beforeFiltered: [String] = ["초기화", "대여기간", "차종", "지역", "가격", "인기"]
     var afterFiltered: [String] = ["초기화", "3개월 | 2021", "준중형", "서울/경기/인천", "낮은 가격 순", "인기"]
-    var requestData: FilterRequestData?
-    var sendParameter: [String] = ["", "", "", "", "", ""]
+    var requestData: FilterRequestData = FilterRequestData()
     
     // MARK: - View Life Cycle
     
@@ -38,23 +37,23 @@ class FilterVC: UIViewController {
     
     func initContentList() {
         afterFiltered[1] = date[0] + " ~ "
-        requestData = FilterRequestData(from: <#T##Decoder#>)
-        sendParameter[1] = date[0]
-        sendParameter[2] = date[1]
+        requestData = FilterRequestData(userId: 3, start: date[0], end: date[1])
         isClickedFilter[1] = 1
         
-        FilterService.shared.filter(userId: 3, start: sendParameter[0], end: sendParameter[1], type: sendParameter[2], location: sendParameter[3], price: sendParameter[4], trend: sendParameter[5]) { responseData in
+        print(requestData)
+        
+        FilterService.shared.filter(parameter: requestData) { responseData in
             switch responseData {
             case .success(let filterResponse):
                 guard let response = filterResponse as? FilterResponseData else {return}
                 
                 if let response = response.data {
                     self.reserveContentList = response
+                    print("##")
                     print(response)
+                    self.reservationCV.reloadData()
+                    self.filterCV.reloadData()
                 }
-                
-                self.reservationCV.reloadData()
-                self.filterCV.reloadData()
             case .requestErr(let msg):
                 print("requestErr \(msg)")
             case .pathErr :
@@ -101,55 +100,58 @@ class FilterVC: UIViewController {
 
 extension FilterVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        // 초기화인 경우
-        if indexPath.row == 0 {
-            sendParameter.indices.forEach{sendParameter[$0] = ""}
-            sendParameter[0] = date[0]
-            sendParameter[1] = date[1]
+    
+        if indexPath.row == 0 { // 초기화인 경우
+            requestData = FilterRequestData(userId: 3)
             isClickedFilter = [0, 0, 0, 0, 0, 0]
         } else if isClickedFilter[indexPath.row] == 0 {
+            var sendParameter: FilterRequestData = requestData
             
             isClickedFilter[indexPath.row] = 1
             
             switch indexPath.row {
-            case 1:
-                sendParameter[0] = date[0]
-                sendParameter[1] = date[1]
-            case 2:
-                sendParameter[2] = "준중형"
-            case 3:
-                sendParameter[3] = "서울/경기/인천"
-            case 4:
-                sendParameter[4] = "desc"
-            case 5:
-                sendParameter[5] = "true"
+            case 1: // 대여 기간
+                sendParameter.start = date[0]
+                sendParameter.end = date[1]
+            case 2: // 차종
+                sendParameter.type = "준중형"
+            case 3: // 지역
+                sendParameter.location = "서울/경기/인천"
+            case 4: // 가격
+                sendParameter.price = "desc"
+            case 5: // 인기
+                sendParameter.trend = "true"
             default:
                 print("none")
             }
+            requestData = sendParameter
+            
         } else {
+            var sendParameter: FilterRequestData = requestData
+            
             isClickedFilter[indexPath.row] = 0
             
             switch indexPath.row {
-            case 1:
-                sendParameter[0] = ""
-                sendParameter[1] = ""
-            case 2:
-                sendParameter[2] = ""
-            case 3:
-                sendParameter[3] = ""
-            case 4:
-                sendParameter[4] = ""
-            case 5:
-                sendParameter[5] = "false"
+            case 1: // 대여 기간
+                sendParameter.start = nil
+                sendParameter.end = nil
+            case 2: // 차종
+                sendParameter.type = nil
+            case 3: // 지역
+                sendParameter.location = nil
+            case 4: // 가격
+                sendParameter.price = nil
+            case 5: // 인기
+                sendParameter.trend = nil
             default:
                 print("none")
             }
+            requestData = sendParameter
 
         }
-        print(sendParameter)
+        print(requestData)
         
-        FilterService.shared.filter(userId: 3, start: sendParameter[0], end: sendParameter[1], type: sendParameter[2], location: sendParameter[3], price: sendParameter[4], trend: sendParameter[5]) { responseData in
+        FilterService.shared.filter(parameter: requestData) { responseData in
             switch responseData {
             case .success(let filterResponse):
                 guard let response = filterResponse as? FilterResponseData else {return}
