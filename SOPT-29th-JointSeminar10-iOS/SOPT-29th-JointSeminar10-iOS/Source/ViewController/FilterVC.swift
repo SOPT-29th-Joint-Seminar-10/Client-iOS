@@ -259,6 +259,7 @@ extension FilterVC: UICollectionViewDataSource {
             cell.discountLabel.text = String(reserveContentList[indexPath.row].discountRate)
             cell.locationLabel.text = reserveContentList[indexPath.row].currentLocation
             
+            cell.heartCellDelegate = self
             return cell
         }
     }
@@ -329,7 +330,6 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
             let numberOfCellsOfWidth: CGFloat = 2
             let numberOfCellsOfHeight: CGFloat = 5
             let width = collectionView.frame.size.width - (flowLayout.minimumInteritemSpacing * (numberOfCellsOfWidth-1))
-            let height = collectionView.frame.size.height - (flowLayout.minimumLineSpacing * (numberOfCellsOfHeight-1))
             return CGSize(width: width/(numberOfCellsOfWidth), height: width/(numberOfCellsOfWidth))
         }
     }
@@ -358,3 +358,28 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
         }
     }
 }
+
+// MARK: - HeartCellDelegate
+
+extension FilterVC: HeartCellDelegate {
+    func heartCellDelegateWith(carID: Int, isLiked: Bool) {
+        
+    }
+}
+
+//extension FilterVC: HeartCellDelegate {
+//    func heartCellSelected(cell: ReservationCVC) {
+//        selectedHeartList.append(cell.heartID)
+//        updateButtonImage()
+//    }
+//
+//    func heartCellUnselected(cell: ReservationCVC, unselectedID: Int) {
+//        let deletingIndex = selectedHeartList.firstIndex(of: unselectedID) ?? -1
+//        selectedHeartList.remove(at: deletingIndex)
+//        updateButtonImage()
+//    }
+//
+//    func updateButtonImage() {
+//
+//    }
+//}

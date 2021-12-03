@@ -9,6 +9,12 @@ import UIKit
 
 class ReservationCVC: UICollectionViewCell {
     
+    // MARK: - Properties
+    
+    var heartCellDelegate: HeartCellDelegate?
+    var carID: Int?
+    var isLiked: Bool?
+    
     // MARK: - @IBOutlet Properties
     
     @IBOutlet weak var carImageView: UIImageView!
@@ -25,6 +31,9 @@ class ReservationCVC: UICollectionViewCell {
         super.awakeFromNib()
         
         setUI()
+    }
+    @IBAction func touchLikedButton(_ sender: Any) {
+        heartCellDelegate?.heartCellDelegateWith(carID: carID ?? 0, isLiked: isLiked ?? false)
     }
 }
 
