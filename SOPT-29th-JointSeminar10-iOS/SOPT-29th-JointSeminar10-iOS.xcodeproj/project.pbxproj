@@ -23,6 +23,8 @@
 		F6359D4A2755B88D00EB3DEC /* RecommendDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6359D492755B88C00EB3DEC /* RecommendDataService.swift */; };
 		F6DF60342740DE8B00A334EF /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */; };
 		F811B81F275A3A740092D153 /* HeartCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F811B81E275A3A740092D153 /* HeartCellDelegate.swift */; };
+		F811B823275A3DB30092D153 /* FavoriteDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F811B822275A3DB30092D153 /* FavoriteDataService.swift */; };
+		F811B825275A3DCE0092D153 /* FavoriteResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F811B824275A3DCE0092D153 /* FavoriteResponseData.swift */; };
 		F86CFFF6274DC0EF0091B907 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CFFF5274DC0EF0091B907 /* APIConstants.swift */; };
 		F86CFFF8274DC1390091B907 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CFFF7274DC1390091B907 /* NetworkResult.swift */; };
 		F8983F9D2742BBCB00FC69EE /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983F9C2742BBCB00FC69EE /* Const.swift */; };
@@ -75,6 +77,8 @@
 		F6359D492755B88C00EB3DEC /* RecommendDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendDataService.swift; sourceTree = "<group>"; };
 		F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		F811B81E275A3A740092D153 /* HeartCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartCellDelegate.swift; sourceTree = "<group>"; };
+		F811B822275A3DB30092D153 /* FavoriteDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDataService.swift; sourceTree = "<group>"; };
+		F811B824275A3DCE0092D153 /* FavoriteResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteResponseData.swift; sourceTree = "<group>"; };
 		F86CFFF5274DC0EF0091B907 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		F86CFFF7274DC1390091B907 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		F8983F9C2742BBCB00FC69EE /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 				F6359D492755B88C00EB3DEC /* RecommendDataService.swift */,
 				159A92052753DBA600658CC9 /* ReservationService.swift */,
 				159A92092754D8CB00658CC9 /* FilterService.swift */,
+				F811B822275A3DB30092D153 /* FavoriteDataService.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				159A91FD2753C72500658CC9 /* ReservationResponseData.swift */,
 				159A92072754D76100658CC9 /* FilterResponseModel.swift */,
 				1549C77D2758FF0B000BCC3B /* FilterRequestModel.swift */,
+				F811B824275A3DCE0092D153 /* FavoriteResponseData.swift */,
 			);
 			path = NetworkModel;
 			sourceTree = "<group>";
@@ -480,6 +486,7 @@
 				F8983FA32742BD5B00FC69EE /* Xib.swift in Sources */,
 				F8E358FA2740D0FF00E7B810 /* UIFont+Extension.swift in Sources */,
 				F8983FBB2742C94F00FC69EE /* ReservationCVC.swift in Sources */,
+				F811B823275A3DB30092D153 /* FavoriteDataService.swift in Sources */,
 				F8983FBE2742CD4A00FC69EE /* CALayer+Extension.swift in Sources */,
 				F8C7AF892743949B004D0BD6 /* ReservationHistoryView.swift in Sources */,
 				159A91FE2753C72500658CC9 /* ReservationResponseData.swift in Sources */,
@@ -489,6 +496,7 @@
 				F8983F9D2742BBCB00FC69EE /* Const.swift in Sources */,
 				F8983FC4274347F100FC69EE /* ReservationCarModel.swift in Sources */,
 				F86CFFF8274DC1390091B907 /* NetworkResult.swift in Sources */,
+				F811B825275A3DCE0092D153 /* FavoriteResponseData.swift in Sources */,
 				159A92042753DB4500658CC9 /* Dictionary+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
