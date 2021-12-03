@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -68,9 +68,9 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="dayLabel" destination="X7W-Ur-urZ" id="kzA-hl-Vz5"/>
-                <outlet property="mainAddressLabel" destination="FSD-cd-ZDI" id="eO3-M0-3LQ"/>
-                <outlet property="subAddressLabel" destination="V7b-HZ-i7t" id="Eci-ej-dG6"/>
-                <outlet property="weekLabel" destination="maL-fC-i4A" id="fBf-L3-iTY"/>
+                <outlet property="mainAddressLabel" destination="V7b-HZ-i7t" id="1u5-JX-jD5"/>
+                <outlet property="subAddressLabel" destination="FSD-cd-ZDI" id="a1W-Jk-GZc"/>
+                <outlet property="weekLabel" destination="maL-fC-i4A" id="bRX-iB-vKW"/>
             </connections>
             <point key="canvasLocation" x="565.94202898550725" y="-773.4375"/>
         </view>

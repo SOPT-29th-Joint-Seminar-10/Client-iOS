@@ -24,8 +24,6 @@
 		F6DF60342740DE8B00A334EF /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */; };
 		F86CFFF6274DC0EF0091B907 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CFFF5274DC0EF0091B907 /* APIConstants.swift */; };
 		F86CFFF8274DC1390091B907 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CFFF7274DC1390091B907 /* NetworkResult.swift */; };
-		F86CFFFA274DC3DA0091B907 /* TempLoginResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CFFF9274DC3DA0091B907 /* TempLoginResponseData.swift */; };
-		F86CFFFC274DC5510091B907 /* TempUserSignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CFFFB274DC5510091B907 /* TempUserSignService.swift */; };
 		F8983F9D2742BBCB00FC69EE /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983F9C2742BBCB00FC69EE /* Const.swift */; };
 		F8983F9F2742BBD200FC69EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983F9E2742BBD200FC69EE /* ViewController.swift */; };
 		F8983FA12742BBD800FC69EE /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983FA02742BBD800FC69EE /* Storyboard.swift */; };
@@ -78,8 +76,6 @@
 		F6DF60332740DE8B00A334EF /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		F86CFFF5274DC0EF0091B907 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		F86CFFF7274DC1390091B907 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
-		F86CFFF9274DC3DA0091B907 /* TempLoginResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempLoginResponseData.swift; sourceTree = "<group>"; };
-		F86CFFFB274DC5510091B907 /* TempUserSignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempUserSignService.swift; sourceTree = "<group>"; };
 		F8983F9C2742BBCB00FC69EE /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		F8983F9E2742BBD200FC69EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F8983FA02742BBD800FC69EE /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
@@ -264,7 +260,6 @@
 		F8BA1EB9273F846500041003 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
-				F86CFFFB274DC5510091B907 /* TempUserSignService.swift */,
 				F6359D492755B88C00EB3DEC /* RecommendDataService.swift */,
 				159A92052753DBA600658CC9 /* ReservationService.swift */,
 				159A92092754D8CB00658CC9 /* FilterService.swift */,
@@ -276,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				F86CFFF7274DC1390091B907 /* NetworkResult.swift */,
-				F86CFFF9274DC3DA0091B907 /* TempLoginResponseData.swift */,
 				F6359D472755B71800EB3DEC /* RecommendResponseData.swift */,
 				159A91FD2753C72500658CC9 /* ReservationResponseData.swift */,
 				159A92072754D76100658CC9 /* FilterResponseModel.swift */,
@@ -481,14 +475,12 @@
 				159A92062753DBA600658CC9 /* ReservationService.swift in Sources */,
 				F8A5DECF273EC75B00770A6E /* SceneDelegate.swift in Sources */,
 				F8983FB22742C3C600FC69EE /* PairingVC.swift in Sources */,
-				F86CFFFC274DC5510091B907 /* TempUserSignService.swift in Sources */,
 				F8983FAE2742C3AF00FC69EE /* HomeVC.swift in Sources */,
 				F8983FA32742BD5B00FC69EE /* Xib.swift in Sources */,
 				F8E358FA2740D0FF00E7B810 /* UIFont+Extension.swift in Sources */,
 				F8983FBB2742C94F00FC69EE /* ReservationCVC.swift in Sources */,
 				F8983FBE2742CD4A00FC69EE /* CALayer+Extension.swift in Sources */,
 				F8C7AF892743949B004D0BD6 /* ReservationHistoryView.swift in Sources */,
-				F86CFFFA274DC3DA0091B907 /* TempLoginResponseData.swift in Sources */,
 				159A91FE2753C72500658CC9 /* ReservationResponseData.swift in Sources */,
 				F6359D482755B71800EB3DEC /* RecommendResponseData.swift in Sources */,
 				F86CFFF6274DC0EF0091B907 /* APIConstants.swift in Sources */,

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,13 +19,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hID-bf-DKv">
-                        <rect key="frame" x="39" y="0.0" width="61" height="32"/>
+                        <rect key="frame" x="38" y="0.0" width="62" height="32"/>
                         <color key="tintColor" name="whtie"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="" buttonSize="mini"/>
                     </button>
                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DtE-rF-Qci">
-                        <rect key="frame" x="0.0" y="0.0" width="39" height="32"/>
+                        <rect key="frame" x="0.0" y="0.0" width="38" height="32"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="IoG-lt-gyK"/>
                         </constraints>
@@ -35,7 +35,7 @@
                             <attributedString key="attributedTitle">
                                 <fragment content="Button">
                                     <attributes>
-                                        <font key="NSFont" size="12" name="SpoqaHanSansNeo-Regular"/>
+                                        <font key="NSFont" metaFont="cellTitle"/>
                                     </attributes>
                                 </fragment>
                             </attributedString>

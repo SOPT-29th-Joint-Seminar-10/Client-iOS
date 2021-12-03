@@ -16,7 +16,6 @@ class CarPlanVC: UIViewController {
     
     // MARK: - @IBOutlet Properties
     
-    @IBOutlet var rentalView: UIView!
     @IBOutlet var fromTextField: UITextField!
     @IBOutlet var toTextField: UITextField!
     @IBOutlet var reservationButton: UIButton!
@@ -24,6 +23,7 @@ class CarPlanVC: UIViewController {
     @IBOutlet var reservationStackView: UIStackView!
     @IBOutlet var applyView: UIView!
     @IBOutlet var messageLabel: UILabel!
+    @IBOutlet weak var defaultHistoryView: UIView!
     
     // MARK: - View Life Cycle
     
@@ -36,8 +36,7 @@ class CarPlanVC: UIViewController {
         setPlaceholder()
         setTextField()
         setShadowingView()
-        setRecommendCVCList()
-        addCustomView()
+        setStackView()
         assignRecommendCollectionView()
         registerXib()
     }
@@ -61,17 +60,15 @@ class CarPlanVC: UIViewController {
     // MARK: - Custom Method
     
     func getReservationDataList() {
-        ReservationService.shared.showReservation(userId: 3) { responseData in
+        ReservationService.shared.showReservation(userId: 0) { responseData in
             switch responseData {
             case .success(let reservationResponse):
-                guard let response = reservationResponse as? ReservationResponseData else {return}
+                guard let response = reservationResponse as? ReservationResponseData else { return }
                 
-                if let userData = response.data {
-                    for i in userData {
-                        self.reservationData.append(i)
-                    }
+                if let data = response.data {
+                    self.reservationData = data
+                    self.setHistoryView()
                 }
-                print(self.reservationData)
             case .requestErr(let msg):
                 print("requestErr \(msg)")
             case .pathErr :
@@ -85,7 +82,7 @@ class CarPlanVC: UIViewController {
     }
     
     func getRecommendDataList() {
-        RecommendDataService.shared.getRecommendInfo(userId: 4) { responseData in
+        RecommendDataService.shared.getRecommendInfo(userId: 3) { responseData in
 
             switch responseData {
             case .success(let recommendResponse):
@@ -139,18 +136,27 @@ class CarPlanVC: UIViewController {
         applyView.layer.applyShadow(color: .black, alpha: 0.1, x: 1, y: 1, blur: 7, spread: 0)
     }
     
-    func setRecommendCVCList() {
-        
-        recommendCollectionView.isPagingEnabled = true
+    func setStackView() {
+        messageLabel.text = "더 많은 쏘카를 대여해보세요!"
     }
     
-    func addCustomView() {
+    func addCustomView(day: String, week: String, mainAddress: String, subAddress: String, index: Int) {
 
-        guard let loadedNib = Bundle.main.loadNibNamed(String(describing: ReservationHistoryView.self), owner: self, options: nil) else {return}
-        guard let reservationHistory = loadedNib.first as? ReservationHistoryView else {return}
+        guard let loadedNib = Bundle.main.loadNibNamed(String(describing: ReservationHistoryView.self), owner: self, options: nil) else { return }
+        guard let reservationHistory = loadedNib.first as? ReservationHistoryView else { return }
         
-        reservationHistory.frame = CGRect(x: 0, y: 0, width: reservationHistory.frame.width, height: reservationHistory.frame.height)
-        reservationStackView.addSubview(reservationHistory)
+        reservationHistory.initView(day: day, week: week, mainAddress: mainAddress, subAddress: subAddress)
+        reservationHistory.heightAnchor.constraint(equalToConstant: 58).isActive = true
+        reservationStackView.insertArrangedSubview(reservationHistory, at: index)
+    }
+    
+    func setHistoryView() {
+        if reservationData.count == 4 {
+            defaultHistoryView.removeFromSuperview()
+        }
+        for (index, data) in reservationData.enumerated() {
+            addCustomView(day: data.date, week: data.date, mainAddress: data.address, subAddress: data.location, index: index)
+        }
     }
     
     func assignRecommendCollectionView() {
@@ -162,7 +168,6 @@ class CarPlanVC: UIViewController {
         recommendCollectionView.register(UINib(nibName: RecommendCarCVC.identifier, bundle: nil), forCellWithReuseIdentifier: RecommendCarCVC.identifier)
     }
 }
-
 
 // MARK: - Extensions
 
