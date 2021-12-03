@@ -1,12 +1,13 @@
-# 🧃합동세미나 10조 iOS🧃 - 쏘카ㅏㅏㅏㅏ🚘 
+# 🧃합동세미나 10조 iOS🧃 - Socar🚘 
+![메인](https://user-images.githubusercontent.com/69136340/144607293-4b096b55-823f-4474-81fd-a09bcdbdd322.png)
+![멤버 소개](https://user-images.githubusercontent.com/69136340/144607301-07b2d325-915e-4809-9c71-8b4d4a0cfd95.png)
+![기능 구현](https://user-images.githubusercontent.com/69136340/144607497-a97bff0f-40a4-48df-905b-276d2dcfc481.png)
+![코드컨밴션](https://user-images.githubusercontent.com/69136340/144607306-3499f4b0-e0ac-4930-8f18-3831ba139090.png)
+![깃플로우](https://user-images.githubusercontent.com/69136340/144607376-e02029bd-27d1-44bc-8e42-b20d82e132b4.png)
+![커밋 컨벤션](https://user-images.githubusercontent.com/69136340/144607318-16b7a30d-4106-45eb-bda7-2acdec67ecf2.png)
 
-### 역할 분배
 
-|    김현규    |    박예빈     |   정은희   |
-| :-------------: |:-------------:| :-----:|
-| <img src ="https://user-images.githubusercontent.com/69136340/126434954-07f19c00-5fa1-4ff5-8e94-ef7070ab6fb2.png" width ="200"> |   <img src ="https://user-images.githubusercontent.com/69136340/144574490-3fd1e0a4-fc5b-435c-b478-b4099bcb9ed7.png" width = "200"> | <img src ="https://user-images.githubusercontent.com/70689381/143555976-94c13735-622d-4915-9f0a-615618d67354.png" width = "200"> |
-|    셀, 커스텀뷰 구현 및 서버     |    차량플랜 뷰 구현     |   차량예약 뷰 구현   |
-
+## 🚘 Wiki
 
 ### [Code Convention](https://github.com/SOPT-29th-Joint-Seminar-10/Client-iOS/wiki/Code-Convention)
 
