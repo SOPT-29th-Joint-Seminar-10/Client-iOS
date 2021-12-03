@@ -1,5 +1,6 @@
-# 🧃합동세미나 10조 iOS🧃 - Socar🚘 
-![메인](https://user-images.githubusercontent.com/46108770/144620184-9bc4635d-5671-47cb-9ffe-9b510e6c98c6.png)
+# 🧃합동세미나 10조 iOS🧃 - Socar🚘
+![메인](https://user-images.githubusercontent.com/46108770/144620819-269459ea-ed4c-484e-aea6-b541bd043761.png)
+
 
 ## 🚘 시연
 
