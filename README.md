@@ -6,6 +6,15 @@
 ![깃플로우](https://user-images.githubusercontent.com/69136340/144607376-e02029bd-27d1-44bc-8e42-b20d82e132b4.png)
 ![커밋 컨벤션](https://user-images.githubusercontent.com/69136340/144607318-16b7a30d-4106-45eb-bda7-2acdec67ecf2.png)
 
+## 🚘 시연
+
+- 추천 차량, 나의 예약, 하트 버튼 클릭 서버통신
+
+<img src="https://user-images.githubusercontent.com/69136340/144609907-1399bcc8-a2e3-4149-8ea9-7e0812cb99a2.gif" width="250">
+  
+- 차량 필터 리스트 서버통신
+
+<img src="https://user-images.githubusercontent.com/69136340/144609993-cf786dae-0c1b-4de9-95c7-04af2ee3ac6f.gif" width="250">
 
 ## 🚘 Wiki
 
