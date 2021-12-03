@@ -16,7 +16,7 @@ class ReservationCVC: UICollectionViewCell {
     
     // MARK: - Properties
     static let identifier = "ReservationCVC"
-    var heardID: Int = 0
+    var heartID: Int = 0
     var selectedStatus: Bool = false
     var heartDelegate: HeartCellDelegate?
     
@@ -42,15 +42,11 @@ class ReservationCVC: UICollectionViewCell {
 
     @IBAction func clickToHeart(_ sender: Any) {
         if selectedStatus {
-            heartDelegate?.heartCellUnselected(cell: self, unselectedID: heardID)
+            heartDelegate?.heartCellUnselected(cell: self, unselectedID: heartID)
         } else {
             heartDelegate?.heartCellSelected(cell: self)
         }
         selectedStatus.toggle()
-    }
-    
-    func setButtonImage(image: UIImage) {
-        // 버튼 이미지 설정해주는 부분
     }
 }
 

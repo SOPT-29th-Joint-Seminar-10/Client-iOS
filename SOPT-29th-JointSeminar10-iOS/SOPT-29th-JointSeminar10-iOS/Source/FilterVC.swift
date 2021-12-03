@@ -96,6 +96,9 @@ extension FilterVC: UICollectionViewDelegate {
         } else {
             isClickedFilter[indexPath.row] = 0
         }
+        
+        // 딜리게이트 채택하기
+        
         collectionView.reloadData()
     }
 }
@@ -105,10 +108,7 @@ extension FilterVC: UICollectionViewDataSource {
         if collectionView == filterCV {
             return 6
         } else {
-            
-            // TODO: - 서버 붙이면 reservationContentList.count로 변경하기
-            
-            return 10
+            return reserveContentList.count
         }
     }
     
@@ -156,7 +156,7 @@ extension FilterVC: UICollectionViewDataSource {
                 let attributedTitle = cell.titleButton.attributedTitle(for: .normal)
                 cell.layer.frame.size.width = attributedTitle!.size().width + 30
                 
-                if indexPath.row == 0{
+                if indexPath.row == 0 {
                     cell.titleButton.setImage(UIImage(named: "icFilterIns"), for: .normal)
                     cell.titleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 0)
                     cell.titleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 0)
@@ -169,12 +169,15 @@ extension FilterVC: UICollectionViewDataSource {
                 }
             }
             
+            /*
+             carId 받아와서
+             let data = try? Data(contentsOf: url!) 이런식으로 해서
+             cell.carImageView.image = UIImage(data: data!) 이미지 바꿈
+             */
+            
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.Xib.NibName.reservationCVC, for: indexPath) as? ReservationCVC else {return UICollectionViewCell()}
-            
-//            cell.setButtonImage(image: <#T##UIImage#>)
-//            cell.heartDelegate = self
             
             return cell
         }
@@ -273,5 +276,22 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
         } else {
             return 11
         }
+    }
+}
+
+extension FilterVC: HeartCellDelegate {
+    func heartCellSelected(cell: ReservationCVC) {
+        selectedHeartList.append(cell.heartID)
+        updateButtonImage()
+    }
+    
+    func heartCellUnselected(cell: ReservationCVC, unselectedID: Int) {
+        let deletingIndex = selectedHeartList.firstIndex(of: unselectedID) ?? -1
+        selectedHeartList.remove(at: deletingIndex)
+        updateButtonImage()
+    }
+    
+    func updateButtonImage() {
+        
     }
 }
