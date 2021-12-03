@@ -22,7 +22,7 @@ struct FilterResultData: Codable {
     let price, discountRate: Int
     let currentLocation: String
     let imageURL: String
-    let isLiked: Bool
+    var isLiked: Bool
 
     enum CodingKeys: String, CodingKey {
         case carID = "carId"

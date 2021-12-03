@@ -6,8 +6,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ReservationCVC: UICollectionViewCell {
+    
+    // MARK: - Properties
+    
+    var heartCellDelegate: HeartCellDelegate?
+    var carID: Int?
     
     // MARK: - @IBOutlet Properties
     
@@ -25,6 +31,20 @@ class ReservationCVC: UICollectionViewCell {
         super.awakeFromNib()
         
         setUI()
+    }
+    
+    override var isSelected: Bool {
+        didSet{
+            if isSelected == true {
+                heartButton.imageView?.image = UIImage(systemName: "icSelectedHeartIos")
+            } else {
+                heartButton.imageView?.image = UIImage(systemName: "icDefaultHeartIos")
+            }
+        }
+    }
+    
+    @IBAction func touchLikedButton(_ sender: Any) {
+        heartCellDelegate?.heartCellDelegateWith(carID: carID ?? 0, isLiked: heartButton.isSelected)
     }
 }
 
@@ -51,14 +71,16 @@ extension ReservationCVC {
         heartButton.setImage(.icSelectedHeartIos, for: .selected)
     }
     
-    func setDataWith(image: UIImage?,
+    func setDataWith(url: String,
                      name: String,
                      price: String,
                      discount: String,
                      term: String,
                      location: String,
                      isHeartSelected: Bool) {
-        carImageView.image = image
+        if let url = URL(string: url) {
+            carImageView.kf.setImage(with: url)
+        }
         nameLabel.text = name
         priceLabel.text = price
         discountLabel.text = discount
@@ -66,4 +88,5 @@ extension ReservationCVC {
         locationLabel.text = location
         heartButton.isSelected = isHeartSelected
     }
+    
 }

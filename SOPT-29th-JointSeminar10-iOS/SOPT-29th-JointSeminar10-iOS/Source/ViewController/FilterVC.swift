@@ -17,12 +17,15 @@ class FilterVC: UIViewController {
     @IBOutlet weak var reservationCV: UICollectionView!
     @IBOutlet weak var filterView: UIView!
     
+    // MARK: - Properties
+    
     var reserveContentList: [FilterResultData] = []
     var isClickedFilter: [Int] = [0, 0, 0, 0, 0, 0]
     var date: [String] = []
     let beforeFiltered: [String] = ["초기화", "대여기간", "차종", "지역", "가격", "인기"]
     var afterFiltered: [String] = ["초기화", "3개월 | 2021", "준중형", "서울/경기/인천", "낮은 가격 순", "인기"]
     var requestData: FilterRequestData = FilterRequestData()
+    
     
     // MARK: - View Life Cycle
     
@@ -249,16 +252,17 @@ extension FilterVC: UICollectionViewDataSource {
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.Xib.NibName.reservationCVC, for: indexPath) as? ReservationCVC else {return UICollectionViewCell()}
+        
+            cell.setDataWith(url: reserveContentList[indexPath.row].imageURL,
+                             name: reserveContentList[indexPath.row].carName,
+                             price: String(reserveContentList[indexPath.row].price) + "원~",
+                             discount: String(reserveContentList[indexPath.row].discountRate) + "%",
+                             term: reserveContentList[indexPath.row].modelYear,
+                             location: reserveContentList[indexPath.row].currentLocation,
+                             isHeartSelected: reserveContentList[indexPath.row].isLiked)
+            cell.carID = reserveContentList[indexPath.row].carID
             
-            // TODO: - imageURL 없는 경우 에러 처리
-            let url = URL(string: reserveContentList[indexPath.row].imageURL)
-            cell.carImageView.kf.setImage(with: url)
-            cell.nameLabel.text = reserveContentList[indexPath.row].carName
-            cell.priceLabel.text = String(reserveContentList[indexPath.row].price)
-            cell.termLabel.text = reserveContentList[indexPath.row].modelYear
-            cell.discountLabel.text = String(reserveContentList[indexPath.row].discountRate)
-            cell.locationLabel.text = reserveContentList[indexPath.row].currentLocation
-            
+            cell.heartCellDelegate = self
             return cell
         }
     }
@@ -327,9 +331,7 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
         } else {
             guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { return CGSize() }
             let numberOfCellsOfWidth: CGFloat = 2
-            let numberOfCellsOfHeight: CGFloat = 5
             let width = collectionView.frame.size.width - (flowLayout.minimumInteritemSpacing * (numberOfCellsOfWidth-1))
-            let height = collectionView.frame.size.height - (flowLayout.minimumLineSpacing * (numberOfCellsOfHeight-1))
             return CGSize(width: width/(numberOfCellsOfWidth), height: width/(numberOfCellsOfWidth))
         }
     }
@@ -355,6 +357,38 @@ extension FilterVC: UICollectionViewDelegateFlowLayout {
             return 0
         } else {
             return 11
+        }
+    }
+}
+
+// MARK: - HeartCellDelegate
+
+extension FilterVC: HeartCellDelegate {
+    func heartCellDelegateWith(carID: Int, isLiked: Bool) {
+        
+        FavoriteDataService.shared.putFavoriteInfo(userID: 3, carID: carID, isLiked: !isLiked) { responseData in
+            switch responseData {
+            case .success(let favoriteResponse):
+                guard let response = favoriteResponse as? FavoriteResponseData else {return}
+                
+                if let response = response.data {
+                    for index in 0..<self.reserveContentList.count {
+                        if response.carID == self.reserveContentList[index].carID {
+                            self.reserveContentList[index].isLiked = response.isLiked
+                            break
+                        }
+                    }
+                    self.reservationCV.reloadData()
+                }
+            case .requestErr(let msg):
+                print("requestErr \(msg)")
+            case .pathErr :
+                print("pathErr")
+            case .serverErr :
+                print("serveErr")
+            case .networkFail :
+                print("networkFail")
+            }
         }
     }
 }
